@@ -6,7 +6,7 @@ class get_D_FlightSearch{
 	/**
 	 * @var 航程类型：string类型；必填；S（单程）D（往返程）M（联程）
 	 */
-	var $SearchType="";
+	var $SearchType="S";
 	/**
 	 * @var 航程列表
 	 */
@@ -61,11 +61,11 @@ class get_D_FlightSearch{
 	/**
 	 *@var 产品价格类型筛选选项 NormalPrice：普通政策，SingleTripPrice: 提前预售特价
 	 */
-	var $PriceTypeOptions="";
+	var $LatestDepartTimeOptions="";
 	/**
 	 *@var 产品类型筛选选项 Normal：普通，YoungMan:青年特价，OldMan:老年特价
 	 */
-	var $ProductTypeOptions="";
+	var $ProductTypeOptions="Normal";
 	/**
 	 *
 	 *@var Y 经济舱C公务舱 F头等舱
@@ -73,7 +73,7 @@ class get_D_FlightSearch{
 	var $Classgrade="";
 	/**
 	 *
-	 * @var 响应排序方式 DepartTime/TakeOffTime：起飞时间排序（舱位按价格次之），Price:按价格排序（时间次之），Rate:折扣优先（时间次之）,LowPrice: 低价单一排序
+	 * @var 响应排序方式 DepartTime/TakeOffTime：起飞时间排序（舱位按价格次之），Price:按价格排序（时间次之），Rate:折扣优先（时间次之）,Direction: 低价单一排序
 	 */
 	var $OrderBy="DepartTime";
 	/**
@@ -82,10 +82,6 @@ class get_D_FlightSearch{
 	 * @var string
 	 */
 	var $Direction="ASC";
-	/**
-	 * @var 点选的纬度
-	 * @var double
-	 */
 	/**
 	 *@var返回体
 	 */
@@ -102,201 +98,150 @@ class get_D_FlightSearch{
 		$AllianceID=Allianceid;
 		$SID=Sid;
 		$KEYS=SiteKey;
-		$RequestType="D_FlightSearch";
+		$RequestType="OTA_FlightSearch";
 		//构造权限头部
 		$headerRight=getRightString($AllianceID,$SID,$KEYS,$RequestType);
-		$city="";
-		if($this->CityID!=""){
-			$city=<<<BEGIN
-<CityID>$this->CityID</CityID>
+		echo $headerRight;
+		$SearchType="";
+		if($this->SearchType!=""){
+			$SearchType=<<<BEGIN
+<SearchType>$this->SearchType</SearchType>
 BEGIN;
 		}
-		//构造坐标的查询条件
-		$DotXs="";
-		if($this->DotX!=0){
-			$DotXs=<<<BEGIN
-<DotX>$this->DotX</DotX>
+		//构造航程列表
+		$DepartCity="";
+		if($this->DepartCity!=""){
+			$DepartCity=<<<BEGIN
+<DepartCity>$this->DepartCity</DepartCity>
 BEGIN;
 		}
-		$DotYs="";
-		if($this->DotY!=0){
-			$DotYs=<<<BEGIN
-<DotY>$this->DotY</DotY>
+		$ArriveCity="";
+		if($this->ArriveCity!=""){
+			$ArriveCity=<<<BEGIN
+<ArriveCity>$this->ArriveCity</ArriveCity>
 BEGIN;
 		}
-		$Radiuss="";
-		if($this->Radius!=0){
-			$Radiuss=<<<BEGIN
-<Radius>$this->Radius</Radius>
+		$DepartDate="";
+		if($this->DepartDate!=""){
+			$DepartDate=<<<BEGIN
+<DepartDate>$this->DepartDate</DepartDate>
 BEGIN;
 		}
-		$HotelMaps="";//坐标的请求节点
-		if($DotXs!=""&&$DotYs!=""&&$Radiuss!="")
+		$AirlineDibitCode="";
+		if($this->AirlineDibitCode!="")
 		{
-			$HotelMaps="<HotelMap>$DotXs$DotYs$Radiuss</HotelMap>";
-		}
-		
-		//构造坐标的查询条件
-		$checkIn="";
-		if($this->CheckInDate!=""){
-			$checkIn=<<<BEGIN
-<CheckInDate>$this->CheckInDate</CheckInDate>
+			$AirlineDibitCode=<<<BEGIN
+<AirlineDibitCode>$this->AirlineDibitCode</AirlineDibitCode>
 BEGIN;
 		}
-		$checkOut="";
-		if($this->CheckOutDate!=""){
-			$checkOut=<<<BEGIN
-<CheckOutDate>$this->CheckOutDate</CheckOutDate>
+		$DepartPort="";
+		if($this->DepartPort!=""){
+			$DepartPort=<<<BEGIN
+<DepartPort>$this->DepartPort</DepartPort>
 BEGIN;
 		}
-		$hotelNames="";
-		if($this->HotelName!=""){
-			$hotelNames=<<<BEGIN
-<HotelName>$this->HotelName</HotelName>
+		$ArrivePort="";
+		if($this->ArrivePort!=""){
+			$ArrivePort=<<<BEGIN
+<ArrivePort>$this->ArrivePort</ArrivePort>
 BEGIN;
 		}
-		$PriceTypes="";
-		if($this->PriceType!=""){
-			$PriceTypes=<<<BEGIN
-<PriceType>$this->PriceType</PriceType>
+		$EaliestDepartTime="";
+		if($this->EaliestDepartTime!=""){
+			$EaliestDepartTime=<<<BEGIN
+<EaliestDepartTime>$this->EaliestDepartTime</EaliestDepartTime>
 BEGIN;
 		}
+		$LatestDepartTime="";
+		if($this->LatestDepartTime!=""){
+			$LatestDepartTime=<<<BEGIN
+<LatestDepartTime>$this->LatestDepartTime</LatestDepartTime>
+BEGIN;
+		}
+		$Routes=<<<BEGIN
+<Routes><FlightRoute>$DepartCity$ArriveCity$DepartDate$AirlineDibitCode$DepartPort$ArrivePort$EarliestDepartTime$LatestDepartTime</FlightRoute></Routes>
+BEGIN;
+		// 航程列表到此结束
 
-
-		$pagesizes="";
-		if($this->PageSize!=""){
-			$pagesizes=<<<BEGIN
-<PageSize>$this->PageSize</PageSize>
+		$SendTicketCity="";
+		if($this->SendTicketCity!=""){
+			$SendTicketCity=<<<BEGIN
+<SendTicketCity>$this->SendTicketCity</SendTicketCity>
 BEGIN;
 		}
-		$pagenumbers="";
-		if($this->PageNumber!=""){
-			$pagenumbers=<<<BEGIN
-<PageNumber>$this->PageNumber</PageNumber>
+		$IsSimpleResponses="";
+		if($this->IsSimpleResponse!=""){
+			$IsSimpleResponses=<<<BEGIN
+<IsSimpleResponse>$this->IsSimpleResponse</IsSimpleResponse>
 BEGIN;
 		}
-		$HotelLists="";
-		if($this->HotelList!=""){
-			$HotelLists=<<<BEGIN
-<HotelList>$this->HotelList</HotelList>
+		$IsLowestPrices="";
+		if($this->IsLowestPrice!=""){
+			$IsLowestPrices=<<<BEGIN
+<IsLowestPrice>$this->IsLowestPrice</IsLowestPrice>
 BEGIN;
 		}
-		$starlists="";
-		if($this->StarList!=""){
-			$starlists=<<<BEGIN
-<StarList>$this->StarList</StarList>
+		$LatestDepartTimeOptionss="";
+		if($this->LatestDepartTimeOptions!=""){
+			$LatestDepartTimeOptionss=<<<BEGIN
+<LatestDepartTimeOptions>$this->LatestDepartTimeOptions</LatestDepartTimeOptions>
 BEGIN;
 		}
-		//用酒店的品牌作为关键字，提供给酒店名称，做模糊查询，实现一个品牌名称，查询出多个子品牌的数据
-		$hotelbrands="";
-		if($this->HotelBrand!=""){
-			$hotelbrands=<<<BEGIN
-<HotelBrand>$this->HotelBrand</HotelBrand>
+		$ProductTypeOptionss="";
+		if($this->ProductTypeOptions!=""){
+			$ProductTypeOptionss=<<<BEGIN
+<ProductTypeOptions>$this->ProductTypeOptions</ProductTypeOptions>
 BEGIN;
 		}
-		$ordernames="";
-		if($this->OrderName!=""){
-			$ordernames=<<<BEGIN
-<OrderName>$this->OrderName</OrderName>
+		$Classgrade="";
+		if($this->Classgrade!=""){
+			$Classgrade=<<<BEGIN
+<Classgrade>$this->Classgrade</Classgrade>
 BEGIN;
 		}
-		$ordertypes="";
-		if($this->OrderType!=""){
-			$ordertypes=<<<BEGIN
-<OrderType>$this->OrderType</OrderType>
+		$OrderBys="";
+		if($this->OrderBy!=""){
+			$OrderBys=<<<BEGIN
+<OrderBy>$this->OrderBy</OrderBy>
 BEGIN;
 		}
-		$lowprices="";
-		if($this->LowPrice!=""){
-			$lowprices=<<<BEGIN
-<LowPrice>$this->LowPrice</LowPrice>
+		$Directions="";
+		if($this->Direction!=""){
+			$Directions=<<<BEGIN
+<Direction>$this->Direction</Direction>
 BEGIN;
 		}
-		$highprices="";
-		if($this->HighPrice!=""){
-			$highprices=<<<BEGIN
-<HighPrice>$this->HighPrice</HighPrice>
-BEGIN;
-		}
-		$locations="";
-		if($this->Location!=""){
-			$locations=<<<BEGIN
-<Location>$this->Location</Location>
-BEGIN;
-		}
-		$zones="";
-		if($this->Zone!=""){
-			$zones=<<<BEGIN
-<Zone>$this->Zone</Zone>
-BEGIN;
-		}
-		$Districts="";
-		if($this->District!=""){
-			$Districts=<<<BEGIN
-<District>$this->District</District>
-BEGIN;
-		}
-
-		$HotelFacilitys="";
-		if($this->HotelFacility!="")
-		{
-			if(strpos($this->HotelFacility,",")>0)
-			{
-				//如果有多个则要切割
-				$arrayFacility=explode(",",$this->HotelFacility);
-				for($i=0;$i<count($arrayFacility);$i++)
-				{
-					if($arrayFacility[$i]!=""&&$arrayFacility[$i]!=null)
-					{
-						$HotelFacilitys=$HotelFacilitys."<".$arrayFacility[$i].">T</".$arrayFacility[$i].">";
-					}
-				}
-			}
-			else
-			{
-				$HotelFacilitys="<".$this->HotelFacility.">T</".$this->HotelFacility.">";
-			}
-			
-			if($HotelFacilitys!="")//如果有设备，则前后加上设备标签
-			{
-			  $HotelFacilitys="<HotelFacility>".$HotelFacilitys."</HotelFacility>";
-			}
-		}
-
-				$paravalues=<<<BEGIN
+		$paravalues=<<<BEGIN
 <?xml version="1.0"?>
 <Request>
 <Header $headerRight/>
-<DomesticHotelListRequest>$city$checkIn$checkOut$hotelNames$pagesizes$pagenumbers$starlists$hotelbrands$ordernames$ordertypes$lowprices$highprices$locations$zones$Districts$HotelFacilitys$HotelLists$PriceTypes$HotelMaps</DomesticHotelListRequest>
+<FlightSearchRequest>$SearchType$Routes$SendTicketCity$IsSimpleResponse$IsLowestPrice$LatestDepartTimeOptions$ProductTypeOptions$Classgrade$OrderBy$Direction</FlightSearchRequest>
 </Request>
 BEGIN;
 
-				return  $paravalues;
-			}
-			/**
-			 *
-			 * 调用直接查询酒店列表的接口，获取到酒店的数据
-			 */
-			function main(){
-				try{
-					$requestXML=$this->getRequestXML();
-					$commonRequestDo=new commonRequest();//常用数据请求
-					$commonRequestDo->requestURL=D_HotelSearch_Url;
-					$commonRequestDo->requestXML=$requestXML;
-					$commonRequestDo->requestType=System_RequestType;//取config中的配置
-					$commonRequestDo->doRequest();
-					$returnXML=$commonRequestDo->responseXML;
-					
-					//print_r($commonRequestDo);die;
-	    // echo json_encode($returnXML);die;//校验请求数据-临时用
-					//调用Common/RequestDomXml.php中函数解析返回的XML
-					$this->ResponseXML=getXMLFromReturnString($returnXML);
-				}
-				catch(Exception $e)
-				{
-					$this->ResponseXML=null;
-				}
-			}
-		
+		return  $paravalues;
+	}
+
+	function main(){
+		try{
+			$requestXML=$this->getRequestXML();
+			$commonRequestDo=new commonRequest();//常用数据请求
+			$commonRequestDo->requestURL=OTA_FlightSearch_Url;
+			$commonRequestDo->requestXML=$requestXML;
+			$commonRequestDo->requestType=System_RequestType;//取config中的配置
+			$commonRequestDo->doRequest();
+			$returnXML=$commonRequestDo->responseXML;
+			
+			//print_r($commonRequestDo);die;
+// echo json_encode($returnXML);die;//校验请求数据-临时用
+			//调用Common/RequestDomXml.php中函数解析返回的XML
+			$this->ResponseXML=getXMLFromReturnString($returnXML);
 		}
-		?>
+		catch(Exception $e)
+		{
+			$this->ResponseXML=null;
+		}
+	}
+		
+}
+?>
