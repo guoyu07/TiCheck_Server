@@ -40,6 +40,7 @@ begin;
 		$requestXML=str_replace(">",@"&gt;",$requestXML);
 
 		$requestXML=$r_head.$requestXML.$r_end;
+		echo "<!--" . $requestXML ."-->";
 		$myhttp->open();
 		$myhttp->send($requestXML);
 	    

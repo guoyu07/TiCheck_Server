@@ -1,0 +1,490 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ABSPATH	SDK.config.php	/^	define('ABSPATH',dirname(__FILE__).'\/');$/;"	d
+AirlineDibitCode	sdk/API/Flight/D_FlightSearch.php	/^			$AirlineDibitCode=<<<BEGIN$/;"	v
+AirlineDibitCode	sdk/API/Flight/D_FlightSearch.php	/^		$AirlineDibitCode="";$/;"	v
+AirlineDibitCode	sdk/API/Flight/D_FlightSearch.php	/^	var $AirlineDibitCode="";$/;"	v
+AllianceID	sdk/API/Flight/D_FlightSearch.php	/^		$AllianceID=Allianceid;$/;"	v
+Allianceid	SDK.config.php	/^		define('Allianceid','4341');$/;"	d
+Allianceid	SDK.config.php	/^	define('Allianceid',$SiteAllianceid);$/;"	d
+Allianceid_Uid	SDK.config.php	/^	define('Allianceid_Uid',$SiteAllianceid_Uid);$/;"	d
+ArriveCity	sdk/API/Flight/D_FlightSearch.php	/^			$ArriveCity=<<<BEGIN$/;"	v
+ArriveCity	sdk/API/Flight/D_FlightSearch.php	/^		$ArriveCity="";$/;"	v
+ArriveCity	sdk/API/Flight/D_FlightSearch.php	/^	var $ArriveCity="";$/;"	v
+ArrivePort	sdk/API/Flight/D_FlightSearch.php	/^			$ArrivePort=<<<BEGIN$/;"	v
+ArrivePort	sdk/API/Flight/D_FlightSearch.php	/^		$ArrivePort="";$/;"	v
+ArrivePort	sdk/API/Flight/D_FlightSearch.php	/^	var $ArrivePort="";$/;"	v
+Classgrade	sdk/API/Flight/D_FlightSearch.php	/^			$Classgrade=<<<BEGIN$/;"	v
+Classgrade	sdk/API/Flight/D_FlightSearch.php	/^		$Classgrade="";$/;"	v
+Classgrade	sdk/API/Flight/D_FlightSearch.php	/^	var $Classgrade="";$/;"	v
+D_FlightSearch	demo/demo_flightSearch.php	/^$D_FlightSearch=new get_D_FLightSearch();$/;"	v
+D_GetBrandCityRequest_Url	SDK.config.php	/^	define('D_GetBrandCityRequest_Url',$ServiceUrlCtripOpenAPI.'\/Hotel\/D_GetBrandCityRequest.asmx');$/;"	d
+D_HotelCommentKey_Url	SDK.config.php	/^	define('D_HotelCommentKey_Url',$ServiceUrlCtripOpenAPI.'\/Hotel\/D_HotelCommentKey.asmx');$/;"	d
+D_HotelCommentListPage_Url	SDK.config.php	/^	define('D_HotelCommentListPage_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/D_HotelCommentListWithPage.asmx');$/;"	d
+D_HotelCommentList_Url	SDK.config.php	/^	define('D_HotelCommentList_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/D_HotelCommentList.asmx');$/;"	d
+D_HotelDetail_Url	SDK.config.php	/^	define('D_HotelDetail_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/D_HotelDetail.asmx');$/;"	d
+D_HotelHotComment_Url	SDK.config.php	/^	define('D_HotelHotComment_Url',$ServiceUrlCtripOpenAPI.'\/Hotel\/D_HotelHotComment.asmx');$/;"	d
+D_HotelNearbyInfo_Url	SDK.config.php	/^	define('D_HotelNearbyInfo_Url',$ServiceUrlCtripOpenAPI.'\/Hotel\/D_HotelNearbyInfo.asmx');$/;"	d
+D_HotelOrderDetail_Url	SDK.config.php	/^	define('D_HotelOrderDetail_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/D_HotelOrderDetail.asmx');$/;"	d
+D_HotelOrderList_Url	SDK.config.php	/^	define('D_HotelOrderList_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/D_HotelOrderList.asmx');$/;"	d
+D_HotelSearch_Url	SDK.config.php	/^	define('D_HotelSearch_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/D_HotelSearch.asmx');$/;"	d
+DepartCity	sdk/API/Flight/D_FlightSearch.php	/^			$DepartCity=<<<BEGIN$/;"	v
+DepartCity	sdk/API/Flight/D_FlightSearch.php	/^		$DepartCity="";$/;"	v
+DepartCity	sdk/API/Flight/D_FlightSearch.php	/^	var $DepartCity="";$/;"	v
+DepartDate	sdk/API/Flight/D_FlightSearch.php	/^			$DepartDate=<<<BEGIN$/;"	v
+DepartDate	sdk/API/Flight/D_FlightSearch.php	/^		$DepartDate="";$/;"	v
+DepartDate	sdk/API/Flight/D_FlightSearch.php	/^	var $DepartDate="";$/;"	v
+DepartPort	sdk/API/Flight/D_FlightSearch.php	/^			$DepartPort=<<<BEGIN$/;"	v
+DepartPort	sdk/API/Flight/D_FlightSearch.php	/^		$DepartPort="";$/;"	v
+DepartPort	sdk/API/Flight/D_FlightSearch.php	/^	var $DepartPort="";$/;"	v
+Direction	sdk/API/Flight/D_FlightSearch.php	/^	var $Direction="ASC";$/;"	v
+Directions	sdk/API/Flight/D_FlightSearch.php	/^			$Directions=<<<BEGIN$/;"	v
+Directions	sdk/API/Flight/D_FlightSearch.php	/^		$Directions="";$/;"	v
+EaliestDepartTime	sdk/API/Flight/D_FlightSearch.php	/^			$EaliestDepartTime=<<<BEGIN$/;"	v
+EaliestDepartTime	sdk/API/Flight/D_FlightSearch.php	/^		$EaliestDepartTime="";$/;"	v
+EarliestDepartTime	sdk/API/Flight/D_FlightSearch.php	/^	var $EarliestDepartTime="";$/;"	v
+FirstString	Common/browseHistoryClass.php	/^						$FirstString=substr($RecentlyGoods,0,$pos); \/\/取出第一个参数$/;"	v
+GetIP	Common/toolExt.php	/^function GetIP(){$/;"	f
+GroupProductInfo_Url	SDK.config.php	/^	define('GroupProductInfo_Url',$ServiceUrlCtripOpenAPI.'\/tuan\/GroupProductInfo.asmx');$/;"	d
+GroupProductList_Url	SDK.config.php	/^	define('GroupProductList_Url',$ServiceUrlCtripOpenAPI.'\/tuan\/GroupProductList.asmx');$/;"	d
+HttpProtocolVersion	Common/HttpRequest.php	/^			$this->HttpProtocolVersion = $result[1];$/;"	v
+HttpRequest	Common/HttpRequest.php	/^class HttpRequest{$/;"	c
+InputSafeFilter	Common/toolExt.php	/^function InputSafeFilter($inputString)$/;"	f
+IsLowestPrice	sdk/API/Flight/D_FlightSearch.php	/^	var $IsLowestPrice="";$/;"	v
+IsLowestPrices	sdk/API/Flight/D_FlightSearch.php	/^			$IsLowestPrices=<<<BEGIN$/;"	v
+IsLowestPrices	sdk/API/Flight/D_FlightSearch.php	/^		$IsLowestPrices="";$/;"	v
+IsSimpleResponse	sdk/API/Flight/D_FlightSearch.php	/^	var $IsSimpleResponse="";$/;"	v
+IsSimpleResponses	sdk/API/Flight/D_FlightSearch.php	/^			$IsSimpleResponses=<<<BEGIN$/;"	v
+IsSimpleResponses	sdk/API/Flight/D_FlightSearch.php	/^		$IsSimpleResponses="";$/;"	v
+KEYS	sdk/API/Flight/D_FlightSearch.php	/^		$KEYS=SiteKey;$/;"	v
+KeyString	Common/rightControl.php	/^	$KeyString=$Timestamp.$AID.$SecretKeyMd5.$SID.$RequestType;$/;"	v
+LatestDepartTime	sdk/API/Flight/D_FlightSearch.php	/^			$LatestDepartTime=<<<BEGIN$/;"	v
+LatestDepartTime	sdk/API/Flight/D_FlightSearch.php	/^		$LatestDepartTime="";$/;"	v
+LatestDepartTime	sdk/API/Flight/D_FlightSearch.php	/^	var $LatestDepartTime="";$/;"	v
+LatestDepartTimeOptions	sdk/API/Flight/D_FlightSearch.php	/^	var $LatestDepartTimeOptions="";$/;"	v
+LatestDepartTimeOptionss	sdk/API/Flight/D_FlightSearch.php	/^			$LatestDepartTimeOptionss=<<<BEGIN$/;"	v
+LatestDepartTimeOptionss	sdk/API/Flight/D_FlightSearch.php	/^		$LatestDepartTimeOptionss="";$/;"	v
+MD5Ext_Strtoupper	Common/toolExt.php	/^function MD5Ext_Strtoupper($str)$/;"	f
+MD5Ext_Strtoupper2	Common/rightControl.php	/^function MD5Ext_Strtoupper2($str)$/;"	f
+OTA_FlightSearch_Url	SDK.config.php	/^	define('OTA_FlightSearch_Url',$ServiceUrlCtripOpenAPI.'\/Flight\/DomesticFlight\/OTA_FlightSearch.asmx');$/;"	d
+OTA_OrderCancel_Url	SDK.config.php	/^	define('OTA_OrderCancel_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/OTA_Cancel.asmx');$/;"	d
+OTA_Ping_Url	SDK.config.php	/^	define('OTA_Ping_Url',$ServiceUrlCtripOpenAPI.'\/Hotel\/OTA_Ping.asmx');$/;"	d
+OTA_UserUniqueID_Url	SDK.config.php	/^	define('OTA_UserUniqueID_Url',$ServiceUrlCtripOpenAPI.'\/hotel\/OTA_UserUniqueID.asmx');$/;"	d
+OrderBy	sdk/API/Flight/D_FlightSearch.php	/^	var $OrderBy="DepartTime";$/;"	v
+OrderBys	sdk/API/Flight/D_FlightSearch.php	/^			$OrderBys=<<<BEGIN$/;"	v
+OrderBys	sdk/API/Flight/D_FlightSearch.php	/^		$OrderBys="";$/;"	v
+ProductTypeOptions	sdk/API/Flight/D_FlightSearch.php	/^	var $ProductTypeOptions="Normal";$/;"	v
+ProductTypeOptionss	sdk/API/Flight/D_FlightSearch.php	/^			$ProductTypeOptionss=<<<BEGIN$/;"	v
+ProductTypeOptionss	sdk/API/Flight/D_FlightSearch.php	/^		$ProductTypeOptionss="";$/;"	v
+REMOTE_ADDR	Common/toolExt.php	/^		$REMOTE_ADDR = $_SERVER["HTTP_X_FORWARDED_FOR"];$/;"	v
+REMOTE_ADDR	Common/toolExt.php	/^		$REMOTE_ADDR = $tmp_ip[0];$/;"	v
+RecentlyGoods	Common/browseHistoryClass.php	/^						$RecentlyGoods=str_replace($FirstString,"",$RecentlyGoods); \/\/将第一个参数删除$/;"	v
+RecentlyGoods	Common/browseHistoryClass.php	/^				$RecentlyGoods=$_COOKIE[$name];$/;"	v
+RecentlyGoodsArray	Common/browseHistoryClass.php	/^				$RecentlyGoodsArray=explode(",", $RecentlyGoods);$/;"	v
+RecentlyGoodsNew	Common/browseHistoryClass.php	/^							$RecentlyGoodsNew=$RecentlyGoods.",".$id;$/;"	v
+RecentlyGoodsNew	Common/browseHistoryClass.php	/^						$RecentlyGoodsNew=$RecentlyGoods.",".$id; \/\/在尾部加入最新的记录g$/;"	v
+RecentlyGoodsNum	Common/browseHistoryClass.php	/^				$RecentlyGoodsNum=count($RecentlyGoodsArray); \/\/RecentlyGoodsNum 当前存储的变量个数$/;"	v
+RequestType	sdk/API/Flight/D_FlightSearch.php	/^		$RequestType="OTA_FlightSearch";$/;"	v
+ResponseXML	sdk/API/Flight/D_FlightSearch.php	/^			$this->ResponseXML=getXMLFromReturnString($returnXML);$/;"	v
+ResponseXML	sdk/API/Flight/D_FlightSearch.php	/^			$this->ResponseXML=null;$/;"	v
+ResponseXML	sdk/API/Flight/D_FlightSearch.php	/^	var $ResponseXML="";$/;"	v
+Routes	sdk/API/Flight/D_FlightSearch.php	/^		$Routes=<<<BEGIN$/;"	v
+Routes	sdk/API/Flight/D_FlightSearch.php	/^	var $Routes="";$/;"	v
+SID	sdk/API/Flight/D_FlightSearch.php	/^		$SID=Sid;$/;"	v
+SearchType	sdk/API/Flight/D_FlightSearch.php	/^			$SearchType=<<<BEGIN$/;"	v
+SearchType	sdk/API/Flight/D_FlightSearch.php	/^		$SearchType="";$/;"	v
+SearchType	sdk/API/Flight/D_FlightSearch.php	/^	var $SearchType="S";$/;"	v
+SecretKeyMd5	Common/rightControl.php	/^	$SecretKeyMd5=MD5Ext_strtoupper2($KEYS);\/\/先加密一次$/;"	v
+SendTicketCity	sdk/API/Flight/D_FlightSearch.php	/^			$SendTicketCity=<<<BEGIN$/;"	v
+SendTicketCity	sdk/API/Flight/D_FlightSearch.php	/^		$SendTicketCity="";$/;"	v
+SendTicketCity	sdk/API/Flight/D_FlightSearch.php	/^	var $SendTicketCity="";$/;"	v
+ServiceUrlCtripOpenAPI	SDK.config.php	/^$ServiceUrlCtripOpenAPI="http:\/\/openapi.ctrip.com";$/;"	v
+Session	Common/Session.php	/^class Session{$/;"	c
+Sid	SDK.config.php	/^	define('Sid',$SiteSid);$/;"	d
+Sid	SDK.config.php	/^	define('Sid','439437');$/;"	d
+Signature	Common/rightControl.php	/^	$Signature=MD5Ext_strtoupper2($KeyString);$/;"	v
+SiteKey	SDK.config.php	/^	define('SiteKey',$SiteSiteKey);$/;"	d
+SiteKey	SDK.config.php	/^	define('SiteKey','ED2C1865-E81C-424E-A05C-5DEE7DFF92EB');\/\/abcDFG645354$/;"	d
+System_RequestType	SDK.config.php	/^	define('System_RequestType','httpRequest');\/\/soap  httpRequest$/;"	d
+TempNum	Common/browseHistoryClass.php	/^			$TempNum = $maxNum;\/\/cookie里面存储多少个浏览记录$/;"	v
+Timestamp	Common/rightControl.php	/^	$Timestamp=TimestampFrom19702();\/\/需要计算的时间戳$/;"	v
+TimestampFrom1970	Common/toolExt.php	/^function  TimestampFrom1970()$/;"	f
+TimestampFrom19702	Common/rightControl.php	/^function  TimestampFrom19702()$/;"	f
+TuanEndDate_Distance	SDK.config.php	/^	define('TuanEndDate_Distance','7');$/;"	d
+UnionSite_ShortName	SDK.config.php	/^	define('UnionSite_ShortName',urlencode($UnionSite_ShortName));\/\/定义网站发短信通知时的简称$/;"	d
+__construct	Common/HttpRequest.php	/^	function __construct($url="",$method="GET",$useSocket=0){$/;"	f
+__construct	Common/Session.php	/^	public function __construct(){$/;"	f
+__construct	Common/operXml.php	/^  public function __construct() $/;"	f
+__toString	Common/operXml.php	/^  public function __toString()  $/;"	f
+_buffer	Common/HttpRequest.php	/^			$this->_buffer="";$/;"	v
+_getNodeByProp	Common/operXml.php	/^  private function _getNodeByProp($node,$propName,$propValue)$/;"	f
+_getheaderinfo	Common/HttpRequest.php	/^	private function _getheaderinfo(){$/;"	f
+_geturlinfo	Common/HttpRequest.php	/^	private function _geturlinfo(){$/;"	f
+_headers	Common/HttpRequest.php	/^		$this->_headers = $_temp;$/;"	v
+_senddata	Common/HttpRequest.php	/^		$this->_senddata = $senddata;$/;"	v
+_splitcontent	Common/HttpRequest.php	/^	private function _splitcontent(){$/;"	f
+_temp	Common/HttpRequest.php	/^		$_temp=array();$/;"	v
+addChild	Common/operXml.php	/^  public function addChild($node,$tag)  $/;"	f
+addRoot	Common/operXml.php	/^  public function addRoot($tag)   \/\/ 添加根节点$/;"	f
+anode	Common/operXml.php	/^      $anode = $node->children[$i];$/;"	v
+anode	Common/operXml.php	/^      $anode = $this->_getNodeByProp($node->children[$i],$propName,$propValue);$/;"	v
+args	Common/operXml.php	/^    $args = func_get_args();$/;"	v
+arrayCE	Common/toolExt.php	/^			$arrayCE=explode(".",$level);$/;"	v
+arrayCip	Common/toolExt.php	/^	 $arrayCip=explode(‘,’,$cip);$/;"	v
+browse_history_class	Common/browseHistoryClass.php	/^class browse_history_class$/;"	c
+buffer	Common/HttpRequest.php	/^				$buffer = socket_read($this->fp,4096);$/;"	v
+buffer	Common/HttpRequest.php	/^			$buffer="";$/;"	v
+cdata	Common/operXml.php	/^  public function cdata($parser, $cdata) $/;"	f
+checkCookieIsReady	Common/browseHistoryClass.php	/^	function checkCookieIsReady()$/;"	f
+checkDate	Common/toolExt.php	/^	$checkDate= date($format,$unixTime);$/;"	v
+childCount	Common/operXml.php	/^    $childCount = count($treeNode->children);$/;"	v
+chunk_hex	Common/HttpRequest.php	/^		$chunk_hex = substr ( $chunk_hex, 0, $sc_pos );$/;"	v
+chunk_hex	Common/HttpRequest.php	/^		$chunk_hex = trim ( substr ( $in, 0, $lf_pos ) );$/;"	v
+chunk_len	Common/HttpRequest.php	/^		$chunk_len = hexdec ( $chunk_hex );$/;"	v
+cip	Common/toolExt.php	/^	 $cip = "0.0.0.0";$/;"	v
+cip	Common/toolExt.php	/^	 $cip = $_SERVER["HTTP_CLIENT_IP"];$/;"	v
+cip	Common/toolExt.php	/^	 $cip = $_SERVER["HTTP_X_FORWARDED_FOR"];$/;"	v
+cip	Common/toolExt.php	/^	 $cip = $_SERVER["REMOTE_ADDR"];$/;"	v
+cip	Common/toolExt.php	/^	 $cip=$arrayCip(strlen($arrayCip)-1);$/;"	v
+className	Common/toolExt.php	/^				$className="diamond0".$arrayCE[0];$/;"	v
+className	Common/toolExt.php	/^				$className="half_diamond0".$customerleve;$/;"	v
+className	Common/toolExt.php	/^				$className=$arrayCE[0];$/;"	v
+className	Common/toolExt.php	/^				$className=$customerleve;$/;"	v
+className	Common/toolExt.php	/^			$className="diamond0".$CustomerEval;$/;"	v
+className	Common/toolExt.php	/^			$className=$CustomerEval;$/;"	v
+clear	Common/browseHistoryClass.php	/^	static function clear() {$/;"	f
+commonRequest	Common/commonRequestData.php	/^class commonRequest$/;"	c
+commonRequestDo	sdk/API/Flight/D_FlightSearch.php	/^			$commonRequestDo=new commonRequest();\/\/常用数据请求$/;"	v
+constructUnionSessionName	Common/Session.php	/^	protected function constructUnionSessionName($key){$/;"	f
+contain	Common/Session.php	/^	public function contain($key){$/;"	f
+content	Common/operXml.php	/^    $content = $this->__toString();$/;"	v
+cookieNew	Common/browseHistoryClass.php	/^			$cookieNew=str_replace($keyTemp,"",$cookieOld);$/;"	v
+cookieOld	Common/browseHistoryClass.php	/^			$cookieOld=$_COOKIE[$name];$/;"	v
+count	Common/HttpRequest.php	/^			$count = preg_match("\/^http\\:\\\/\\\/([^\\:\\\/]+?)(\\:(\\d+))?(\\\/)?$\/is",$url,$result);$/;"	v
+count	Common/HttpRequest.php	/^		$count = preg_match("\/^HTTP\\\/(.+?)\\s(\\d+)\\s(.+?)\\r\\n\/is",$headerstr,$result);$/;"	v
+count	Common/HttpRequest.php	/^		$count = preg_match("\/^http\\:\\\/\\\/([^\\:\\\/]+?)(\\:(\\d+))?\\\/(.+?)$\/is",$url,$result);$/;"	v
+count	Common/HttpRequest.php	/^		$count = preg_match_all("\/\\n$key\\:(.+?)\\r\/is",$headerstr,$result,PREG_SET_ORDER);$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue="";$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue=date("Y".$linkChar."m".$linkChar."d H:i:s");$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue=date("Y".$linkChar."m".$linkChar."d");$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue=date("Y".$linkChar."m".$linkChar."d",strtotime("$d   +$addDay   day"));$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue=date("Y年m月d日  H:i:s");$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue=date("Y年m月d日");$/;"	v
+coutValue	Common/getDate.php	/^	$coutValue=date("Y年m月d日",strtotime("$d   +$addDay   day"));$/;"	v
+coutw	Common/RequestDomXml.php	/^				$coutw=$xml->Header["ResultMsg"];\/\/null;$/;"	v
+coutw	Common/RequestDomXml.php	/^				$coutw=$xml;$/;"	v
+coutw	Common/RequestDomXml.php	/^	$coutw=null;$/;"	v
+coutw	Common/browseHistoryClass.php	/^			$coutw=true;$/;"	v
+coutw	Common/browseHistoryClass.php	/^		$coutw=false;$/;"	v
+coutw	Common/httpRequestData.php	/^			$coutw=$myhttp->responseBodyWithoutHeader;$/;"	v
+coutw	Common/httpRequestData.php	/^			$coutw=$responseBodys;$/;"	v
+coutw	Common/httpRequestData.php	/^		$coutw=str_replace("&gt;",">",$coutw);\/\/将符号换回来$/;"	v
+coutw	Common/httpRequestData.php	/^		$coutw=str_replace("&lt;","<",$coutw);\/\/将符号换回来$/;"	v
+coutw	Common/httpRequestData.php	/^		$coutw=str_replace($responseEnd,"",$coutw);\/\/替换返回尾$/;"	v
+coutw	Common/httpRequestData.php	/^		$coutw=str_replace($responseHead,"",$coutw);\/\/替换返回头$/;"	v
+coutw	Common/rightControl.php	/^		$coutw=strtoupper(md5($str));$/;"	v
+coutw	Common/rightControl.php	/^	$coutw=$str;$/;"	v
+coutw	Common/soapData.php	/^		$coutw=$soap->$funcName($parameters);$/;"	v
+coutw	Common/toolExt.php	/^			$coutw="<span class=\\"icon_refund\\">".isDouble($values)."元<\/span>";$/;"	v
+coutw	Common/toolExt.php	/^			$coutw=$str;\/\/如果是可以强转的，则还是可以被称为整数的$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="&yen;";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="免费";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="单早";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="双早";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="无";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="无早";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw="￥";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$HasBreakfast."早";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$coutw."床";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$dateArray2[0];$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$dateArray3[0];$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$dateArray[0];$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$str.StringFormatNotice."整数";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$str.StringFormatNotice."日期";$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=$str;$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=0;$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=intval($str);$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=strtoupper(md5($str));$/;"	v
+coutw	Common/toolExt.php	/^		$coutw=substr($coutw,0,strlen($coutw)-1);$/;"	v
+coutw	Common/toolExt.php	/^	$coutw= str_replace("\/\/","\/",$coutw);$/;"	v
+coutw	Common/toolExt.php	/^	$coutw= str_replace("人床","",$BedType);$/;"	v
+coutw	Common/toolExt.php	/^	$coutw= str_replace("人床","\/",$BedType);$/;"	v
+coutw	Common/toolExt.php	/^	$coutw= str_replace("床","",$coutw);$/;"	v
+coutw	Common/toolExt.php	/^	$coutw= str_replace("床","\/",$coutw);$/;"	v
+coutw	Common/toolExt.php	/^	$coutw="";$/;"	v
+coutw	Common/toolExt.php	/^	$coutw="收费";$/;"	v
+coutw	Common/toolExt.php	/^	$coutw=$inCurrency;$/;"	v
+coutw	Common/toolExt.php	/^	$coutw=$str;$/;"	v
+currencyTransition	Common/toolExt.php	/^function currencyTransition($inCurrency)$/;"	f
+currencyTransitionFh	Common/toolExt.php	/^function currencyTransitionFh($inCurrency)$/;"	f
+customerleve	Common/toolExt.php	/^				$customerleve=$arrayCE[0]+1;$/;"	v
+data	Common/HttpRequest.php	/^			$data="";$/;"	v
+data	Common/HttpRequest.php	/^	$data = ($data);$/;"	v
+dateArray	Common/toolExt.php	/^		$dateArray=explode("-",$date);$/;"	v
+dateArray2	Common/toolExt.php	/^		$dateArray2=explode("\/",$date);$/;"	v
+dateArray3	Common/toolExt.php	/^		$dateArray3=explode("年",$date);$/;"	v
+days	Common/getDate.php	/^     $days = intval($timediff\/86400);$/;"	v
+deep	Common/operXml.php	/^    $this->deep = 0;$/;"	v
+delete	Common/browseHistoryClass.php	/^	static function delete($name) {$/;"	f
+delete	Common/operXml.php	/^  public function delete($node)  $/;"	f
+deleteListHotel	Common/browseHistoryClass.php	/^	static function deleteListHotel($name,$keys,$maxNum)$/;"	f
+doRequest	Common/commonRequestData.php	/^	public function doRequest(){$/;"	f
+dom	Common/RequestDomXml.php	/^		$dom=new DOMDocument('1.0','UTF-8');$/;"	v
+domain	Common/browseHistoryClass.php	/^		$domain='http:\/\/ctrip.com';$/;"	v
+endtag	Common/operXml.php	/^    $this->endtag = $endtag;$/;"	v
+endtime	Common/getDate.php	/^        $endtime = $begin_time;$/;"	v
+endtime	Common/getDate.php	/^        $endtime = $end_time;$/;"	v
+excption	Common/HttpRequest.php	/^					$this->excption="can not connect to server " . $this->hostname . " on port" . $this->port;return false;$/;"	v
+excption	Common/HttpRequest.php	/^				$this->excption="can not connect to server " . $this->hostname . " on port" . $this->port;return false;$/;"	v
+excption	Common/HttpRequest.php	/^				$this->excption="can not create socket";return false;$/;"	v
+expire	Common/browseHistoryClass.php	/^		$expire =   !empty($expire)?    time()+$expire  : 0;$/;"	v
+expire	Common/browseHistoryClass.php	/^		$expire=300000;$/;"	v
+extralen	Common/HttpRequest.php	/^			$extralen = $extralen [1];$/;"	v
+extralen	Common/HttpRequest.php	/^			$extralen = unpack ( 'v', substr ( $data, 10, 2 ) );$/;"	v
+extralen	Common/HttpRequest.php	/^		$extralen = 0;$/;"	v
+filenamelen	Common/HttpRequest.php	/^		$filenamelen = 0;$/;"	v
+filterHtmls	Common/toolExt.php	/^function filterHtmls($str)$/;"	f
+flags	Common/HttpRequest.php	/^		$flags = ord ( substr ( $data, 3, 1 ) );$/;"	v
+fp	Common/HttpRequest.php	/^	private $fp=0,$_buffer="",$responseBody,$responseHeader,$timeout=0,$useSocket;$/;"	v
+fp	Common/operXml.php	/^    $fp = @fopen($xmlFile,"w") or die("创建文件失败：".$xmlFile);$/;"	v
+gbToUtf8	Common/utf8GBTransfer.php	/^function gbToUtf8($str){$/;"	f
+gbToUtf8_bak	Common/HttpRequest.php	/^function gbToUtf8_bak($str){$/;"	f
+get	Common/Session.php	/^	public function get($key,$default=false){$/;"	f
+get	Common/browseHistoryClass.php	/^	static function get($name) {$/;"	f
+getAllResponseHeaders	Common/HttpRequest.php	/^	public function getAllResponseHeaders(){$/;"	f
+getBedTypeName	Common/toolExt.php	/^function getBedTypeName($BedType)$/;"	f
+getBedTypeNameIndex	Common/toolExt.php	/^function getBedTypeNameIndex($BedType)$/;"	f
+getBreakFastName	Common/toolExt.php	/^function getBreakFastName($HasBreakfast)$/;"	f
+getChildByTag	Common/operXml.php	/^  public function getChildByTag($node,$tag)  \/\/ 取得$node节点下标签为$tag的节点$/;"	f
+getChildsByTag	Common/operXml.php	/^  public function getChildsByTag($node,$tag) \/\/ 取得$node节点下标签为$tag的节点，返回节点列表数组$/;"	f
+getDataFromSoap	Common/soapData.php	/^function getDataFromSoap($url,$funcName,$parameters)$/;"	f
+getDateYMD	Common/getDate.php	/^function getDateYMD($linkChar)$/;"	f
+getDateYMDSHM	Common/getDate.php	/^function getDateYMDSHM($linkChar)$/;"	f
+getDateYMD_addDay	Common/getDate.php	/^function getDateYMD_addDay($linkChar,$addDay)$/;"	f
+getGifValue	Common/toolExt.php	/^function getGifValue($startTime,$endTime,$values)$/;"	f
+getHotelIDLastChar	Common/toolExt.php	/^function getHotelIDLastChar($hotelID,$supportNum)$/;"	f
+getHttpTypeName	Common/commonRequestData.php	/^	public function getHttpTypeName()$/;"	f
+getMicrotime	Common/getDate.php	/^function getMicrotime()$/;"	f
+getNodeByProp	Common/operXml.php	/^  public function getNodeByProp() \/\/ 根据属性名称和值取得节点，$/;"	f
+getRequestXML	sdk/API/Flight/D_FlightSearch.php	/^	private  function getRequestXML()$/;"	f
+getResponseBody	Common/HttpRequest.php	/^	public function getResponseBody(){$/;"	f
+getResponseHeader	Common/HttpRequest.php	/^	public function getResponseHeader($key){$/;"	f
+getRightString	Common/rightControl.php	/^function getRightString($AID,$SID,$KEYS,$RequestType)$/;"	f
+getRightStringURL	Common/rightControl.php	/^function getRightStringURL($AID_INPUT,$SID_INPUT,$KEYS,$RequestType)$/;"	f
+getSoapTypeName	Common/commonRequestData.php	/^	public function getSoapTypeName()$/;"	f
+getStarInfo	Common/toolExt.php	/^function getStarInfo($star){$/;"	f
+getWireName	Common/toolExt.php	/^function getWireName($HasWirelessBroadnet,$HasWiredBroadnet)$/;"	f
+getXMLFromReturnString	Common/RequestDomXml.php	/^function getXMLFromReturnString($ReturnString)$/;"	f
+getYearFromDate	Common/toolExt.php	/^function getYearFromDate($date)$/;"	f
+get_D_FlightSearch	sdk/API/Flight/D_FlightSearch.php	/^class get_D_FlightSearch{$/;"	c
+get_class_name	Common/toolExt.php	/^function get_class_name($level,$class){$/;"	f
+gzdecode_1	Common/HttpRequest.php	/^function gzdecode_1 ($data) {$/;"	f
+headerRight	sdk/API/Flight/D_FlightSearch.php	/^		$headerRight=getRightString($AllianceID,$SID,$KEYS,$RequestType);$/;"	v
+headerlen	Common/HttpRequest.php	/^		$headerlen = 10;$/;"	v
+headerlen	Common/HttpRequest.php	/^		$headerlen = strpos ( $data, chr ( 0 ), $headerlen ) + 1;$/;"	v
+headerstr	Common/HttpRequest.php	/^		$headerstr = $this->responseHeader . "\\r\\n";$/;"	v
+headerstr	Common/HttpRequest.php	/^		$headerstr = $this->responseHeader;$/;"	v
+hearder	Common/RequestDomXml.php	/^		$hearder=$xml->Header;$/;"	v
+hostname	Common/HttpRequest.php	/^			$this->hostname=$result[1];$/;"	v
+hotelIDDouble	Common/toolExt.php	/^	$hotelIDDouble=$hotelID\/100.00;$/;"	v
+hotelurl	demo/demo_flightSearch.php	/^		$hotelurl="demo_D_hotelDetail.php?HotelID=".$v->HotelID."&CityID=2&CheckInDate=".$D_FlightSearch->CheckInDate."&CheckOutDate=".$D_FlightSearch->CheckOutDate;$/;"	v
+hotelurl	demo/demo_flightSearch.php	/^	    \/\/ $hotelurl=getNewUrl($hotelurl);\/\/做伪静态,$hotelurl); $/;"	v
+hours	Common/getDate.php	/^     $hours = intval($remain\/3600);$/;"	v
+htmlDecode	Common/toolExt.php	/^function htmlDecode($value,$charset='UTF-8'){$/;"	f
+htmlEncode	Common/toolExt.php	/^function htmlEncode($value,$charset='UTF-8'){$/;"	f
+htmlTransition	Common/toolExt.php	/^function htmlTransition($str)$/;"	f
+httpRequestSoapData	Common/httpRequestData.php	/^function httpRequestSoapData($responseUrl,$requestXML)$/;"	f
+i	demo/demo_flightSearch.php	/^	    $i=$i+1;$/;"	v
+i	demo/demo_flightSearch.php	/^$i=1;$/;"	v
+in	Common/HttpRequest.php	/^			$in = "";$/;"	v
+in	Common/HttpRequest.php	/^			$in = substr ( $in, $lf_pos + 1 );$/;"	v
+in	Common/HttpRequest.php	/^			$in = substr ( $in, $lf_pos + 2 + $chunk_len );$/;"	v
+inputString	Common/toolExt.php	/^		$inputString=htmlspecialchars($inputString);\/\/作HTML的转义$/;"	v
+inputString	Common/toolExt.php	/^		$inputString=sqlFilter($inputString);\/\/作SQL注入的过滤$/;"	v
+intCout	Common/toolExt.php	/^		$intCout=$intCout;$/;"	v
+intCout	Common/toolExt.php	/^		$intCout=10;\/\/后2位为00，和后2位在01--09之间$/;"	v
+intCout	Common/toolExt.php	/^	$intCout=$x[1];$/;"	v
+ip	Common/HttpRequest.php	/^		$ip = ($ip=="" ? $this->hostname : $ip);$/;"	v
+isDouble	Common/toolExt.php	/^function isDouble($str)$/;"	f
+isInt	Common/toolExt.php	/^function isInt($str)$/;"	f
+isSiteConfigPHP	SDK.config.php	/^	$isSiteConfigPHP=true;$/;"	v
+isSiteConfigPHP	SDK.config.php	/^$isSiteConfigPHP=false;$/;"	v
+is_set	Common/browseHistoryClass.php	/^	static function is_set($cookieName) {$/;"	f
+isdate	Common/toolExt.php	/^function isdate($str,$format="Y-m-d"){$/;"	f
+key	Common/HttpRequest.php	/^		$key = str_replace("-","\\-",$key);$/;"	v
+key	Common/operXml.php	/^      $s .= " $key=\\"$value\\"";$/;"	v
+key1	Common/HttpRequest.php	/^			foreach($result as $key1=>$value){$/;"	v
+keyTemp	Common/browseHistoryClass.php	/^					$keyTemp=$keys3;$/;"	v
+keyTemp	Common/browseHistoryClass.php	/^					$keyTemp=$keys;$/;"	v
+keyTemp	Common/browseHistoryClass.php	/^				$keyTemp=$keys2;$/;"	v
+keyTemp	Common/browseHistoryClass.php	/^				$keyTemp=$keys3;\/\/要保留一个逗号$/;"	v
+keyTemp	Common/browseHistoryClass.php	/^			$keyTemp="";$/;"	v
+keys	Common/HttpRequest.php	/^		foreach($this->_headers as $keys => $value){$/;"	v
+keys1	Common/browseHistoryClass.php	/^			$keys1=",".$keys.",";$/;"	v
+keys2	Common/browseHistoryClass.php	/^			$keys2=",".$keys;$/;"	v
+keys3	Common/browseHistoryClass.php	/^			$keys3=$keys.",";$/;"	v
+lf_pos	Common/HttpRequest.php	/^		$lf_pos = strpos ( $in, "\\012" );$/;"	v
+main	sdk/API/Flight/D_FlightSearch.php	/^	function main(){$/;"	f
+method	Common/HttpRequest.php	/^		$this->method = strtoupper($method);$/;"	v
+mins	Common/getDate.php	/^     $mins = intval($remain\/60);$/;"	v
+move	Common/operXml.php	/^  public function move($dstNode,$srcNode) $/;"	f
+myhttp	Common/httpRequestData.php	/^		$myhttp = new HttpRequest($responseUrl."?WSDL","POST");$/;"	v
+name	Common/Session.php	/^		$name=$this->constructUnionSessionName($key);		 $/;"	v
+name	Common/Session.php	/^		$name=$this->constructUnionSessionName($key);$/;"	v
+node	Common/operXml.php	/^      $node = $this->_getNodeByProp($node,$args[0],$args[$i]);$/;"	v
+node	Common/operXml.php	/^    $node = $this->tree;$/;"	v
+o	Common/operXml.php	/^    $o = new stdClass;$/;"	v
+open	Common/HttpRequest.php	/^	public function open($ip="",$port=-1){$/;"	f
+operXml	Common/operXml.php	/^class operXml$/;"	c
+out	Common/HttpRequest.php	/^	$out = "";$/;"	v
+p	Common/operXml.php	/^    $p = $node->p;$/;"	v
+p1	Common/HttpRequest.php	/^		$p1 = strpos($this->_buffer,"\\r\\n\\r\\n");$/;"	v
+p2	Common/HttpRequest.php	/^		$p2=strpos($this->_buffer,"<?xml");\/\/第一次出现XML标记的位置$/;"	v
+pList	Common/operXml.php	/^    $this->pList = array($this->tree);$/;"	v
+parameters	Common/commonRequestData.php	/^			$parameters=array("requestXML"=>$this->requestXML);$/;"	v
+paravalues	sdk/API/Flight/D_FlightSearch.php	/^		$paravalues=<<<BEGIN$/;"	v
+parse	Common/operXml.php	/^  public function parse($xmlStr="",$endtag=true) $/;"	f
+parser	Common/operXml.php	/^    $this->parser = xml_parser_create();$/;"	v
+parser	Common/operXml.php	/^  var $parser;$/;"	v
+path	Common/browseHistoryClass.php	/^		$path='\/';$/;"	v
+port	Common/HttpRequest.php	/^		$port = ($port==-1 ? $this->port : $port);$/;"	v
+pos	Common/browseHistoryClass.php	/^						$pos=strpos($RecentlyGoods,",")+1; \/\/第一个参数的起始位置$/;"	v
+protocol	Common/HttpRequest.php	/^			$this->protocol="http";$/;"	v
+r_end	Common/httpRequestData.php	/^		$r_end=<<<BEGIN$/;"	v
+r_head	Common/httpRequestData.php	/^		$r_head=<<<BEGIN$/;"	v
+redirect	Common/toolExt.php	/^function redirect($url){$/;"	f
+registerScript	Common/toolExt.php	/^function registerScript($script){	 $/;"	f
+remain	Common/getDate.php	/^     $remain = $remain%3600;$/;"	v
+remain	Common/getDate.php	/^     $remain = $timediff%86400;$/;"	v
+remove	Common/Session.php	/^	public function remove($key){$/;"	f
+removeRequestHeader	Common/HttpRequest.php	/^	public function removeRequestHeader($key){$/;"	f
+requestType	Common/commonRequestData.php	/^	var $requestType=null;\/\/在config.php文件中配置的请求模式常量$/;"	v
+requestURL	Common/commonRequestData.php	/^	var $requestURL=null;$/;"	v
+requestXML	Common/commonRequestData.php	/^	var $requestXML=null;$/;"	v
+requestXML	Common/httpRequestData.php	/^		$requestXML=$r_head.$requestXML.$r_end;$/;"	v
+requestXML	Common/httpRequestData.php	/^		$requestXML=str_replace("<",@"&lt;",$requestXML);$/;"	v
+requestXML	Common/httpRequestData.php	/^		$requestXML=str_replace(">",@"&gt;",$requestXML);$/;"	v
+requestXML	sdk/API/Flight/D_FlightSearch.php	/^			$requestXML=$this->getRequestXML();$/;"	v
+res	Common/getDate.php	/^     $res = array("day" => $days,"hour" => $hours,"min" => $mins,"sec" => $secs);$/;"	v
+responseBody	Common/HttpRequest.php	/^				$this->responseBody = substr($this->_buffer,$p1+4);$/;"	v
+responseBody	Common/HttpRequest.php	/^		$this->responseBody="";\/\/有Header的返回体$/;"	v
+responseBodyWithoutHeader	Common/HttpRequest.php	/^				$this->responseBodyWithoutHeader = substr($this->_buffer,$p2-1);$/;"	v
+responseBodyWithoutHeader	Common/HttpRequest.php	/^		$this->responseBodyWithoutHeader="";\/\/没有header的XML$/;"	v
+responseBodys	Common/httpRequestData.php	/^		$responseBodys=$myhttp->getResponseBody();\/\/这里有可能有HEAD，要判断一下$/;"	v
+responseEnd	Common/httpRequestData.php	/^		$responseEnd=<<<begin$/;"	v
+responseHead	Common/httpRequestData.php	/^		$responseHead=<<<begin$/;"	v
+responseHeader	Common/HttpRequest.php	/^			$this->responseHeader = substr($this->_buffer,0,$p1);$/;"	v
+responseHeader	Common/HttpRequest.php	/^		$this->responseHeader="";$/;"	v
+responseXML	Common/commonRequestData.php	/^		$this->responseXML=$responseXmlTemp;$/;"	v
+responseXML	Common/commonRequestData.php	/^	var $responseXML=null;$/;"	v
+responseXmlTemp	Common/commonRequestData.php	/^			$responseXmlTemp=$responseXmlTemp->RequestResult;$/;"	v
+responseXmlTemp	Common/commonRequestData.php	/^			$responseXmlTemp=getDataFromSoap($this->requestURL."?WSDL","Request",$parameters);$/;"	v
+responseXmlTemp	Common/commonRequestData.php	/^			$responseXmlTemp=httpRequestSoapData($this->requestURL,$this->requestXML);$/;"	v
+responseXmlTemp	Common/commonRequestData.php	/^			$responseXmlTemp=null;$/;"	v
+responseXmlTemp	Common/commonRequestData.php	/^		$responseXmlTemp="";\/\/保存临时的返回结果$/;"	v
+resultCode	Common/RequestDomXml.php	/^			$resultCode=$hearder["ResultCode"];$/;"	v
+returnXML	demo/demo_flightSearch.php	/^$returnXML=$D_FlightSearch->ResponseXML;\/\/返回的数据是一个XML$/;"	v
+returnXML	sdk/API/Flight/D_FlightSearch.php	/^			$returnXML=$commonRequestDo->responseXML;$/;"	v
+returnXMLDataForList	demo/demo_flightSearch.php	/^$returnXMLDataForList=$returnXML ->DomesticHotelList->HotelDataList;$/;"	v
+returnstr	Common/HttpRequest.php	/^			$returnstr = substr($returnstr,0,strlen($returnstr)-2);$/;"	v
+returnstr	Common/HttpRequest.php	/^			$returnstr="";$/;"	v
+root	Common/operXml.php	/^      $this->root = $this->tree->children[0];$/;"	v
+root	Common/operXml.php	/^      $this->root = NULL;$/;"	v
+root	Common/operXml.php	/^    $this->root = $this->addChild($this->tree,$tag);$/;"	v
+rs	Common/operXml.php	/^    $rs = array();$/;"	v
+s	Common/operXml.php	/^    $s = "";$/;"	v
+s	Common/operXml.php	/^    $s = $space."<".$treeNode->tag;$/;"	v
+s_str	Common/HttpRequest.php	/^			$s_str="?";$/;"	v
+s_str	Common/HttpRequest.php	/^			if(strpos($this->uri,"?")>0) $s_str = "&";$/;"	v
+save	Common/operXml.php	/^  public function save($xmlFile)  $/;"	f
+sc_pos	Common/HttpRequest.php	/^		$sc_pos = strpos ( $chunk_hex, ';' );$/;"	v
+secs	Common/getDate.php	/^     $secs = $remain%60;$/;"	v
+send	Common/HttpRequest.php	/^	public function send($data=""){$/;"	f
+senddata	Common/HttpRequest.php	/^		$senddata=$this->method . " " . $this->uri . " HTTP\/1.1\\r\\n";$/;"	v
+set	Common/Session.php	/^	public function set($key,$value){$/;"	f
+set	Common/browseHistoryClass.php	/^	static function set($name,$value,$expire=300000) {$/;"	f
+setListHotel	Common/browseHistoryClass.php	/^	static function setListHotel($name,$id,$maxNum){$/;"	f
+setRequestHeader	Common/HttpRequest.php	/^	public function setRequestHeader($key,$value=""){$/;"	f
+setTimeout	Common/HttpRequest.php	/^	public function setTimeout($timeout=0){$/;"	f
+showMsg	Common/toolExt.php	/^function showMsg($content){	 $/;"	f
+soap	Common/soapData.php	/^	$soap=new SoapClient($url);$/;"	v
+space	Common/operXml.php	/^    $space = "";$/;"	v
+space	Common/operXml.php	/^    $space = str_pad($s,$treeNode->level*2," ",STR_PAD_LEFT);$/;"	v
+sqlFilter	Common/toolExt.php	/^function sqlFilter($str)$/;"	f
+star	Common/toolExt.php	/^		$star="五星级";$/;"	v
+star	Common/toolExt.php	/^	$star="三星级";$/;"	v
+star	Common/toolExt.php	/^	$star="二星级及以下";$/;"	v
+star	Common/toolExt.php	/^	$star="四星级";$/;"	v
+star	Common/toolExt.php	/^	}else{  $star=$/;"	v
+starttime	Common/getDate.php	/^        $starttime = $begin_time;$/;"	v
+starttime	Common/getDate.php	/^        $starttime = $end_time;$/;"	v
+status	Common/HttpRequest.php	/^			$this->status = intval($result[2]);$/;"	v
+statusText	Common/HttpRequest.php	/^			$this->statusText = $result[3];$/;"	v
+str	Common/toolExt.php	/^				$str=substr($str,3);$/;"	v
+str	Common/toolExt.php	/^			$str=substr($str,$lengths);$/;"	v
+str	Common/toolExt.php	/^			$str=substr($str,1);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace(" ","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("&amp;","&",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("&gt;",">",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("&lt;","<",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("&quot;","\\"",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("'","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("=","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("\\"","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("and","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("char","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("chr","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("count","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("create","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("declare","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("delete","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("execute","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("insert","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("master","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("mid","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("or","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("select","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("truncate","",$str);$/;"	v
+str	Common/toolExt.php	/^		$str = str_replace("update","",$str);$/;"	v
+str	Common/toolExt.php	/^	$str =implode("-",$newArr);$/;"	v
+str	Common/toolExt.php	/^	$str="二星级";$/;"	v
+str	Common/toolExt.php	/^	$str=str_replace("<\/b>",",",$str);$/;"	v
+str	Common/toolExt.php	/^	$str=str_replace("<b>",",",$str);$/;"	v
+strArr	Common/toolExt.php	/^	$strArr = explode("-",$str);$/;"	v
+strSubstr	Common/toolExt.php	/^function strSubstr($str,$lengths)$/;"	f
+supportNum	Common/toolExt.php	/^		$supportNum=0;$/;"	v
+supportNum	Common/toolExt.php	/^	$supportNum=$intCout+$supportNum;$/;"	v
+tag_close	Common/operXml.php	/^  public function tag_close($parser, $tag)$/;"	f
+tag_open	Common/operXml.php	/^  public function tag_open($parser, $tag, $attributes) $/;"	f
+temp_str	Common/toolExt.php	/^		$temp_str=substr($str,0,1);$/;"	v
+timeToSecond	Common/getDate.php	/^function timeToSecond($datatime)$/;"	f
+timediff	Common/getDate.php	/^     $timediff = $endtime-$starttime;$/;"	v
+timediff	Common/getDate.php	/^function timediff($begin_time,$end_time)$/;"	f
+timeout	Common/HttpRequest.php	/^		$this->timeout = $timeout;$/;"	v
+timestart	Common/HttpRequest.php	/^			$timestart = time();$/;"	v
+tmp_ip	Common/toolExt.php	/^		$tmp_ip = explode( ",", $REMOTE_ADDR );$/;"	v
+transfer_encoding_chunked_decode	Common/HttpRequest.php	/^function transfer_encoding_chunked_decode($in) {$/;"	f
+traversalNodeToXml	Common/operXml.php	/^  private function traversalNodeToXml($treeNode,$endtag)$/;"	f
+tree	Common/operXml.php	/^    $this->tree = new stdClass;$/;"	v
+unixTime	Common/toolExt.php	/^	$unixTime=strtotime($str);$/;"	v
+unpacked	Common/HttpRequest.php	/^		$unpacked = $data;$/;"	v
+unpacked	Common/HttpRequest.php	/^		$unpacked = @gzinflate ( substr ( $data, $headerlen ) );$/;"	v
+uri	Common/HttpRequest.php	/^				$this->uri="\/";$/;"	v
+uri	Common/HttpRequest.php	/^			$this->uri="\/" . $result[4];$/;"	v
+url	Common/HttpRequest.php	/^		$this->url = $url;$/;"	v
+url	Common/HttpRequest.php	/^		$url = $this->url;$/;"	v
+useSocket	Common/HttpRequest.php	/^		$this->useSocket = $useSocket;$/;"	v
+utf8ToGB	Common/utf8GBTransfer.php	/^function utf8ToGB($str){$/;"	f
+utf8ToGB_bak	Common/HttpRequest.php	/^function utf8ToGB_bak($str){$/;"	f
+utf_substr	Common/toolExt.php	/^function utf_substr($str,$len)$/;"	f
+val	Common/toolExt.php	/^			$val="0".$val;$/;"	v
+value	Common/browseHistoryClass.php	/^		$value   =  base64_encode(serialize($value));$/;"	v
+value	Common/browseHistoryClass.php	/^		$value   =  unserialize(base64_decode($value));$/;"	v
+value	Common/browseHistoryClass.php	/^		$value   = $_COOKIE[$name];$/;"	v
+x	Common/toolExt.php	/^	$x=explode(".",$hotelIDDouble);$/;"	v
+xml	Common/RequestDomXml.php	/^		$xml = simplexml_import_dom($dom);$/;"	v
+xmlStr	Common/operXml.php	/^    $this->xmlStr = $xmlStr;$/;"	v

@@ -101,7 +101,6 @@ class get_D_FlightSearch{
 		$RequestType="OTA_FlightSearch";
 		//构造权限头部
 		$headerRight=getRightString($AllianceID,$SID,$KEYS,$RequestType);
-		echo $headerRight;
 		$SearchType="";
 		if($this->SearchType!=""){
 			$SearchType=<<<BEGIN
@@ -146,10 +145,10 @@ BEGIN;
 <ArrivePort>$this->ArrivePort</ArrivePort>
 BEGIN;
 		}
-		$EaliestDepartTime="";
-		if($this->EaliestDepartTime!=""){
-			$EaliestDepartTime=<<<BEGIN
-<EaliestDepartTime>$this->EaliestDepartTime</EaliestDepartTime>
+		$EarliestDepartTime="";
+		if($this->EarliestDepartTime!=""){
+			$EarliestDepartTime=<<<BEGIN
+<EarliestDepartTime>$this->EarliestDepartTime</EarliestDepartTime>
 BEGIN;
 		}
 		$LatestDepartTime="";
@@ -169,27 +168,27 @@ BEGIN;
 <SendTicketCity>$this->SendTicketCity</SendTicketCity>
 BEGIN;
 		}
-		$IsSimpleResponses="";
+		$IsSimpleResponse="";
 		if($this->IsSimpleResponse!=""){
-			$IsSimpleResponses=<<<BEGIN
+			$IsSimpleResponse=<<<BEGIN
 <IsSimpleResponse>$this->IsSimpleResponse</IsSimpleResponse>
 BEGIN;
 		}
-		$IsLowestPrices="";
+		$IsLowestPrice="";
 		if($this->IsLowestPrice!=""){
-			$IsLowestPrices=<<<BEGIN
+			$IsLowestPrice=<<<BEGIN
 <IsLowestPrice>$this->IsLowestPrice</IsLowestPrice>
 BEGIN;
 		}
-		$LatestDepartTimeOptionss="";
+		$LatestDepartTimeOptions="";
 		if($this->LatestDepartTimeOptions!=""){
-			$LatestDepartTimeOptionss=<<<BEGIN
+			$LatestDepartTimeOptions=<<<BEGIN
 <LatestDepartTimeOptions>$this->LatestDepartTimeOptions</LatestDepartTimeOptions>
 BEGIN;
 		}
-		$ProductTypeOptionss="";
+		$ProductTypeOptions="";
 		if($this->ProductTypeOptions!=""){
-			$ProductTypeOptionss=<<<BEGIN
+			$ProductTypeOptions=<<<BEGIN
 <ProductTypeOptions>$this->ProductTypeOptions</ProductTypeOptions>
 BEGIN;
 		}
@@ -199,19 +198,19 @@ BEGIN;
 <Classgrade>$this->Classgrade</Classgrade>
 BEGIN;
 		}
-		$OrderBys="";
+		$OrderBy="";
 		if($this->OrderBy!=""){
-			$OrderBys=<<<BEGIN
+			$OrderBy=<<<BEGIN
 <OrderBy>$this->OrderBy</OrderBy>
 BEGIN;
 		}
-		$Directions="";
+		$Direction="";
 		if($this->Direction!=""){
-			$Directions=<<<BEGIN
+			$Direction=<<<BEGIN
 <Direction>$this->Direction</Direction>
 BEGIN;
 		}
-		$paravalues=<<<BEGIN
+		$paravalue=<<<BEGIN
 <?xml version="1.0"?>
 <Request>
 <Header $headerRight/>
@@ -219,7 +218,7 @@ BEGIN;
 </Request>
 BEGIN;
 
-		return  $paravalues;
+		return  $paravalue;
 	}
 
 	function main(){
@@ -235,6 +234,7 @@ BEGIN;
 			//print_r($commonRequestDo);die;
 // echo json_encode($returnXML);die;//校验请求数据-临时用
 			//调用Common/RequestDomXml.php中函数解析返回的XML
+//			echo $returnXML;
 			$this->ResponseXML=getXMLFromReturnString($returnXML);
 		}
 		catch(Exception $e)
