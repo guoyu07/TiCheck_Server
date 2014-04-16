@@ -52,12 +52,14 @@ CREATE TABLE IF NOT EXISTS `Subscription` (
 
 CREATE TABLE IF NOT EXISTS `TiUser` (
   `ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `Account` varchar(64) COLLATE utf8_bin NOT NULL,
+  `Account` varchar(64) COLLATE utf8_bin DEFAULT NULL,
   `Password` varchar(64) COLLATE utf8_bin NOT NULL,
-  `Email` varchar(320) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`Account`),
-  UNIQUE KEY `ID` (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
+  `Email` varchar(320) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+  `Timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`Email`),
+  UNIQUE KEY `ID` (`ID`),
+  KEY `Account` (`Account`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
