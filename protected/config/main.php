@@ -54,10 +54,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		 */
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=TiCheck',
+			'connectionString' => 'mysql:host=10.60.41.52;dbname=TiCheck',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'tac',
+			'password' => 'tongjiappleclub',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(

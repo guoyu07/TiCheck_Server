@@ -11,16 +11,22 @@ class CreateController extends Controller
 	{
 		if (isset($_POST['User']))
 		{
+			echo "begin";
+/*
+			if ($_POST['User'])==NULL)
+			{
+				echo "User null";
+			}
+*/
 			$user = json_decode($_POST['User']);
-			//echo var_dump($user);
+			echo var_dump($user);
 
 			if (!$this->verifyInfo($user))
 			{
-				//echo "user ok";			
+				echo "user erro";			
 				return false;
 			}
 			$tiUser = new TiUser;
-//			$tiUser->attributes = array($user);
 			foreach ($user as $name=>$value)
 			{
 				$tiUser->$name = $value;
@@ -34,7 +40,7 @@ class CreateController extends Controller
 			}
 			catch(Exception $e)
 			{
-				echo "save to database wrong". $e->getMessage();
+				throw new CDbException($e->getMessage());
 				return false;
 			}
 
@@ -43,6 +49,7 @@ class CreateController extends Controller
 		}
 		else
 		{
+			throw new CDException("no user");
 			echo "no user posted";
 			return false;
 		}
@@ -56,6 +63,8 @@ class CreateController extends Controller
 			    echo "This ($email) email address is considered valid.<br>";
 				return true;
 		}
+		echo "email not valid";
+		return false;
 	}
 
 	private function verifyAccount($account)
@@ -93,10 +102,12 @@ class CreateController extends Controller
 
 	private function verifyInfo($user)
 	{
-		$email = $user->Email;
 		if (!$this->verifyAccount($user->Account))
+		{
+			echo "wrong account";
 			return false;
-		if (!$this->verifyEmail($email))
+		}
+		if (!$this->verifyEmail($user->Email))
 			return false;
 		if (!$this->verifyPassword($user->Password))
 			return false;

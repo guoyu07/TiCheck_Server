@@ -1014,6 +1014,7 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/TiCheck_Server/index.php?r=User/modify/account
 ---
+<<<<<<< HEAD
 2014/04/16 12:36:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php:286
 Stack trace:
 #0 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
@@ -1169,4 +1170,370 @@ Stack trace:
 #2 /Library/WebServer/Documents/TiCheck_Server/index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/TiCheck_Server/index.php?r=userSubscription
+=======
+2014/04/16 20:42:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/create".' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('user/create')
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/server/index.php?r=user/create
+---
+2014/04/16 20:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Subscription".' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('Subscription')
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/server/index.php?r=Subscription
+---
+2014/04/16 20:42:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "subscription".' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('subscription')
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/server/index.php?r=subscription
+---
+2014/04/16 20:42:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 20:46:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 20:46:20 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 21:10:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:13:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:22:16 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:37:29 [error] [php] Undefined property: stdClass::$Email (/Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php:102)
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CreateController->runAction()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CreateController->runActionWithFilters()
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CreateController->run()
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CWebApplication->run()
+REQUEST_URI=/server/index.php?r=User/create
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (102)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (23)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:40:08 [error] [php] Undefined property: stdClass::$Email (/Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php:103)
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CreateController->runAction()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CreateController->runActionWithFilters()
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CreateController->run()
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CWebApplication->run()
+REQUEST_URI=/server/index.php?r=User/create
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (103)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (24)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:41:07 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:41:09 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:41:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:41:26 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:41:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:41:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:41:55 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:44:07 [error] [php] Undefined property: stdClass::$Email (/Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php:103)
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CreateController->runAction()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CreateController->runActionWithFilters()
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CreateController->run()
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CWebApplication->run()
+REQUEST_URI=/server/index.php?r=User/create
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (103)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (24)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:44:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:47:17 [error] [php] Undefined property: stdClass::$Email (/Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php:103)
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CreateController->runAction()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CreateController->runActionWithFilters()
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CreateController->run()
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CWebApplication->run()
+REQUEST_URI=/server/index.php?r=User/create
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (103)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (24)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:47:51 [error] [php] Undefined property: stdClass::$Email (/Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php:103)
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CreateController->runAction()
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CreateController->runActionWithFilters()
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CreateController->run()
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CWebApplication->run()
+REQUEST_URI=/server/index.php?r=User/create
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (103)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (24)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:52:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:53:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:56:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:57:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:59:37 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'xxx@sina.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `TiUser` (`Password`, `Email`, `Account`) VALUES (:yp0, :yp1, :yp2).
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (40)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:59:37 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 22:59:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'xxx@sina.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `TiUser` (`Password`, `Email`, `Account`) VALUES (:yp0, :yp1, :yp2).
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (40)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 22:59:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 23:04:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'rxx@sina.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `TiUser` (`Password`, `Email`, `Account`) VALUES (:yp0, :yp1, :yp2).
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (39)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 23:04:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'rxx@sina.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `TiUser` (`Password`, `Email`, `Account`) VALUES (:yp0, :yp1, :yp2)' in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php:43
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#7 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/04/16 23:05:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'rxx@sina.com' for key 'PRIMARY'. The SQL statement executed was: INSERT INTO `TiUser` (`Password`, `Email`, `Account`) VALUES (:yp0, :yp1, :yp2).
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/protected/modules/User/controllers/CreateController.php (39)
+in /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php (13)
+2014/04/16 23:05:19 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php:336
+Stack trace:
+#0 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#2 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#4 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#5 /Library/Server/Web/Data/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/server/index.php?r=User/create
 ---
