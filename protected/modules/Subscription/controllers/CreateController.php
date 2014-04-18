@@ -2,6 +2,8 @@
 
 class CreateController extends Controller
 {
+	private $_subs;
+	private $_user;
 	/*
 	public function actionIndex()
 	{
@@ -13,47 +15,90 @@ class CreateController extends Controller
 	{
 		if (isset($_POST['Subscription']) && isset($_POST['User']))
 		{
-			$subs = json_decode($_POST['Subscription']);
-			$user = json_decode($_POST['User']);
-			//echo var_dump($subs);
+			// subscription
+			$this->prepareSubscription();
 
-			if ($subs->DepartCity == NULL ||
-				$subs->ArriveCity == NULL ||
-				$subs->StartDate == NULL ||
-				$subs->EndDate == NULL)
-			{
-				echo "not enough data";
-				return false;
-			}
+			// user
+			$this->prepareUser();
 
-			$tiSubs = new Subscription;
-//			$tiSubs->attributes = array($subs);
-			foreach ($subs as $name=>$value)
-			{
-				$tiSubs->$name = $value;
-			}
- 
-
-			echo $tiSubs->DepartCity;
-			try
-			{
-				$tiSubs->save();
-			}
-			catch(Exception $e)
-			{
-				echo "save to database wrong". $e->getMessage();
-				return false;
-			}
-
-			echo "create tiSubs record<br>";
-			return true;
+			// modify database
+			$this->createRelation();
 		}
 		else
 		{
-			echo "no subs posted";
-			return false;
+			throw new CDException("post variable not enough");
 		}
 	}
+
+	private function prepareSubscription()
+	{
+		$subs = json_decode($_POST['Subscription'], true);
+		//echo var_dump($subs);
+
+		if ($subs['DepartCity'] == NULL ||
+			$subs['ArriveCity'] == NULL ||
+			$subs['StartDate'] == NULL ||
+			$subs['EndDate'] == NULL
+			)
+		{
+			throw new CDException("not enough data");
+		}
+		
+		$tiSubs = new Subscription;
+		$tiSubs->attributes = $subs;
+		$subs_adp = $tiSubs->search(false);
+		if ($subs_adp->itemCount)
+		{
+			$this->_subs = $subs_adp->getData()[0];
+		}
+		else
+		{
+			// @TO-DO need current price here
+			if (!$tiSubs->save())
+			{
+				throw new CDbException("save subscription failed");
+			}
+			$this->_subs = $tiSubs;
+		}
+	}
+
+	private function prepareUser()
+	{
+		$user = json_decode($_POST['User'], true);
+		if ($user['Email'] == NULL &&
+			$user['Account'] == NULL)
+		{
+			throw new CDException("not enough data");
+		}
+		$tiUser = new TiUser;
+		$tiUser->attributes = $user;
+		$user_adp = $tiUser->search(false);
+		if (!$user_adp->itemCount)
+		{
+			throw new CDException("user info. error");
+		}
+		$this->_user = $user_adp->getData()[0];
+	}
+
+	private function createRelation()
+	{
+		$subs = $this->_subs;
+		$user = $this->_user;
+		echo var_dump($subs);
+		echo var_dump($user);
+		$user_subs = new UserSubscription;
+		$user_subs->ID_user = $user->ID;
+		$user_subs->ID_subscription = $subs->ID;
+		if ($user_subs->save())
+		{
+			echo "saved user_subs<br>";
+		}
+		else
+		{
+			throw new CDbException("failed save");
+		}
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

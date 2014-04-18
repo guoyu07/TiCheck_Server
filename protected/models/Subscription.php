@@ -9,6 +9,7 @@
  * @property string $ArriveCity
  * @property string $StartDate
  * @property string $EndDate
+ * @property string $CurrentPrice
  * @property string $EarliestDepartTime
  * @property string $LatestDepartTime
  * @property integer $PriceLimit
@@ -38,14 +39,15 @@ class Subscription extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('DepartCity, ArriveCity, StartDate, EndDate', 'required'),
+			array('DepartCity, ArriveCity, StartDate, EndDate, CurrentPrice', 'required'),
 			array('PriceLimit', 'numerical', 'integerOnly'=>true),
+			array('CurrentPrice', 'numerical', 'integerOnly'=>true),
 			array('DepartCity, ArriveCity, ArriveAirport, DepartAirport', 'length', 'max'=>3),
 			array('AirlineDibitCode', 'length', 'max'=>2),
 			array('EarliestDepartTime, LatestDepartTime', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, DepartCity, ArriveCity, StartDate, EndDate, EarliestDepartTime, LatestDepartTime, PriceLimit, AirlineDibitCode, ArriveAirport, DepartAirport', 'safe', 'on'=>'search'),
+			array('ID, DepartCity, ArriveCity, StartDate, EndDate, CurrentPrice, EarliestDepartTime, LatestDepartTime, PriceLimit, AirlineDibitCode, ArriveAirport, DepartAirport', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,6 +75,7 @@ class Subscription extends CActiveRecord
 			'ArriveCity' => 'Arrive City',
 			'StartDate' => 'Start Date',
 			'EndDate' => 'End Date',
+			'CurrentPrice' => 'Current Price',
 			'EarliestDepartTime' => 'Earliest Depart Time',
 			'LatestDepartTime' => 'Latest Depart Time',
 			'PriceLimit' => 'Price Limit',
@@ -91,27 +94,29 @@ class Subscription extends CActiveRecord
 	 * models according to data in model fields.
 	 * - Pass data provider to CGridView, CListView or any similar widget.
 	 *
+	 * @param Bool whether user LIKE or not
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-	public function search()
+	public function search($exact=true)
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ID',$this->ID,true);
-		$criteria->compare('DepartCity',$this->DepartCity,true);
-		$criteria->compare('ArriveCity',$this->ArriveCity,true);
-		$criteria->compare('StartDate',$this->StartDate,true);
-		$criteria->compare('EndDate',$this->EndDate,true);
-		$criteria->compare('EarliestDepartTime',$this->EarliestDepartTime,true);
-		$criteria->compare('LatestDepartTime',$this->LatestDepartTime,true);
+//		$criteria->compare('ID',$this->ID,$exact);
+		$criteria->compare('DepartCity',$this->DepartCity,$exact);
+		$criteria->compare('ArriveCity',$this->ArriveCity,$exact);
+		$criteria->compare('StartDate',$this->StartDate,$exact);
+		$criteria->compare('EndDate',$this->EndDate,$exact);
+		$criteria->compare('CurrentPrice',$this->CurrentPrice,$exact);
+		$criteria->compare('EarliestDepartTime',$this->EarliestDepartTime,$exact);
+		$criteria->compare('LatestDepartTime',$this->LatestDepartTime,$exact);
 		$criteria->compare('PriceLimit',$this->PriceLimit);
-		$criteria->compare('AirlineDibitCode',$this->AirlineDibitCode,true);
-		$criteria->compare('ArriveAirport',$this->ArriveAirport,true);
-		$criteria->compare('DepartAirport',$this->DepartAirport,true);
-
+		$criteria->compare('AirlineDibitCode',$this->AirlineDibitCode,$exact);
+		$criteria->compare('ArriveAirport',$this->ArriveAirport,$exact);
+		$criteria->compare('DepartAirport',$this->DepartAirport,$exact);
+ 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
