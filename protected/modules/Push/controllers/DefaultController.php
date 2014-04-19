@@ -1,11 +1,17 @@
 <?php
 include_once ('/Library/WebServer/Documents/TiCheck_Server/SDK.config.php');
+include_once ('/Library/WebServer/Documents/TiCheck_Server/Common/getDate.php');
+
 include_once (ABSPATH.'sdk/API/Flight/D_FlightSearch.php');
 
 class DefaultController extends Controller
 {
 	private $_deviceToken;
 	private $_message;
+//	private $_flight;
+	private $_date;
+	private $_price=NULL;
+
 	public function actionIndex()
 	{
 		// push
@@ -21,7 +27,7 @@ class DefaultController extends Controller
 		////////////////////////////////////////////////////////////////////////////////
 
 		$ctx = stream_context_create();
-		stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
+		stream_context_set_option($ctx, 'ssl', 'local_cert', '/Library/WebServer/Documents/TiCheck_Server/ck.pem');
 		stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 		// Open a connection to the APNS server
@@ -37,12 +43,12 @@ class DefaultController extends Controller
 
 		// Create the payload body
 		$body['aps'] = array(
-			'alert' => $message,
+			'alert' => urlencode($message),
 			'sound' => 'default'
 			);
 
 		// Encode the payload as JSON
-		$payload = json_encode($body);
+		$payload = urldecode(json_encode($body));
 
 		// Build the binary notification
 		$msg = chr(0) . pack('n', 32) . pack('H*', $deviceToken) . pack('n', strlen($payload)) . $payload;
@@ -64,43 +70,114 @@ class DefaultController extends Controller
 	public function actionSearch()
 	{
 		//echo dirname(__FILE__);
-		$array_subs = Subscription::model()->findALl();
+		$array_subs = Subscription::model()->with('userSubscriptions')->findALl();
+		var_dump($array_subs);
 		foreach ($array_subs as $subs)
 		{
 			//echo var_dump($subs);
-			echo "xxxxxxxxxxxxxxxx<br>";
+			//echo "xxxxxxxxxxxxxxxx<br>";
 			$this->searchFlight($subs);
+			$this->createHistoryPrice($subs, (int)$this->_price);
+			$isModified = $this->modifySubscription($subs, (int)$this->_price);
+			if ($isModified)
+			{
+				$array_user_subs = $subs->userSubscriptions;
+				foreach ($array_user_subs as $user_subs)
+				{
+					$tiUser = $user_subs->iDUser;
+					if ($this->_price < $user_subs->PriceLimit || $user_subs->PriceLimit == NULL)
+					{
+						$user_devices = $tiUser->userDevices;
+						foreach ($user_devices as $user_device)
+						{
+							$this->_deviceToken = $user_device->Device_token;
+							$this->_deviceToken = "70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7";
+							//$this->_message = "asdf";
+							$this->_message = "您订阅的{$subs->DepartCity}至{$subs->ArriveCity}价格已更新至{$this->_price}";
+							$this->actionIndex();
+						}
+					}
+				}
+			}
 		}
 	}
 	
 	private function searchFlight(Subscription $subs)
 	{
-		$D_FlightSearch=new get_D_FLightSearch();
-		$D_FlightSearch->DepartCity=$subs->DepartCity;
-		$D_FlightSearch->ArriveCity=$subs->ArriveCity;
-		$D_FlightSearch->DepartDate=$subs->StartDate;
-		//$D_FlightSearch->EarliestDepartTime=$subs->EarliestDepartTime;
-		//$D_FlightSearch->LatestDepartTime=$subs->LatestDepartTime;
-		//$D_FlightSearch->AirlineDibitCode=$subs->AirlineDibitCode;
-		$D_FlightSearch->IsLowestPrice="true";
-		$D_FlightSearch->OrderBy="Price";
-		$D_FlightSearch->main();
-		$returnXML=$D_FlightSearch->ResponseXML;//返回的数据是一个XML
-		//可以将返回的数据直接用json转换一下，打印出来，方便查看节点名称和数据
-		//echo  json_encode($returnXML);
-		//echo $returnXML->DomesticFlightData;
-		//echo json_encode($returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->RecordCount);
-		//var_dump($returnXML);
-		$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
-		//echo $flights[0]->Price;
-
-		$price = $flights[0]->Price;
-		if ($price != $subs->CurrentPrice)
+		$date = new DateTime($subs->StartDate);
+		$endDate = $subs->EndDate;
+		while ($date->format('Y-m-d') != $endDate)
 		{
-			$subs->CurrentPrice = $flights[0]->Price;
-			$subs->save();
+			$D_FlightSearch=new get_D_FLightSearch();
+			$D_FlightSearch->DepartCity=$subs->DepartCity;
+			$D_FlightSearch->ArriveCity=$subs->ArriveCity;
+			$D_FlightSearch->DepartDate=$date->format('Y-m-d');
+			//$D_FlightSearch->EarliestDepartTime=$subs->EarliestDepartTime;
+			//$D_FlightSearch->LatestDepartTime=$subs->LatestDepartTime;
+			//$D_FlightSearch->AirlineDibitCode=$subs->AirlineDibitCode;
+			$D_FlightSearch->IsLowestPrice="true";
+			$D_FlightSearch->OrderBy="Price";
+			$D_FlightSearch->main();
+			$returnXML=$D_FlightSearch->ResponseXML;//返回的数据是一个XML
+			//可以将返回的数据直接用json转换一下，打印出来，方便查看节点名称和数据
+			//echo  json_encode($returnXML);
+			//echo $returnXML->DomesticFlightData;
+			//echo json_encode($returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->RecordCount);
+			//var_dump($returnXML);
+			$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
+			
+			if ($this->_price > $flights[0]->Price || $this->_price==NULL)
+			{
+				$this->_price = $flights[0]->Price;	
+				$this->_date = $date;
+			}
+			$date->add(new DateInterval('P1D'));
 		}
 		//echo json_encode($flights);
+	}
+
+	private function createHistoryPrice(Subscription $subs, $price)
+	{
+		$date = getDateYMD("-");
+		$history_price = HistoryPrice::model()->findByAttributes(array(
+			'ID_subscription'=>$subs->ID,
+			'Date'=>$date
+		));
+		if ($history_price==NULL || $history_price->count()==0)
+		{
+			$history_price = new HistoryPrice;
+			$history_price->ID_subscription = $subs->ID;
+			$history_price->Price = $price;
+			$history_price->Date = $date;
+			if (!$history_price->save())
+				throw new CDbException("update old history_price fail");
+		}
+		else
+		{
+			var_dump($history_price);
+			return;
+			$history_price = $history_price[0];
+			$history_price->Price = ($price < $history_price->Price)?$price:$history_price;
+			if (!$history_price->save())
+				throw new CDbException("save new history_price fail");
+		}
+	}
+
+
+	private function modifySubscription(Subscription $subs, $price)
+	{
+		$old_price = (int)$subs->CurrentPrice;
+
+		if ($price != $old_price)
+		{
+			$subs->CurrentPrice = $price;
+			if (!$subs->save())
+			{
+				throw new CDbException("save new subs failed");
+			}
+			return true;
+		}
+		return false;
 	}
 
 }

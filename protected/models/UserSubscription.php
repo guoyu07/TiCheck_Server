@@ -4,8 +4,10 @@
  * This is the model class for table "User_Subscription".
  *
  * The followings are the available columns in table 'User_Subscription':
+ * @property integer $ID
  * @property string $ID_user
  * @property string $ID_subscription
+ * @property integer $PriceLimit
  *
  * The followings are the available model relations:
  * @property TiUser $iDUser
@@ -30,10 +32,11 @@ class UserSubscription extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('ID_user, ID_subscription', 'required'),
+			array('PriceLimit', 'numerical', 'integerOnly'=>true),
 			array('ID_user, ID_subscription', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID_user, ID_subscription', 'safe', 'on'=>'search'),
+			array('ID, ID_user, ID_subscription, PriceLimit', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,8 +59,10 @@ class UserSubscription extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'ID' => 'ID',
 			'ID_user' => 'Id User',
 			'ID_subscription' => 'Id Subscription',
+			'PriceLimit' => 'Price Limit',
 		);
 	}
 
@@ -79,6 +84,7 @@ class UserSubscription extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
+		$criteria->compare('ID',$this->ID);
 		$criteria->compare('ID_user',$this->ID_user,true);
 		$criteria->compare('ID_subscription',$this->ID_subscription,true);
 
