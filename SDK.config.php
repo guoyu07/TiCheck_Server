@@ -1,6 +1,7 @@
 <?php
 //定义本系统的相对路径根部
-if(!defined(ABSPATH)) {
+if(!defined('ABSPATH') )
+{
 	define('ABSPATH',dirname(__FILE__).'/');
 }
 $isSiteConfigPHP=false;
@@ -21,15 +22,15 @@ if($isSiteConfigPHP&&$SiteAllianceid!=""&&$SiteSid!=""&&$SiteSiteKey!=""&&$SiteA
 else{
 //预置的联盟信息，如果site.config.php中没有配置联盟信息，则用默认的（PHPSDK预置有联盟信息）
 //定义分销联盟的AID
-if(!defined(Allianceid)) {
+if(!defined('Allianceid')) {
 		define('Allianceid','4341');
 }
 //定义分销联盟的SID
-if(!defined(Sid)) {
+if(!defined('Sid')) {
 	define('Sid','439437');
 }
 //定义分销联盟的key
-if(!defined(SiteKey)) {
+if(!defined('SiteKey')) {
 	define('SiteKey','ED2C1865-E81C-424E-A05C-5DEE7DFF92EB');//abcDFG645354
 }
  
@@ -37,81 +38,81 @@ if(!defined(SiteKey)) {
 }
 $ServiceUrlCtripOpenAPI="http://openapi.ctrip.com";
 //定义酒店直接查询接口的URL
-if(!defined(D_HotelSearch_Url)) {
+if(!defined('D_HotelSearch_Url')) {
 	define('D_HotelSearch_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelSearch.asmx');
 }
 //定义酒店详细查询接口的URL
-if(!defined(D_HotelDetail_Url)) {
+if(!defined('D_HotelDetail_Url')) {
 	define('D_HotelDetail_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelDetail.asmx');
 }
 //定义酒店评价接口的URL
-if(!defined(D_HotelCommentList_Url)) {
+if(!defined('D_HotelCommentList_Url')) {
 	define('D_HotelCommentList_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelCommentList.asmx');
 }
 //定义酒店评价接口的URL-带有分页功能
-if(!defined(D_HotelCommentListPage_Url)) {
+if(!defined('D_HotelCommentListPage_Url')) {
 	define('D_HotelCommentListPage_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelCommentListWithPage.asmx');
 }
 
 //定义酒店团购接口的URL
-if(!defined(GroupProductList_Url)) {
+if(!defined('GroupProductList_Url')) {
 	define('GroupProductList_Url',$ServiceUrlCtripOpenAPI.'/tuan/GroupProductList.asmx');
 }
 //定义酒店团购详细接口的URL
-if(!defined(GroupProductInfo_Url)) {
+if(!defined('GroupProductInfo_Url')) {
 	define('GroupProductInfo_Url',$ServiceUrlCtripOpenAPI.'/tuan/GroupProductInfo.asmx');
 }
 //定义酒店订单列表的URL
-if(!defined(D_HotelOrderList_Url)) {
+if(!defined('D_HotelOrderList_Url')) {
 	define('D_HotelOrderList_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelOrderList.asmx');
 }
 //定义酒店订单详细的URL
-if(!defined(D_HotelOrderDetail_Url)) {
+if(!defined('D_HotelOrderDetail_Url')) {
 	define('D_HotelOrderDetail_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelOrderDetail.asmx');
 }
 //定义获取“检查并生成外部UserUniqueID”的URL
-if(!defined(OTA_UserUniqueID_Url)) {
+if(!defined('OTA_UserUniqueID_Url')) {
 	define('OTA_UserUniqueID_Url',$ServiceUrlCtripOpenAPI.'/hotel/OTA_UserUniqueID.asmx');
 }
 
 //定义获取订单取消的URL
-if(!defined(OTA_OrderCancel_Url)) {
+if(!defined('OTA_OrderCancel_Url')) {
 	define('OTA_OrderCancel_Url',$ServiceUrlCtripOpenAPI.'/hotel/OTA_Cancel.asmx');
 }
 
 //定义国内机票查询接口的URL
-if(!defined(OTA_FlightSearch_Url)) {
+if(!defined('OTA_FlightSearch_Url')) {
 	define('OTA_FlightSearch_Url',$ServiceUrlCtripOpenAPI.'/Flight/DomesticFlight/OTA_FlightSearch.asmx');
 }
 //定义测试接口地址
-if(!defined(OTA_Ping_Url)) {
+if(!defined('OTA_Ping_Url')) {
 	define('OTA_Ping_Url',$ServiceUrlCtripOpenAPI.'/Hotel/OTA_Ping.asmx');
 }
 //定义酒店周边信息接口地址
-if(!defined(D_HotelNearbyInfo_Url)) {
+if(!defined('D_HotelNearbyInfo_Url')) {
 	define('D_HotelNearbyInfo_Url',$ServiceUrlCtripOpenAPI.'/Hotel/D_HotelNearbyInfo.asmx');
 }
 //定义酒店点评关键字接口地址
-if(!defined(D_HotelCommentKey_Url)) {
+if(!defined('D_HotelCommentKey_Url')) {
 	define('D_HotelCommentKey_Url',$ServiceUrlCtripOpenAPI.'/Hotel/D_HotelCommentKey.asmx');
 }
 //定义最新热门酒店点评接口地址
-if(!defined(D_HotelHotComment_Url)) {
+if(!defined('D_HotelHotComment_Url')) {
 	define('D_HotelHotComment_Url',$ServiceUrlCtripOpenAPI.'/Hotel/D_HotelHotComment.asmx');
 }
 //定义品牌的城市分布接口地址
-if(!defined(D_GetBrandCityRequest_Url)) {
+if(!defined('D_GetBrandCityRequest_Url')) {
 	define('D_GetBrandCityRequest_Url',$ServiceUrlCtripOpenAPI.'/Hotel/D_GetBrandCityRequest.asmx');
 }
 
 
 //定义本系统的对于API2.0采用的请求模式：httpRequest/soap(如果PHP的服务器上没有开启支持SOAP的功能，则用httpRequest)
-if(!defined(System_RequestType)) {
+if(!defined('System_RequestType')) {
 	define('System_RequestType','httpRequest');//soap  httpRequest
 }
 
 //定义首页团购获取距离今天多少天内的产品
-if(!defined(TuanEndDate_Distance)) {
+if(!defined('TuanEndDate_Distance')) {
 	define('TuanEndDate_Distance','7');
 }
 

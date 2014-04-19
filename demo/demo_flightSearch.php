@@ -4,12 +4,6 @@
 /**
  * 飞机票搜索测试Demo
  */
-set_time_limit(0);
-while(1)
-{
-	echo "1<br/>";
-	sleep(10);
-}
 include_once ('../SDK.config.php');//配置文件加载--必须加载这个文件
 include_once (ABSPATH.'sdk/API/Flight/D_FlightSearch.php');//加载D_FlightSearch这个接口的封装类
 //include_once(ABSPATH."include/urlRewrite.php");//加载URL伪静态处理

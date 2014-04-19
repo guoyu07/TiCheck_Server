@@ -11,13 +11,6 @@ class CreateController extends Controller
 	{
 		if (isset($_POST['User']))
 		{
-			echo "begin";
-/*
-			if ($_POST['User'])==NULL)
-			{
-				echo "User null";
-			}
-*/
 			$user = json_decode($_POST['User']);
 			echo var_dump($user);
 

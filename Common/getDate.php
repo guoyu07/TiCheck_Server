@@ -35,7 +35,7 @@ function getDateYMD_addDay($linkChar,$addDay)
 	}
 	return $coutValue;
 }
-date("Y-m-d",strtotime("$d   +1   day"));
+//date("Y-m-d",strtotime("$d   +1   day"));
 
 /**
  * 获取年月日时分秒形式的日期(参数为空，输出2012年12月23日 12:23:50；输入分隔符，则输出2012-12-23  12:23:50形式)
