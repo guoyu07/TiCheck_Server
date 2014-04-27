@@ -2,7 +2,7 @@
 /**
  * 请求D_FlightSearch的服务（酒店列表查询）
  */
-class get_D_FlightSearch{
+class D_FlightSearch{
 	/**
 	 * @var 航程类型：string类型；必填；S（单程）D（往返程）M（联程）
 	 */

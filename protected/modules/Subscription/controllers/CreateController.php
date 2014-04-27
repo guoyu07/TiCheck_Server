@@ -1,5 +1,6 @@
 <?php
 
+
 class CreateController extends Controller
 {
 	private $_subs;
@@ -15,11 +16,12 @@ class CreateController extends Controller
 	{
 		if (isset($_POST['Subscription']) && isset($_POST['User']))
 		{
+			// user
+			$this->prepareUser();
+
 			// subscription
 			$this->prepareSubscription();
 
-			// user
-			$this->prepareUser();
 
 			// modify database
 			$this->createRelation();
@@ -53,7 +55,8 @@ class CreateController extends Controller
 		}
 		else
 		{
-			// @TO-DO need current price here
+			$lowestPrice = new D_LowestPrice;
+			$tiSubs->CurrentPrice = (int)$lowestPrice->searchFlight($tiSubs);
 			if (!$tiSubs->save())
 			{
 				throw new CDbException("save subscription failed");
@@ -62,6 +65,72 @@ class CreateController extends Controller
 		}
 	}
 
+	/*
+	private function currentPrice(Subscription $subs)
+	{
+		$date = new DateTime($subs->StartDate);
+		$endDate = $subs->EndDate;
+		$price = NULL;
+
+		while ($date->format('Y-m-d') != $endDate)
+		{
+			$D_FlightSearch=new get_D_FLightSearch();
+			$D_FlightSearch->DepartCity=$subs->DepartCity;
+			$D_FlightSearch->ArriveCity=$subs->ArriveCity;
+			$D_FlightSearch->DepartDate=$date->format('Y-m-d');
+			$D_FlightSearch->EarliestDepartTime=$subs->EarliestDepartTime;
+			$D_FlightSearch->LatestDepartTime=$subs->LatestDepartTime;
+			$D_FlightSearch->AirlineDibitCode=$subs->AirlineDibitCode;
+			$D_FlightSearch->IsLowestPrice="true";
+			$D_FlightSearch->OrderBy="Price";
+			$D_FlightSearch->main();
+			$returnXML=$D_FlightSearch->ResponseXML;
+			var_dump($returnXML);
+			if ($returnXML->FlightSearchResponse== NULL)
+			{
+				$date->add(new DateInterval('P1D'));
+				continue;
+			}
+			if ($returnXML->FlightSearchResponse->FlightRoutes== NULL)
+			{
+				$date->add(new DateInterval('P1D'));
+				continue;
+			}
+			if ($returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute== NULL)
+			{
+				$date->add(new DateInterval('P1D'));
+				continue;
+			}
+			if ($returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList== NULL)
+			{
+				$date->add(new DateInterval('P1D'));
+				continue;
+			}
+
+			try
+			{
+				$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
+			}
+			catch(Exception $e)
+			{
+				throw new CDException($e->getMessage());
+			}
+			
+			//var_dump($flights);
+			if (is_array($flights))
+				$flight = $flights[0];
+			else
+				$flight = $flights;
+
+			if ($price > $flight->Price || $price==NULL)
+			{
+				$price = $flight->Price;	
+			}
+			$date->add(new DateInterval('P1D'));
+		}
+	}
+	 */
+	
 	private function prepareUser()
 	{
 		$user = json_decode($_POST['User'], true);

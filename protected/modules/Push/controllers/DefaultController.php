@@ -1,8 +1,8 @@
 <?php
-include_once ('/Library/WebServer/Documents/TiCheck_Server/SDK.config.php');
-include_once ('/Library/WebServer/Documents/TiCheck_Server/Common/getDate.php');
-
-include_once (ABSPATH.'sdk/API/Flight/D_FlightSearch.php');
+//include_once ('/Library/WebServer/Documents/TiCheck_Server/SDK.config.php');
+//include_once (Yii::app()->basePath . '/../SDK.config.php');
+//include_once (Yii::app()->basePath . '/../Common/getDate.php');
+//include_once (ABSPATH.'sdk/API/Flight/D_FlightSearch.php');
 
 class DefaultController extends Controller
 {
@@ -70,38 +70,49 @@ class DefaultController extends Controller
 	public function actionSearch()
 	{
 		//echo dirname(__FILE__);
-		$array_subs = Subscription::model()->with('userSubscriptions')->findALl();
-		var_dump($array_subs);
-		foreach ($array_subs as $subs)
+		set_time_limit(0);
+		while(1)
 		{
-			//echo var_dump($subs);
-			//echo "xxxxxxxxxxxxxxxx<br>";
-			$this->searchFlight($subs);
-			$this->createHistoryPrice($subs, (int)$this->_price);
-			$isModified = $this->modifySubscription($subs, (int)$this->_price);
-			if ($isModified)
+			$array_subs = Subscription::model()->with('userSubscriptions')->findALl();
+			var_dump($array_subs);
+			foreach ($array_subs as $tiSubs)
 			{
-				$array_user_subs = $subs->userSubscriptions;
-				foreach ($array_user_subs as $user_subs)
+				//echo var_dump($tiSubs);
+				//echo "xxxxxxxxxxxxxxxx<br>";
+				$lowestPrice = new D_LowestPrice;
+				$this->_price = $lowestPrice->searchFlight($tiSubs);
+				$this->_date = $lowestPrice->date;
+
+				$this->createHistoryPrice($tiSubs, (int)$this->_price);
+
+				$isModified = $this->modifySubscription($tiSubs, (int)$this->_price);
+
+				if ($isModified)
 				{
-					$tiUser = $user_subs->iDUser;
-					if ($this->_price < $user_subs->PriceLimit || $user_subs->PriceLimit == NULL)
+					$array_user_subs = $tiSubs->userSubscriptions;
+					foreach ($array_user_subs as $user_tiSubs)
 					{
-						$user_devices = $tiUser->userDevices;
-						foreach ($user_devices as $user_device)
+						$tiUser = $user_tiSubs->iDUser;
+						if ($this->_price < $user_tiSubs->PriceLimit || $user_tiSubs->PriceLimit == NULL)
 						{
-							$this->_deviceToken = $user_device->Device_token;
-							$this->_deviceToken = "70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7";
-							//$this->_message = "asdf";
-							$this->_message = "您订阅的{$subs->DepartCity}至{$subs->ArriveCity}价格已更新至{$this->_price}";
-							$this->actionIndex();
+							$user_devices = $tiUser->userDevices;
+							foreach ($user_devices as $user_device)
+							{
+								$this->_deviceToken = $user_device->Device_token;
+								$this->_deviceToken = "70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7";
+								//$this->_message = "asdf";
+								$this->_message = "您订阅的{$tiSubs->DepartCity}至{$tiSubs->ArriveCity}价格已更新至{$this->_price}";
+								$this->actionIndex();
+							}
 						}
 					}
 				}
 			}
+			sleep(300);
 		}
 	}
 	
+	/*
 	private function searchFlight(Subscription $subs)
 	{
 		$date = new DateTime($subs->StartDate);
@@ -112,9 +123,9 @@ class DefaultController extends Controller
 			$D_FlightSearch->DepartCity=$subs->DepartCity;
 			$D_FlightSearch->ArriveCity=$subs->ArriveCity;
 			$D_FlightSearch->DepartDate=$date->format('Y-m-d');
-			//$D_FlightSearch->EarliestDepartTime=$subs->EarliestDepartTime;
-			//$D_FlightSearch->LatestDepartTime=$subs->LatestDepartTime;
-			//$D_FlightSearch->AirlineDibitCode=$subs->AirlineDibitCode;
+			$D_FlightSearch->EarliestDepartTime=$subs->EarliestDepartTime;
+			$D_FlightSearch->LatestDepartTime=$subs->LatestDepartTime;
+			$D_FlightSearch->AirlineDibitCode=$subs->AirlineDibitCode;
 			$D_FlightSearch->IsLowestPrice="true";
 			$D_FlightSearch->OrderBy="Price";
 			$D_FlightSearch->main();
@@ -135,6 +146,7 @@ class DefaultController extends Controller
 		}
 		//echo json_encode($flights);
 	}
+	 */
 
 	private function createHistoryPrice(Subscription $subs, $price)
 	{
