@@ -20,7 +20,7 @@ class CancelController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
-			throw new CDException("post variable not enough");
+			throw new CException("post variable not enough");
 		}
 	}
 

@@ -42,7 +42,7 @@ class CreateController extends Controller
 		}
 		else
 		{
-			throw new CDException("no user");
+			throw new CException("no user");
 			echo "no user posted";
 			return false;
 		}

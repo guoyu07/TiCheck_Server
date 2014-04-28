@@ -56,13 +56,13 @@ return array(
 		// uncomment the following to use a MySQL database
 		 */
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=TiCheck',
-			//'connectionString' => 'mysql:host=10.60.41.52;dbname=TiCheck',
+			//'connectionString' => 'mysql:host=localhost;dbname=TiCheck',
+			'connectionString' => 'mysql:host=10.60.41.52;dbname=TiCheck',
 			'emulatePrepare' => true,
-//			'username' => 'tac',
-//			'password' => 'tongjiappleclub',
-			'username' => 'root',
-			'password' => '',
+			'username' => 'tac',
+			'password' => 'tongjiappleclub',
+//			'username' => 'root',
+			//'password' => '',
 			'charset' => 'utf8',
 		),
 		'errorHandler'=>array(

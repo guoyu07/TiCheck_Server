@@ -26,7 +26,7 @@ class CreateController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
-			throw new CDException("post variable not enough");
+			throw new CException("post variable not enough");
 		}
 	}
 
@@ -106,7 +106,7 @@ class CreateController extends Subscription\controllers\DefaultController
 			}
 			catch(Exception $e)
 			{
-				throw new CDException($e->getMessage());
+				throw new CException($e->getMessage());
 			}
 			
 			//var_dump($flights);
