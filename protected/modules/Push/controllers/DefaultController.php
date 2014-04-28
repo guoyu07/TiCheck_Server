@@ -1,7 +1,6 @@
 <?php
 //include_once ('/Library/WebServer/Documents/TiCheck_Server/SDK.config.php');
 //include_once (Yii::app()->basePath . '/../SDK.config.php');
-//include_once (Yii::app()->basePath . '/../Common/getDate.php');
 //include_once (ABSPATH.'sdk/API/Flight/D_FlightSearch.php');
 
 class DefaultController extends Controller

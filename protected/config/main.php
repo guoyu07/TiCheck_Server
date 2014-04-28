@@ -1,5 +1,4 @@
 <?php
-
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
@@ -17,6 +16,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.apiCtrip.*',
+		'application.apiCtrip.Common.*',
 	),
 
 	'modules'=>array(

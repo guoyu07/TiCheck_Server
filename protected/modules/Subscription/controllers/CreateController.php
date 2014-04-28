@@ -1,10 +1,7 @@
 <?php
 
-
-class CreateController extends Controller
+class CreateController extends Subscription\controllers\DefaultController
 {
-	private $_subs;
-	private $_user;
 	/*
 	public function actionIndex()
 	{
@@ -22,9 +19,10 @@ class CreateController extends Controller
 			// subscription
 			$this->prepareSubscription();
 
-
 			// modify database
 			$this->createRelation();
+
+			$this->createHistoryPrice($this->_subs);
 		}
 		else
 		{
@@ -32,39 +30,34 @@ class CreateController extends Controller
 		}
 	}
 
-	private function prepareSubscription()
+	private function createHistoryPrice(Subscription $subs)
 	{
-		$subs = json_decode($_POST['Subscription'], true);
-		//echo var_dump($subs);
-
-		if ($subs['DepartCity'] == NULL ||
-			$subs['ArriveCity'] == NULL ||
-			$subs['StartDate'] == NULL ||
-			$subs['EndDate'] == NULL
-			)
+		$date = new \DateGenerater;
+		$date = $date->getDateYMD("-");
+		$price = $subs->CurrentPrice;
+		$history_price = HistoryPrice::model()->findByAttributes(array(
+			'ID_subscription'=>$subs->ID,
+			'Date'=>$date
+		));
+		if ($history_price==NULL || $history_price->count()==0)
 		{
-			throw new CDException("not enough data");
-		}
-		
-		$tiSubs = new Subscription;
-		$tiSubs->attributes = $subs;
-		$subs_adp = $tiSubs->search(false);
-		if ($subs_adp->itemCount)
-		{
-			$this->_subs = $subs_adp->getData()[0];
+			$history_price = new HistoryPrice;
+			$history_price->ID_subscription = $subs->ID;
+			$history_price->Price = $price;
+			$history_price->Date = $date;
+			if (!$history_price->save())
+				throw new CDbException("update old history_price fail");
 		}
 		else
 		{
-			$lowestPrice = new D_LowestPrice;
-			$tiSubs->CurrentPrice = (int)$lowestPrice->searchFlight($tiSubs);
-			if (!$tiSubs->save())
-			{
-				throw new CDbException("save subscription failed");
-			}
-			$this->_subs = $tiSubs;
+			var_dump($history_price);
+			return;
+			$history_price = $history_price[0];
+			$history_price->Price = ($price < $history_price->Price)?$price:$history_price;
+			if (!$history_price->save())
+				throw new CDbException("save new history_price fail");
 		}
 	}
-
 	/*
 	private function currentPrice(Subscription $subs)
 	{
@@ -131,23 +124,6 @@ class CreateController extends Controller
 	}
 	 */
 	
-	private function prepareUser()
-	{
-		$user = json_decode($_POST['User'], true);
-		if ($user['Email'] == NULL &&
-			$user['Account'] == NULL)
-		{
-			throw new CDException("not enough data");
-		}
-		$tiUser = new TiUser;
-		$tiUser->attributes = $user;
-		$user_adp = $tiUser->search(false);
-		if (!$user_adp->itemCount)
-		{
-			throw new CDException("user info. error");
-		}
-		$this->_user = $user_adp->getData()[0];
-	}
 
 	private function createRelation()
 	{
@@ -155,9 +131,14 @@ class CreateController extends Controller
 		$user = $this->_user;
 		echo var_dump($subs);
 		echo var_dump($user);
-		$user_subs = new UserSubscription;
+		$user_subs = new \UserSubscription;
 		$user_subs->ID_user = $user->ID;
 		$user_subs->ID_subscription = $subs->ID;
+		$user_subs_adp = $user_subs->search();
+		if ($user_subs_adp->itemCount)
+		{
+			return;
+		}
 		if ($user_subs->save())
 		{
 			echo "saved user_subs<br>";
