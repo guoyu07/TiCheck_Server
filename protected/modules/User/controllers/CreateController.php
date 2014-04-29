@@ -16,23 +16,21 @@ class CreateController extends Controller
 
 			if (!$this->verifyInfo($user))
 			{
-				echo "user data error";			
-				return false;
+				throw new CHttpException(3,"用户名/邮箱/密码不合规范");
 			}
 			$tiUser = new TiUser;
 			$tiUser->attributes = $user;
 
 			//echo $tiUser->Account;
-			if ($tiUser->save())
+			try
 			{
-				echo "user create succeed.";
+				$tiUser->save();
+				throw new CHttpException(1,"注册成功");
 			}
-			else
+			catch(Exception $e)
 			{
-				echo "user save error";
-				return false;
+				throw new CHttpException(2,"用户名或邮箱已被使用");
 			}
-			return true;
 		}
 		else
 		{
