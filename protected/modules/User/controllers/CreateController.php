@@ -11,38 +11,31 @@ class CreateController extends Controller
 	{
 		if (isset($_POST['User']))
 		{
-			$user = json_decode($_POST['User']);
-			echo var_dump($user);
+			$user = json_decode($_POST['User'], true);
+			//echo var_dump($user);
 
 			if (!$this->verifyInfo($user))
 			{
-				echo "user erro";			
+				echo "user data error";			
 				return false;
 			}
 			$tiUser = new TiUser;
-			foreach ($user as $name=>$value)
-			{
-				$tiUser->$name = $value;
-			}
- 
+			$tiUser->attributes = $user;
 
-			echo $tiUser->Account;
-			try
+			//echo $tiUser->Account;
+			if ($tiUser->save())
 			{
-				$tiUser->save();
+				echo "user create succeed.";
 			}
-			catch(Exception $e)
+			else
 			{
-				throw new CDbException($e->getMessage());
+				echo "user save error";
 				return false;
 			}
-
-			echo "create TiUser record<br>";
 			return true;
 		}
 		else
 		{
-			throw new CException("no user");
 			echo "no user posted";
 			return false;
 		}
@@ -62,6 +55,10 @@ class CreateController extends Controller
 
 	private function verifyAccount($account)
 	{
+		if ($account == '')
+		{
+			return true;
+		}
 		$pattern = "/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/";
 		if (preg_match($pattern,$account))
 		{
@@ -95,15 +92,19 @@ class CreateController extends Controller
 
 	private function verifyInfo($user)
 	{
-		if (!$this->verifyAccount($user->Account))
+		if (!$this->verifyAccount($user['Account']))
 		{
 			echo "wrong account";
 			return false;
 		}
-		if (!$this->verifyEmail($user->Email))
+		if (!$this->verifyEmail($user['Email']))
+		{
 			return false;
-		if (!$this->verifyPassword($user->Password))
+		}
+		if (!$this->verifyPassword($user['Password']))
+		{
 			return false;
+		}
 		return true;
 	}
 

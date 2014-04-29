@@ -6,10 +6,12 @@ $this->pageTitle=Yii::app()->name . ' - Error';
 $this->breadcrumbs=array(
 	'Error',
 );
+$error = json_encode(array(
+	'ErrorCode'=>$code, 
+	'ErrorMessage'=>$message
+));
+//Error echo $code; 
+//echo CHtml::encode($message); 
+echo $error;
+
 ?>
-
-<h2>Error <?php echo $code; ?></h2>
-
-<div class="error">
-<?php echo CHtml::encode($message); ?>
-</div>
