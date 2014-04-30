@@ -1,10 +1,9 @@
 <?php
 namespace Subscription\controllers;
-class DefaultController extends \Controller
+class DefaultController extends \User\controllers\DefaultController
 {
 
 	protected $_subs;
-	protected $_user;
 	protected $_user_subs;
 	public function actionIndex()
 	{
@@ -14,7 +13,7 @@ class DefaultController extends \Controller
 	protected function prepareUserSubscription()
 	{
 		$user_subs = new \UserSubscription;
-		$user_subs->ID_user = $this->_user->ID;
+		$user_subs->ID_user = $this->tiUser->ID;
 		$user_subs->ID_subscription = $this->_subs->ID;
 		$user_subs_adp = $user_subs->search();
 		if ($user_subs_adp->itemCount)
@@ -26,18 +25,17 @@ class DefaultController extends \Controller
 
 	protected function prepareSubscription()
 	{
+		if (!isset($_POST['Subscription']))
+			new \Error(4, 'Subscription');
 		$subs = json_decode($_POST['Subscription'], true);
 		//echo var_dump($subs);
 
 		if ($subs['DepartCity'] == NULL ||
 			$subs['ArriveCity'] == NULL ||
 			$subs['StartDate'] == NULL ||
-			$subs['EndDate'] == NULL
-			)
-		{
-			throw new CDException("not enough data");
-		}
-		
+			$subs['EndDate'] == NULL)
+			new \Error(4, array('DepartCity', 'ArriveCity', 'StartDate', 'EndDate'));
+
 		$tiSubs = new \Subscription;
 		$tiSubs->attributes = $subs;
 		$subs_adp = $tiSubs->search();
@@ -49,16 +47,22 @@ class DefaultController extends \Controller
 		{
 			$lowestPrice = new \D_LowestPrice;
 			$tiSubs->CurrentPrice = (int)$lowestPrice->searchFlight($tiSubs);
-			if (!$tiSubs->save())
+			try
 			{
-				throw new CDbException("save subscription failed");
+				$tiSubs->save();
+			}
+			catch(Exception $e)
+			{
+				new \Error(5, NULL, $e->getMessage());
 			}
 			$this->_subs = $tiSubs;
 		}
 	}
 
+	/*
 	protected function prepareUser()
 	{
+		
 		$user = json_decode($_POST['User'], true);
 		if ($user['Email'] == NULL &&
 			$user['Account'] == NULL)
@@ -72,6 +76,7 @@ class DefaultController extends \Controller
 		{
 			throw new CDException("user info. error");
 		}
-		$this->_user = $user_adp->getData()[0];
+		$this->tiUser = $user_adp->getData()[0];
 	}
+	 */
 }

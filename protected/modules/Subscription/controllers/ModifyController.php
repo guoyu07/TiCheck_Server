@@ -5,27 +5,22 @@ class ModifyController extends Subscription\controllers\DefaultController
 	private $_newSubs=NULL;
 	public function actionIndex()
 	{
-		if (isset($_POST['Subscription']) && isset($_POST['User']))
-		{
-			$this->prepareUser();
-			$this->prepareSubscription();
-			$this->prepareNewSubscription();
-			$this->prepareUserSubscription();
+		$this->prepareUser();
+		$this->prepareSubscription();
+		$this->prepareNewSubscription();
+		$this->prepareUserSubscription();
 
-			if ($this->_newSubs != NULL)
-			{
-				$this->_user_subs->ID_subscription = $this->_subs->ID;
-				$this->_user_subs->save();
-			}
-		}
-		else
+		if ($this->_newSubs != NULL)
 		{
-			echo "not enough data";
+			$this->_user_subs->ID_subscription = $this->_subs->ID;
+			$this->_user_subs->save();
 		}
 	}
 
 	protected function prepareNewSubscription()
 	{
+		if (!isset($_POST['NewSubscription']))
+			new Error(4, 'NewSubscription');
 		$subs = json_decode($_POST['NewSubscription'], true);
 		//echo var_dump($subs);
 
@@ -35,7 +30,7 @@ class ModifyController extends Subscription\controllers\DefaultController
 			$subs['EndDate'] == NULL
 			)
 		{
-			throw new CDException("not enough data");
+			new \Error(4, array('DepartCity', 'ArriveCity', 'StartDate', 'EndDate'));
 		}
 		
 		$tiSubs = new \Subscription;
@@ -48,15 +43,14 @@ class ModifyController extends Subscription\controllers\DefaultController
 		else
 		{
 			$this->_subs->attributes = $subs;
-			if ($this->_subs->save())
+			try
 			{
-				echo "save new subscription";	
+				$this->_subs->save();
 			}
-			else
+			catch(Exception $e)
 			{
-				echo "save new subscription fail";
+				new Error(5, NULL, $e->getMessage());
 			}
-
 		}
 	}
 	// Uncomment the following methods and override them if needed

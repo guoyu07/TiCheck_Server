@@ -1,12 +1,44 @@
 <?php
-
-class DefaultController extends Controller
+namespace User\controllers;
+class DefaultController extends \Controller
 {
+	protected $tiUser;
 	public function actionIndex()
 	{
-		$this->render('index');
+		//$this->render('index');
 	}
 
+	public function prepareUser()
+	{
+		if (!isset($_POST['User']))
+		{
+			new \Error(4, "User");
+		}
+		$user = json_decode($_POST['User'],true);
+		//echo var_dump($user);
+
+		if (property_exists($user, 'Password') && $user->Password!=NULL)
+		{
+			$tiUser = \TiUser::model()->findByAttributes(
+				array('Email'=>$user->Email,'Password'=>$user->Password) 
+			);
+		}
+		else
+		{
+			$tiUser = \TiUser::model()->findByAttributes(
+				array('Email'=>$user->Email) 
+			);
+		}
+
+		if ($tiUser)
+			$this->tiUser = $tiUser;
+		else
+		{
+			new Error(6);
+		}
+	}
+
+	/*
 	public function actionCreate()
 	{
 		if (isset($_POST['User']))
@@ -101,4 +133,5 @@ class DefaultController extends Controller
 			return false;
 		return true;
 	}
+	 */
 }

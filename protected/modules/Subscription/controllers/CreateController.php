@@ -11,23 +11,16 @@ class CreateController extends Subscription\controllers\DefaultController
 	
 	public function actionIndex()
 	{
-		if (isset($_POST['Subscription']) && isset($_POST['User']))
-		{
-			// user
-			$this->prepareUser();
+		// user
+		$this->prepareUser();
 
-			// subscription
-			$this->prepareSubscription();
+		// subscription
+		$this->prepareSubscription();
 
-			// modify database
-			$this->createRelation();
+		// modify database
+		$this->createRelation();
 
-			$this->createHistoryPrice($this->_subs);
-		}
-		else
-		{
-			throw new CException("post variable not enough");
-		}
+		$this->createHistoryPrice($this->_subs);
 	}
 
 	private function createHistoryPrice(Subscription $subs)
@@ -45,19 +38,33 @@ class CreateController extends Subscription\controllers\DefaultController
 			$history_price->ID_subscription = $subs->ID;
 			$history_price->Price = $price;
 			$history_price->Date = $date;
-			if (!$history_price->save())
-				throw new CDbException("update old history_price fail");
+			try
+			{
+				$history_price->save();
+			}
+			catch(Exception $e)
+			{
+				new Error(5, NULL, $e->getMessage());
+			}
 		}
 		else
 		{
-			var_dump($history_price);
-			return;
+			//var_dump($history_price);
 			$history_price = $history_price[0];
+			if ($history_price->Price == $price)
+				return;
 			$history_price->Price = ($price < $history_price->Price)?$price:$history_price;
-			if (!$history_price->save())
-				throw new CDbException("save new history_price fail");
+			try
+			{
+				$history_price->save();
+			}
+			catch(Exception $e)
+			{
+				new Error(5, NULL, $e->getMessage());
+			}
 		}
 	}
+
 	/*
 	private function currentPrice(Subscription $subs)
 	{
@@ -128,7 +135,7 @@ class CreateController extends Subscription\controllers\DefaultController
 	private function createRelation()
 	{
 		$subs = $this->_subs;
-		$user = $this->_user;
+		$user = $this->tiUser;
 		echo var_dump($subs);
 		echo var_dump($user);
 		$user_subs = new \UserSubscription;
@@ -139,14 +146,15 @@ class CreateController extends Subscription\controllers\DefaultController
 		{
 			return;
 		}
-		if ($user_subs->save())
+		try
 		{
-			echo "saved user_subs<br>";
+			$user_subs->save();
 		}
-		else
+		catch(Exception $e)
 		{
-			throw new CDbException("failed save");
+			new Error(5, NULL, $e->getMessage());
 		}
+
 	}
 
 	// Uncomment the following methods and override them if needed

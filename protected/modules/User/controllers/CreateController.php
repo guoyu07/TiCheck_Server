@@ -9,33 +9,29 @@ class CreateController extends Controller
 
 	public function actionIndex()
 	{
-		if (isset($_POST['User']))
+		if (!isset($_POST['User']))
 		{
-			$user = json_decode($_POST['User'], true);
-			//echo var_dump($user);
-
-			if (!$this->verifyInfo($user))
-			{
-				throw new CHttpException(3,"用户名/邮箱/密码不合规范");
-			}
-			$tiUser = new TiUser;
-			$tiUser->attributes = $user;
-
-			//echo $tiUser->Account;
-			try
-			{
-				$tiUser->save();
-				throw new CHttpException(1,"注册成功");
-			}
-			catch(Exception $e)
-			{
-				throw new CHttpException(2,"用户名或邮箱已被使用");
-			}
+			new Error(4, "User");
 		}
-		else
+		$user = json_decode($_POST['User'], true);
+		//echo var_dump($user);
+
+		if (!$this->verifyInfo($user))
 		{
-			echo "no user posted";
-			return false;
+			new Error(3);
+		}
+		$tiUser = new TiUser;
+		$tiUser->attributes = $user;
+
+		//echo $tiUser->Account;
+		try
+		{
+			$tiUser->save();
+			new Error(1);
+		}
+		catch(Exception $e)
+		{
+			new Error(2);
 		}
 	}
 
@@ -44,10 +40,9 @@ class CreateController extends Controller
 	{
 		if (filter_var($email, FILTER_VALIDATE_EMAIL)) 
 		{
-			    echo "This ($email) email address is considered valid.<br>";
-				return true;
+			return true;
 		}
-		echo "email not valid";
+		new Error(3, NULL, "Email");
 		return false;
 	}
 
@@ -59,15 +54,8 @@ class CreateController extends Controller
 		}
 		$pattern = "/^[a-zA-Z][a-zA-Z0-9_]{4,15}$/";
 		if (preg_match($pattern,$account))
-		{
-			echo "account ($account) ok <br>";
 			return true;
-		}
-		else
-		{
-			echo "not valid account<br>";
-		}
-		
+		new Error(3, NULL, "Account");
 		return false;
 	}
 
@@ -75,35 +63,14 @@ class CreateController extends Controller
 	{
 		$pattern = "/[\s|\S]{5,64}$/";
 		if (preg_match($pattern,$passwd))
-		{
-			echo "length of ($passwd) ok <br>";
 			return true;
-		}
-		else
-		{
-			echo "not valid passwd<br>";
-		}
-		
+		new Error(3, NULL, "Password");
 		return false;
 	}
 
-
 	private function verifyInfo($user)
 	{
-		if (!$this->verifyAccount($user['Account']))
-		{
-			echo "wrong account";
-			return false;
-		}
-		if (!$this->verifyEmail($user['Email']))
-		{
-			return false;
-		}
-		if (!$this->verifyPassword($user['Password']))
-		{
-			return false;
-		}
-		return true;
+		return $this->verifyAccount($user['Account']) && $this->verifyEmail($user['Email']) && $this->verifyPassword($user['Password']);
 	}
 
 	// Uncomment the following methods and override them if needed

@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends Controller
+class LoginController extends User\controllers\DefaultController
 {
 /*	
 	public function actionIndex()
@@ -11,29 +11,13 @@ class LoginController extends Controller
 
 	public function actionIndex()
 	{
-		if (isset($_POST['User']))
-		{
-			$user = json_decode($_POST['User']);
-			//echo var_dump($user);
+		$this->prepareUser();
 
-			$tiUser = TiUser::model()->findByAttributes(
-				array('Email'=>$user->Email,'Password'=>$user->Password) 
-			);
-
-			if ($tiUser)
-			{
-				echo "Yes login";
-			}
-			else
-			{
-				echo "no this user";
-			}
-		}
-		else
+		if ($this->tiUser)
 		{
-			echo "no user posted";
-			return false;
+			new Error(1);
 		}
+		new Error(6);
 	}
 
 	// Uncomment the following methods and override them if needed

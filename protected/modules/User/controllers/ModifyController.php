@@ -1,62 +1,45 @@
 <?php
 
-class ModifyController extends Controller
+class ModifyController extends User\controllers\DefaultController
 {
 	public function actionIndex()
 	{
-		if (isset($_POST['User']) && isset($_POST['NewUser']))
+		$this->prepareUser();
+		if (!isset($_POST['NewUser']))
+			new Error(4, 'NewUser');
+
+		$newUser = json_decode($_POST['NewUser']);
+		//echo var_dump($user);
+
+		if ($this->tiUser)
 		{
-			$user = json_decode($_POST['User']);
-			$newUser = json_decode($_POST['NewUser']);
-			//echo var_dump($user);
-
-			//$tiUser = new TiUser;
-			if (property_exists($user, 'Password') && $user->Password!=NULL)
+			if (property_exists($newUser, 'Password') &&
+				$newUser->Password != NULL)
+				$this->tiUser->Password = $newUser->Password;
+			if (property_exists($newUser, 'Email') &&
+				$newUser->Email != NULL)
+				$this->tiUser->Email = $newUser->Email;
+			if (property_exists($newUser, 'Account') &&
+				$newUser->Account != NULL)
+				$this->tiUser->Account = $newUser->Account;
+			
+			if (property_exists($newUser, 'Pushable') &&
+				$newUser->Pushable != NULL)
+				$this->tiUser->Pushable = $newUser->Pushable;
+			
+			//echo var_dump($this->tiUser);
+			try
 			{
-				$tiUser = TiUser::model()->findByAttributes(
-					array('Email'=>$user->Email,'Password'=>$user->Password) 
-				);
+				$this->tiUser->save();
 			}
-			else
+			catch(exception $e)
 			{
-				$tiUser = TiUser::model()->findByAttributes(
-					array('Email'=>$user->Email) 
-				);
-			}
-
-			if ($tiUser)
-			{
-				$tiUser->Password = $newUser->Password;
-				$tiUser->Email = $newUser->Email;
-				$tiUser->Account = $newUser->Account;
-
-				/*
-				foreach (get_object_vars($tiUser) as $name=>$value)
-				{
-					$tiUser->$name = $newUser->$name;
-					$value;
-				}
-				 */
-				
-				//echo var_dump($tiUser);
-				try
-				{
-					$tiUser->save();
-				}
-				catch(exception $e)
-				{
-					throw new CDbExceptione($e->getMessage()); 
-				}
-			}
-			else
-			{
-				echo "no this user";
+				new Error(5, NULL, $e->getMessage());
 			}
 		}
 		else
 		{
-			echo "no user posted";
-			return false;
+			new Error(6);
 		}
 	}
 

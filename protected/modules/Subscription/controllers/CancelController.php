@@ -4,32 +4,25 @@ class CancelController extends Subscription\controllers\DefaultController
 {
 	public function actionIndex()
 	{
-		if (isset($_POST['Subscription']) && isset($_POST['User']))
-		{
-			// user
-			$this->prepareUser();
+		// user
+		$this->prepareUser();
 
-			// subscription
-			$this->prepareSubscription();
+		// subscription
+		$this->prepareSubscription();
 
-			// modify database
-			$this->deleteRelation();
+		// modify database
+		$this->deleteRelation();
 
-			// check if subscription could be deleted
-			$this->deleteSubscription();
-		}
-		else
-		{
-			throw new CException("post variable not enough");
-		}
+		// check if subscription could be deleted
+		$this->deleteSubscription();
 	}
 
 	private function deleteRelation()
 	{
 		$subs = $this->_subs;
-		$user = $this->_user;
-		echo var_dump($subs);
-		echo var_dump($user);
+		$user = $this->tiUser;
+		//echo var_dump($subs);
+		//echo var_dump($user);
 		$user_subs = new \UserSubscription;
 		$user_subs->ID_user = $user->ID;
 		$user_subs->ID_subscription = $subs->ID;
@@ -37,13 +30,13 @@ class CancelController extends Subscription\controllers\DefaultController
 		if ($user_subs_adp->itemCount)
 		{
 			$user_subs = $user_subs_adp->getData()[0];
-			if ($user_subs->delete())
-		    {
-				echo "delete user_subs<br>";
-			}
-			else
+			try
 			{
-				throw new CDbException("failed delete user_subs");
+				$user_subs->delete();
+			}
+			catch(Exception $e)
+			{
+				new Error(5, NULL, $e->getMessage());
 			}
 		}
 	}
@@ -57,7 +50,7 @@ class CancelController extends Subscription\controllers\DefaultController
 		}
 		catch (Exception $e)
 		{
-			echo "delete subs fail" . $e->getMessage();
+			new Error(5, NULL, $e->getMessage());
 		}
 	}
 
