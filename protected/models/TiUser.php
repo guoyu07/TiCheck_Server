@@ -8,6 +8,8 @@
  * @property string $Account
  * @property string $Password
  * @property string $Email
+ * @property string $Timestamp
+ * @property integer $Pushable
  *
  * The followings are the available model relations:
  * @property UserDevice[] $userDevices
@@ -31,12 +33,13 @@ class TiUser extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Account, Password, Email', 'required'),
+			array('Password, Email, Timestamp', 'required'),
+			array('Pushable', 'numerical', 'integerOnly'=>true),
 			array('Account, Password', 'length', 'max'=>64),
 			array('Email', 'length', 'max'=>320),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, Account, Password, Email', 'safe', 'on'=>'search'),
+			array('ID, Account, Password, Email, Timestamp, Pushable', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +66,8 @@ class TiUser extends CActiveRecord
 			'Account' => 'Account',
 			'Password' => 'Password',
 			'Email' => 'Email',
+			'Timestamp' => 'Timestamp',
+			'Pushable' => 'Pushable',
 		);
 	}
 
@@ -88,6 +93,8 @@ class TiUser extends CActiveRecord
 		$criteria->compare('Account',$this->Account,true);
 		$criteria->compare('Password',$this->Password,true);
 		$criteria->compare('Email',$this->Email,true);
+		$criteria->compare('Timestamp',$this->Timestamp,true);
+		$criteria->compare('Pushable',$this->Pushable);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
