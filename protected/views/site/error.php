@@ -6,10 +6,10 @@
 //$this->breadcrumbs=array(
 	//'Error',
 //);
-$error = json_encode(array(
+$error = urldecode(json_encode(array(
 	'Code'=>$code, 
-	'Message'=>$message
-));
+	'Message'=>urlencode($message
+))));
 //Error echo $code; 
 //echo CHtml::encode($message); 
 echo $error;

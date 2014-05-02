@@ -14,7 +14,7 @@ class CreateController extends Controller
 			new Error(4, "User");
 		}
 		$user = json_decode($_POST['User'], true);
-		//echo var_dump($user);
+		//var_dump($user);
 
 		if (!$this->verifyInfo($user))
 		{
@@ -24,15 +24,16 @@ class CreateController extends Controller
 		$tiUser->attributes = $user;
 
 		//echo $tiUser->Account;
+		//var_dump($tiUser);
 		try
 		{
 			$tiUser->save();
-			new Error(1);
 		}
 		catch(Exception $e)
 		{
 			new Error(2);
 		}
+		new Error(1);
 	}
 
 	// Utilities
