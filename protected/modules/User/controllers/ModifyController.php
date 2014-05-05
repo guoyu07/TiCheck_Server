@@ -36,6 +36,7 @@ class ModifyController extends User\controllers\DefaultController
 			{
 				new Error(5, NULL, $e->getMessage());
 			}
+			new Error(1);
 		}
 		else
 		{

@@ -14,7 +14,7 @@ class DefaultController extends \Controller
 		{
 			new \Error(4, "User");
 		}
-		$user = json_decode($_POST['User'],true);
+		$user = json_decode($_POST['User']);
 		//echo var_dump($user);
 
 		if (property_exists($user, 'Password') && $user->Password!=NULL)
