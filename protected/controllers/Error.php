@@ -2,13 +2,15 @@
 
 class Error extends Controller
 {
-	function __construct($code, $param=NULL, $msg = NULL)
+	function __construct($code, $param=NULL, $msg = NULL, $data=NULL)
 	{
 		$message = NULL;
 		switch ($code)
 		{
 		case 1:
 			$message = "Succeed";
+			if ($data !=NULL )
+				$message = json_encode($data);
 			break;
 		case 2:
 			$message = "邮箱已被使用";
