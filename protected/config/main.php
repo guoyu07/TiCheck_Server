@@ -25,6 +25,8 @@ return array(
 		'User',
 		'Subscription',
 		'Push',
+		'Flight',
+		'Order',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123',

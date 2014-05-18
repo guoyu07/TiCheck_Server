@@ -1,6 +1,6 @@
 <?php
 //定义本系统的相对路径根部
-if(!defined('ABSPATH') )
+if(!defined('ABSPATH') 
 {
 	define('ABSPATH',dirname(__FILE__).'/');
 }
@@ -39,19 +39,19 @@ if(!defined('SiteKey')) {
 $ServiceUrlCtripOpenAPI="http://openapi.ctrip.com";
 //定义酒店直接查询接口的URL
 if(!defined('D_HotelSearch_Url')) {
-	define('D_HotelSearch_Url',$ServiceUrlCtripOpenAPI.'/flight/D_HotelSearch.asmx');
+	define('D_HotelSearch_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelSearch.asmx');
 }
 //定义酒店详细查询接口的URL
 if(!defined('D_HotelDetail_Url')) {
-	define('D_HotelDetail_Url',$ServiceUrlCtripOpenAPI.'/flight/D_HotelDetail.asmx');
+	define('D_HotelDetail_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelDetail.asmx');
 }
 //定义酒店评价接口的URL
 if(!defined('D_HotelCommentList_Url')) {
-	define('D_HotelCommentList_Url',$ServiceUrlCtripOpenAPI.'/flight/D_HotelCommentList.asmx');
+	define('D_HotelCommentList_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelCommentList.asmx');
 }
 //定义酒店评价接口的URL-带有分页功能
 if(!defined('D_HotelCommentListPage_Url')) {
-	define('D_HotelCommentListPage_Url',$ServiceUrlCtripOpenAPI.'/flight/D_HotelCommentListWithPage.asmx');
+	define('D_HotelCommentListPage_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelCommentListWithPage.asmx');
 }
 
 //定义酒店团购接口的URL
@@ -64,20 +64,20 @@ if(!defined('GroupProductInfo_Url')) {
 }
 //定义酒店订单列表的URL
 if(!defined('D_HotelOrderList_Url')) {
-	define('D_HotelOrderList_Url',$ServiceUrlCtripOpenAPI.'/flight/D_HotelOrderList.asmx');
+	define('D_HotelOrderList_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelOrderList.asmx');
 }
 //定义酒店订单详细的URL
 if(!defined('D_HotelOrderDetail_Url')) {
-	define('D_HotelOrderDetail_Url',$ServiceUrlCtripOpenAPI.'/flight/D_HotelOrderDetail.asmx');
+	define('D_HotelOrderDetail_Url',$ServiceUrlCtripOpenAPI.'/hotel/D_HotelOrderDetail.asmx');
 }
 //定义获取“检查并生成外部UserUniqueID”的URL
 if(!defined('OTA_UserUniqueID_Url')) {
-	define('OTA_UserUniqueID_Url',$ServiceUrlCtripOpenAPI.'/flight/OTA_UserUniqueID.asmx');
+	define('OTA_UserUniqueID_Url',$ServiceUrlCtripOpenAPI.'/hotel/OTA_UserUniqueID.asmx');
 }
 
 //定义获取订单取消的URL
 if(!defined('OTA_OrderCancel_Url')) {
-	define('OTA_OrderCancel_Url',$ServiceUrlCtripOpenAPI.'/flight/OTA_Cancel.asmx');
+	define('OTA_OrderCancel_Url',$ServiceUrlCtripOpenAPI.'/hotel/OTA_Cancel.asmx');
 }
 
 //定义国内机票查询接口的URL

@@ -49,8 +49,6 @@ class CreateController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
-			//var_dump($history_price);
-			$history_price = $history_price[0];
 			if ($history_price->Price == $price)
 				return;
 			$history_price->Price = ($price < $history_price->Price)?$price:$history_price;

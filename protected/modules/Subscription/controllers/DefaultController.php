@@ -28,7 +28,7 @@ class DefaultController extends \User\controllers\DefaultController
 		if (!isset($_POST['Subscription']))
 			new \Error(4, 'Subscription');
 		$subs = json_decode($_POST['Subscription'], true);
-		//echo var_dump($subs);
+		//var_dump($subs);
 
 		if ($subs['DepartCity'] == NULL ||
 			$subs['ArriveCity'] == NULL ||

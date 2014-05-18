@@ -1,23 +1,22 @@
 <?php
 
-class InfoController extends \Subscription\controllers\DefaultController
+class InfoController extends \Order\controllers\DefaultController
 {
-	private $array_subs_users;
-	private $array_subs;
 	public function actionIndex()
 	{
+		//$this->render('index');
 		$this->prepareUser();
-		$this->array_subs_users = $this->tiUser->userSubscriptions;
-		foreach ($this->array_subs_users as $user_subs)
+		$order = new \Order;
+		if (isset($_POST['TempOrder']))
 		{
-			$this->array_subs[] = $user_subs->iDSubscription->attributes;
+			$this->prepareTempOrder();
+			$order->TempOrder = $this->tempOrder;
 		}
+		$order->ID_user = $this->tiUser->ID;
+		$order_provider = $order->search();
+		$arr_order = $order_provider->getData();
 		
-		echo json_encode(array(
-			'Code'=>1,
-			'Message'=>"Succeed",
-			'Data'=>$this->array_subs));
-		exit;
+		
 	}
 
 	// Uncomment the following methods and override them if needed

@@ -1,32 +1,28 @@
 <?php
 
-class LoginController extends User\controllers\DefaultController
+class InfoController extends \Order\controllers\DefaultController
 {
-/*	
 	public function actionIndex()
 	{
-		$this->render('index');
-	}
- */
-
-	public function actionIndex()
-	{
+		//$this->render('index');
 		$this->prepareUser();
-		if (!isset($_POST['User']))
-			new Error(4, 'User');
-		$user = json_decode($_POST['User']);
-		//echo var_dump($user);
-
-		$tiUser = TiUser::model()->findByAttributes(
-			array('Email'=>$user->Email,
-			'Password'=>$user->Password) 
-		);
-
-		if ($tiUser)
+		$order = new \Order;
+		if (isset($_POST['TempOrder']))
 		{
-			new Error(1);
+			$this->prepareTempOrder();
+			$order->TempOrder = $this->tempOrder;
 		}
-		new Error(6);
+		$order->ID_user = $this->tiUser->ID;
+		$order_provider = $order->search();
+		$arr_order = $order_provider->getData();
+		$arr_data_return = null;
+		foreach ($arr_order as $value)
+		{
+			$arr_data_return[] = $value->attributes;
+		}
+		new \Error(1, null, null, $arr_data_return);
+		
+		
 	}
 
 	// Uncomment the following methods and override them if needed

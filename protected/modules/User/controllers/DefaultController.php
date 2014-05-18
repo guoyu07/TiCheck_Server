@@ -34,7 +34,7 @@ class DefaultController extends \Controller
 			$this->tiUser = $tiUser;
 		else
 		{
-			new Error(6);
+			new \Error(6);
 		}
 	}
 

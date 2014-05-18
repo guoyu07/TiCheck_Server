@@ -1,49 +1,11 @@
 <?php
-
-class ModifyController extends User\controllers\DefaultController
+class ModifyController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->prepareUser();
-		if (!isset($_POST['NewUser']))
-			new Error(4, 'NewUser');
-
-		$newUser = json_decode($_POST['NewUser']);
-		//echo var_dump($user);
-
-		if ($this->tiUser)
-		{
-			if (property_exists($newUser, 'Password') &&
-				$newUser->Password != NULL)
-				$this->tiUser->Password = $newUser->Password;
-			if (property_exists($newUser, 'Email') &&
-				$newUser->Email != NULL)
-				$this->tiUser->Email = $newUser->Email;
-			if (property_exists($newUser, 'Account') &&
-				$newUser->Account != NULL)
-				$this->tiUser->Account = $newUser->Account;
-			
-			if (property_exists($newUser, 'Pushable') &&
-				$newUser->Pushable != NULL)
-				$this->tiUser->Pushable = $newUser->Pushable;
-			
-			//echo var_dump($this->tiUser);
-			try
-			{
-				$this->tiUser->save();
-			}
-			catch(exception $e)
-			{
-				new Error(5, NULL, $e->getMessage());
-			}
-		}
-		else
-		{
-			new Error(6);
-		}
+		$this->render('index');
 	}
 
-	/*
 	public function actionAccount()
 	{
 		if (isset($_POST['User']) && isset($_POST['NewUser']))
@@ -72,6 +34,14 @@ class ModifyController extends User\controllers\DefaultController
 				$tiUser->Email = $newUser->Email;
 				$tiUser->Account = $newUser->Account;
 
+				/*
+				foreach (get_object_vars($tiUser) as $name=>$value)
+				{
+					$tiUser->$name = $newUser->$name;
+					$value;
+				}
+				 */
+				
 				//echo var_dump($tiUser);
 				try
 				{
@@ -93,7 +63,6 @@ class ModifyController extends User\controllers\DefaultController
 			return false;
 		}
 	}
-	 */
 
 
 	// Uncomment the following methods and override them if needed
