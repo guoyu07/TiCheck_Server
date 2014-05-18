@@ -27,7 +27,7 @@ class D_LowestPrice extends D_FlightSearch
 			$this->main();
 			$returnXML=$this->ResponseXML;
 
-//			var_dump($returnXML);
+			var_dump($returnXML);
 			//exit;
 			if ($returnXML->FlightSearchResponse== NULL)
 			{
