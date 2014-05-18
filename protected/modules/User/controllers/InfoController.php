@@ -1,25 +1,19 @@
 <?php
 
-class InfoController extends \Subscription\controllers\DefaultController
+class InfoController extends User\controllers\DefaultController
 {
-	private $array_subs_users;
-	private $array_subs;
 	public function actionIndex()
 	{
 		$this->prepareUser();
-		$this->array_subs_users = $this->tiUser->userSubscriptions;
-		foreach ($this->array_subs_users as $user_subs)
-		{
-			$this->array_subs[] = $user_subs->iDSubscription->attributes;
-		}
-		
-		echo json_encode(array(
-			'Code'=>1,
-			'Message'=>"Succeed",
-			'Data'=>$this->array_subs));
+		$userInfo = $this->tiUser->attributes;
+		$info = array(
+			'Account'=>$userInfo['Account'],
+			'Pushable'=>$userInfo['Pushable']
+		);
+		echo json_encode(array('Code'=>1, 'Message'=>"Succeed", 'Data'=>$info));
 		exit;
+		//new Error(1, NULL, NULL, $info); 
 	}
-
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

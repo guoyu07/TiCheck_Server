@@ -1,23 +1,32 @@
 <?php
 
-class InfoController extends \Subscription\controllers\DefaultController
+class LoginController extends User\controllers\DefaultController
 {
-	private $array_subs_users;
-	private $array_subs;
+/*	
+	public function actionIndex()
+	{
+		$this->render('index');
+	}
+ */
+
 	public function actionIndex()
 	{
 		$this->prepareUser();
-		$this->array_subs_users = $this->tiUser->userSubscriptions;
-		foreach ($this->array_subs_users as $user_subs)
+		if (!isset($_POST['User']))
+			new Error(4, 'User');
+		$user = json_decode($_POST['User']);
+		//echo var_dump($user);
+
+		$tiUser = TiUser::model()->findByAttributes(
+			array('Email'=>$user->Email,
+			'Password'=>$user->Password) 
+		);
+
+		if ($tiUser)
 		{
-			$this->array_subs[] = $user_subs->iDSubscription->attributes;
+			new Error(1);
 		}
-		
-		echo json_encode(array(
-			'Code'=>1,
-			'Message'=>"Succeed",
-			'Data'=>$this->array_subs));
-		exit;
+		new Error(6);
 	}
 
 	// Uncomment the following methods and override them if needed
