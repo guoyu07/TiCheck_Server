@@ -19,6 +19,7 @@ class CreateController extends Subscription\controllers\DefaultController
 
 		// modify database
 		$this->createRelation();
+		// TODO 异步搜最低价
 
 		$this->createHistoryPrice($this->_subs);
 	}
