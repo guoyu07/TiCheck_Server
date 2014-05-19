@@ -50,6 +50,11 @@ class CreateController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
+<<<<<<< HEAD
+			//var_dump($history_price);
+			$history_price = $history_price[0];
+=======
+>>>>>>> fee13f6fd60c8ee35ebfb27f4c95d7c5c21c0f0c
 			if ($history_price->Price == $price)
 				return;
 			$history_price->Price = ($price < $history_price->Price)?$price:$history_price;
@@ -135,14 +140,23 @@ class CreateController extends Subscription\controllers\DefaultController
 	{
 		$subs = $this->_subs;
 		$user = $this->tiUser;
+<<<<<<< HEAD
+		//echo var_dump($subs);
+		//echo var_dump($user);
+=======
 		echo var_dump($subs);
 		echo var_dump($user);
+>>>>>>> fee13f6fd60c8ee35ebfb27f4c95d7c5c21c0f0c
 		$user_subs = new \UserSubscription;
 		$user_subs->ID_user = $user->ID;
 		$user_subs->ID_subscription = $subs->ID;
 		$user_subs_adp = $user_subs->search();
 		if ($user_subs_adp->itemCount)
 		{
+<<<<<<< HEAD
+			new Error(5,NULL, "已订阅");
+=======
+>>>>>>> fee13f6fd60c8ee35ebfb27f4c95d7c5c21c0f0c
 			return;
 		}
 		try
@@ -154,6 +168,10 @@ class CreateController extends Subscription\controllers\DefaultController
 			new Error(5, NULL, $e->getMessage());
 		}
 
+<<<<<<< HEAD
+		new Error(1);
+=======
+>>>>>>> fee13f6fd60c8ee35ebfb27f4c95d7c5c21c0f0c
 	}
 
 	// Uncomment the following methods and override them if needed

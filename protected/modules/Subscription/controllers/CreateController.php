@@ -135,14 +135,15 @@ class CreateController extends Subscription\controllers\DefaultController
 	{
 		$subs = $this->_subs;
 		$user = $this->tiUser;
-		echo var_dump($subs);
-		echo var_dump($user);
+		//echo var_dump($subs);
+		//echo var_dump($user);
 		$user_subs = new \UserSubscription;
 		$user_subs->ID_user = $user->ID;
 		$user_subs->ID_subscription = $subs->ID;
 		$user_subs_adp = $user_subs->search();
 		if ($user_subs_adp->itemCount)
 		{
+			new Error(5,NULL, "已订阅");
 			return;
 		}
 		try
@@ -154,6 +155,7 @@ class CreateController extends Subscription\controllers\DefaultController
 			new Error(5, NULL, $e->getMessage());
 		}
 
+		new Error(1);
 	}
 
 	// Uncomment the following methods and override them if needed

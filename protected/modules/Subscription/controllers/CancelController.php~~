@@ -20,7 +20,7 @@ class CancelController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
-			throw new CDException("post variable not enough");
+			throw new CException("post variable not enough");
 		}
 	}
 
@@ -51,13 +51,13 @@ class CancelController extends Subscription\controllers\DefaultController
 	private function deleteSubscription()
 	{
 		$subs = $this->_subs;
-		if ($subs->delete())
+		try
 		{
-			echo "delete subs<br>";
+			$subs->delete();
 		}
-		else
+		catch (Exception $e)
 		{
-			echo "delete subs fail";
+			echo "delete subs fail" . $e->getMessage();
 		}
 	}
 
