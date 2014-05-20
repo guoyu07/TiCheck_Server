@@ -27,6 +27,7 @@ return array(
 		'Push',
 		'Flight',
 		'Order',
+		'Contact',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123',
