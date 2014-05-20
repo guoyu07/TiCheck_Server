@@ -7,6 +7,7 @@ class InfoController extends \Contact\controllers\DefaultController
 	{
 		//$this->render('index');
 		
+		$this->prepareUser();
 		if (!isset($_POST['Contacts']))
 		{
 			$this->fetchContactsOfUser();
@@ -16,30 +17,29 @@ class InfoController extends \Contact\controllers\DefaultController
 			$this->prepareContacts();
 			$this->fetchSpecificContact();
 		}
+		//var_dump($this->data);
+		//exit;
 		echo json_encode(array('Code'=>1, 'Message'=>'Succeed', 'Data'=>$this->data));
 		
 	}
 
 	private function fetchContactsOfUser()
 	{
-		$con_model = Contacts::model()->findByAttributes(array('ID_user'=>$this->tiUser->ID));
+		$con_model = Contacts::model()->findAllByAttributes(array('ID_user'=>$this->tiUser->ID));
+		//var_dump($con_model);
+		//exit;
 		foreach($con_model as $con)
 		{
-			$this->data[] = $con;
+			$this->data[] = $con->attributes;
 		}
 	}
 
 	private function fetchSpecificContact()
 	{
-		foreach ($this->contacts as $con)
+		$con_model = Contacts::model()->findAllByAttributes($this->contacts);
+		foreach ($con_model as $data)
 		{
-			$con_model = new \Contacts;
-			$con_model->attributes = $con;
-			$adp = $con_model->search();
-			foreach ($adp->getData() as $data)
-			{
-				$this->data[] = $data;
-			}
+			$this->data[] = $data->attributes;
 		}
 	}
 

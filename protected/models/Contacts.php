@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'Contacts':
  * @property string $ID
  * @property string $Name
- * @property string $ComfirmOption
+ * @property string $ConfirmOption
  * @property string $MobilePhone
  * @property string $ForeignMobile
  * @property string $MobileCountryFix
@@ -34,15 +34,15 @@ class Contacts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Name, ComfirmOption, MobilePhone, Email, ID_user', 'required'),
+			array('Name, ConfirmOption, MobilePhone, Email, ID_user', 'required'),
 			array('Name, ID_user', 'length', 'max'=>20),
-			array('ComfirmOption', 'length', 'max'=>3),
+			array('ConfirmOption', 'length', 'max'=>3),
 			array('MobilePhone, ForeignMobile', 'length', 'max'=>15),
 			array('MobileCountryFix', 'length', 'max'=>10),
 			array('Email', 'length', 'max'=>512),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, Name, ComfirmOption, MobilePhone, ForeignMobile, MobileCountryFix, Email, ID_user', 'safe', 'on'=>'search'),
+			array('ID, Name, ConfirmOption, MobilePhone, ForeignMobile, MobileCountryFix, Email, ID_user', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,7 +66,7 @@ class Contacts extends CActiveRecord
 		return array(
 			'ID' => 'ID',
 			'Name' => 'Name',
-			'ComfirmOption' => 'Comfirm Option',
+			'ConfirmOption' => 'Confirm Option',
 			'MobilePhone' => 'Mobile Phone',
 			'ForeignMobile' => 'Foreign Mobile',
 			'MobileCountryFix' => 'Mobile Country Fix',
@@ -95,7 +95,7 @@ class Contacts extends CActiveRecord
 
 		$criteria->compare('ID',$this->ID,true);
 		$criteria->compare('Name',$this->Name,true);
-		$criteria->compare('ComfirmOption',$this->ComfirmOption,true);
+		$criteria->compare('ConfirmOption',$this->ConfirmOption,true);
 		$criteria->compare('MobilePhone',$this->MobilePhone,true);
 		$criteria->compare('ForeignMobile',$this->ForeignMobile,true);
 		$criteria->compare('MobileCountryFix',$this->MobileCountryFix,true);

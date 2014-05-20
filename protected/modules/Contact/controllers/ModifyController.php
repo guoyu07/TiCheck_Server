@@ -1,6 +1,6 @@
 <?php
 
-class ModifyController extends \User\controllers\DefautController
+class ModifyController extends \Contact\controllers\DefaultController
 {
 	protected $newContacts;
 	public function actionIndex()
@@ -9,10 +9,8 @@ class ModifyController extends \User\controllers\DefautController
 		$this->prepareContacts();
 		$this->prepareNewContacts();
 
-		$con_model = new \Contacts;
-		$con_model->attributes = $this->contacts;
-		$adp = $con_model->search();
-		foreach ($adp->getData() as $data)
+		$con_model = \Contacts::model()->findAllByAttributes($this->contacts);
+		foreach ($con_model as $data)
 		{
 			$data->attributes = $this->newContacts;
 			try
@@ -24,6 +22,7 @@ class ModifyController extends \User\controllers\DefautController
 				new \Error(5, null, $e->getMessage());
 			}
 		}
+		new \Error(1);
 	}
 
 	private function prepareNewContacts()

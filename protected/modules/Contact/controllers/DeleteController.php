@@ -5,21 +5,27 @@ class DeleteController extends \Contact\controllers\DefaultController
 	public function actionIndex()
 	{
 		//$this->render('index');
+		$this->prepareUser();
 		$this->prepareContacts();
 
-		foreach($this->contacts as $con)
+		if (array_key_exists('Name', $this->contacts))
+			$this->deleteContact($this->contacts);
+		else
 		{
-			$this->deleteContact($con);
+			foreach($this->contacts as $con)
+			{
+				$this->deleteContact($con);
+			}
 		}
+		new \Error(1);
 	}
 
 	private function deleteContact($con)
 	{
-		$con_model = new \Contacts;
-		$con_model->attributes = $con;
-		$con_model->ID_user = $this->tiUser->ID;
-		$adp = $con_model->search();
-		foreach ($adp->getData() as $data)
+		//var_dump($con);
+		//exit;
+		$con_model = \Contacts::model()->findAllByAttributes($con);
+		foreach ($con_model as $data)
 		{
 			try
 			{

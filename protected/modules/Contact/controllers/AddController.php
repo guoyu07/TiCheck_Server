@@ -5,12 +5,11 @@ class AddController extends \Contact\controllers\DefaultController
 	public function actionIndex()
 	{
 		//$this->render('index');
+		$this->prepareUser();
 		$this->prepareContacts();
 		
-		foreach($this->contacts as $con)
-		{
-			$this->createContact($con);
-		}
+		$this->createContact($this->contacts);
+		new \Error(1);
 	}
 
 	private function createContact($con)
@@ -20,12 +19,16 @@ class AddController extends \Contact\controllers\DefaultController
 		$con_model->ID_user = $this->tiUser->ID;
 		try
 		{
-			$con_model->save();
+			if(!$con_model->save())
+			{
+				new \Error(5, null, json_encode($con_model->getErrors()));
+			}
 		}
 		catch(Exception $e)
 		{
 			new \Error(5, null, $e->getMessage());
 		}
+		
 	}
 
 	// Uncomment the following methods and override them if needed
