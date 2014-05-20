@@ -1,30 +1,31 @@
 <?php
 
-class AddController extends \Order\controllers\DefaultController
+class DeleteController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->prepareUser();
-		$this->prepareTempOrder();
-		$this->prepareOrderDetail();
-
-		$this->createOrder();
-
 		//$this->render('index');
-	}
-	private function createOrder()
-	{
-		$order = new \Order();
+		$this->prepareUser();
+		$order = new \Order;
+		$this->prepareTempOrder();
 		$order->TempOrder = $this->tempOrder;
 		$order->ID_user = $this->tiUser->ID;
-		$order->OrderDetail = $this->OrderDetail;
-		//TODO deal with flight here
-		if(!$order->save())
+		$order_provider = $order->search();
+		$arr_order = $order_provider->getData();
+
+		foreach ($arr_order as $value)
 		{
-			var_dump($order);
-			exit;
+			try
+			{
+				$value->delete();
+			}
+			catch(Exception $e)
+			{
+				new \Error(5, null, $e->getMessage());
+			}
 		}
 		new \Error(1);
+
 	}
 
 	// Uncomment the following methods and override them if needed

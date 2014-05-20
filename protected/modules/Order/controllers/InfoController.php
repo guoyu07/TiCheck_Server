@@ -20,7 +20,7 @@ class InfoController extends \Order\controllers\DefaultController
 		{
 			$arr_data_return[] = $value->attributes;
 		}
-		new \Error(1, null, null, $arr_data_return);
+		echo json_encode(array('Code'=>1, 'Message'=>'Succeed', 'Data'=>$arr_data_return));
 		
 		
 	}
