@@ -45,11 +45,16 @@ class DefaultController extends \User\controllers\DefaultController
 		}
 		else
 		{
+			/*
 			$lowestPrice = new \D_LowestPrice;
 			$tiSubs->CurrentPrice = (int)$lowestPrice->searchFlight($tiSubs);
+			 */
 			try
 			{
-				$tiSubs->save();
+				if (!$tiSubs->save())
+				{
+					//var_dump($tiSubs->getErrors());
+				}
 			}
 			catch(Exception $e)
 			{

@@ -18,12 +18,25 @@ return array(
 		 */
 		// uncomment the following to use a MySQL database
 		'db'=>array(
+			//'connectionString' => 'mysql:host=localhost;dbname=TiCheck',
+			'class' => 'CDbConnection',
+			'connectionString' => 'mysql:host=10.60.41.52;dbname=TiCheck',
+			'emulatePrepare' => true,
+			'username' => 'tac',
+			'password' => 'tongjiappleclub',
+//			'username' => 'root',
+			//'password' => '',
+			'charset' => 'utf8',
+		),
+		/*
+		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=TiCheck',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
 		),
+		 */
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -33,5 +46,13 @@ return array(
 				),
 			),
 		),
+	),
+
+	'import'=>array(
+		'application.models.*',
+		'application.components.*',
+		'application.apiCtrip.*',
+		'application.apiCtrip.Common.*',
+		'application.controllers.*',
 	),
 );

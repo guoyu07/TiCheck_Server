@@ -1537,3 +1537,376 @@ Stack trace:
 #7 {main}
 REQUEST_URI=/server/index.php?r=User/create
 ---
+2014/05/19 07:26:11 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:27:08 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:27:31 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:28:08 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:28:29 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CHelpCommand.php(64): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CHelpCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:30:13 [error] [php] include(Subscription.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:31:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/19 07:32:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/19 07:32:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/19 14:07:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 01:58:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 02:03:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 02:10:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 02:10:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(8): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 02:52:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 05:53:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08004] [1040] Too many connections' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 05:56:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08004] [1040] Too many connections' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 06:00:48 [error] [php] Use of undefined constant w - assumed 'w' (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:17)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:04:32 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:17)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:05:24 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:17)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:06:05 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:06:43 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:07:47 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:07:53 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:08:04 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:08:43 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 15:51:48 [error] [exception.CException] exception 'CException' with message 'Subscription and its behaviors do not have a method or closure named "findByAttribute".' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(227): CComponent->__call('findByAttribute', Array)
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(17): CActiveRecord->__call('findByAttribute', Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(17): Subscription->findByAttribute(Array)
+#3 [internal function]: HistoryPriceCommand->actionIndex('27')
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 15:52:36 [error] [exception.CException] exception 'CException' with message 'Property "Subscription.0" is not defined.' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:130
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(145): CComponent->__get('0')
+#1 /Library/WebServer/Documents/YiiRoot/framework/base/CModel.php(596): CActiveRecord->__get('0')
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(17): CModel->offsetGet(0)
+#3 [internal function]: HistoryPriceCommand->actionIndex('27')
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---

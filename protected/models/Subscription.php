@@ -17,7 +17,6 @@
  * @property string $DepartAirport
  *
  * The followings are the available model relations:
- * @property HistoryPrice[] $historyPrices
  * @property UserSubscription[] $userSubscriptions
  */
 class Subscription extends CActiveRecord
@@ -38,7 +37,7 @@ class Subscription extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('DepartCity, ArriveCity, StartDate, EndDate, CurrentPrice', 'required'),
+			array('DepartCity, ArriveCity, StartDate, EndDate', 'required'),
 			array('CurrentPrice', 'numerical', 'integerOnly'=>true),
 			array('DepartCity, ArriveCity, ArriveAirport, DepartAirport', 'length', 'max'=>3),
 			array('AirlineDibitCode', 'length', 'max'=>2),
@@ -57,7 +56,6 @@ class Subscription extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'historyPrices' => array(self::HAS_MANY, 'HistoryPrice', 'ID_subscription'),
 			'userSubscriptions' => array(self::HAS_MANY, 'UserSubscription', 'ID_subscription'),
 		);
 	}
