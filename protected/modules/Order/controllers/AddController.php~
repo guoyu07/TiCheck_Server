@@ -6,6 +6,8 @@ class AddController extends \Order\controllers\DefaultController
 	{
 		$this->prepareUser();
 		$this->prepareTempOrder();
+		//echo "heelo";
+		//exit;
 
 		$this->createOrder();
 
@@ -22,6 +24,7 @@ class AddController extends \Order\controllers\DefaultController
 			var_dump($order);
 			exit;
 		}
+		new \Error(1);
 	}
 
 	// Uncomment the following methods and override them if needed

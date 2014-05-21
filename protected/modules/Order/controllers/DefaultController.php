@@ -16,7 +16,7 @@ class DefaultController extends \User\controllers\DefaultController
 			new \Error(4, "TempOrder");
 		}
 
-		$this->tempOrder = json_decode($_POST['TempOrder']);
+		$this->tempOrder = json_decode($_POST['TempOrder'], true)['OrderID'];
 	}
 	
 }
