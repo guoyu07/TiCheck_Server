@@ -1,28 +1,31 @@
 <?php
 
-class InfoController extends \Order\controllers\DefaultController
+class DeleteController extends Controller
 {
 	public function actionIndex()
 	{
 		//$this->render('index');
 		$this->prepareUser();
 		$order = new \Order;
-		if (isset($_POST['TempOrder']))
-		{
-			$this->prepareTempOrder();
-			$order->TempOrder = $this->tempOrder;
-		}
+		$this->prepareTempOrder();
+		$order->TempOrder = $this->tempOrder;
 		$order->ID_user = $this->tiUser->ID;
 		$order_provider = $order->search();
 		$arr_order = $order_provider->getData();
-		$arr_data_return = null;
+
 		foreach ($arr_order as $value)
 		{
-			$arr_data_return[] = $value->attributes;
+			try
+			{
+				$value->delete();
+			}
+			catch(Exception $e)
+			{
+				new \Error(5, null, $e->getMessage());
+			}
 		}
-		echo json_encode(array('Code'=>1, 'Message'=>'Succeed', 'Data'=>$arr_data_return));
-		
-		
+		new \Error(1);
+
 	}
 
 	// Uncomment the following methods and override them if needed

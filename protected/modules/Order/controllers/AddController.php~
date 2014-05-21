@@ -6,8 +6,12 @@ class AddController extends \Order\controllers\DefaultController
 	{
 		$this->prepareUser();
 		$this->prepareTempOrder();
+<<<<<<< HEAD
 		//echo "heelo";
 		//exit;
+=======
+		$this->prepareOrderDetail();
+>>>>>>> 2ed3551d0aee9586d0919f59a73cc64eb107efb7
 
 		$this->createOrder();
 
@@ -18,11 +22,27 @@ class AddController extends \Order\controllers\DefaultController
 		$order = new \Order();
 		$order->TempOrder = $this->tempOrder;
 		$order->ID_user = $this->tiUser->ID;
+		$order->OrderDetail = $this->OrderDetail;
 		//TODO deal with flight here
-		if(!$order->save())
+<<<<<<< HEAD
+		try 
+=======
+		try
+>>>>>>> 2ed3551d0aee9586d0919f59a73cc64eb107efb7
 		{
-			var_dump($order);
-			exit;
+			if(!$order->save())
+			{
+				var_dump($order);
+				exit;
+			}
+		}
+<<<<<<< HEAD
+		catch(Exception $e)
+=======
+		catch (Exception $e)
+>>>>>>> 2ed3551d0aee9586d0919f59a73cc64eb107efb7
+		{
+			new \Error(5, null, $e->getMessage());
 		}
 		new \Error(1);
 	}

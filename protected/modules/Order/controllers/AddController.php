@@ -6,8 +6,7 @@ class AddController extends \Order\controllers\DefaultController
 	{
 		$this->prepareUser();
 		$this->prepareTempOrder();
-		//echo "heelo";
-		//exit;
+		$this->prepareOrderDetail();
 
 		$this->createOrder();
 
@@ -18,8 +17,9 @@ class AddController extends \Order\controllers\DefaultController
 		$order = new \Order();
 		$order->TempOrder = $this->tempOrder;
 		$order->ID_user = $this->tiUser->ID;
+		$order->OrderDetail = $this->OrderDetail;
 		//TODO deal with flight here
-		try 
+		try
 		{
 			if(!$order->save())
 			{

@@ -3,10 +3,20 @@ namespace Order\controllers;
 class DefaultController extends \User\controllers\DefaultController
 {
 	protected $tempOrder = null;
+	protected $orderDetail = null;
 	public function actionIndex()
 	{
-
 		//$this->render('index');
+	}
+
+	public function prepareOrderDetail()
+	{
+		if (!isset($_POST['OrderDetail']))
+		{
+			new \Error(4, "OrderDetail");
+		}
+
+		$this->tempOrder = json_decode($_POST['OrderDetail']);
 	}
 
 	public function prepareTempOrder()
