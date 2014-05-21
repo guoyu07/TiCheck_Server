@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "User_Device".
+ * This is the model class for table "user_device".
  *
- * The followings are the available columns in table 'User_Device':
+ * The followings are the available columns in table 'user_device':
  * @property string $Device_token
  * @property string $ID_user
  *
@@ -17,7 +17,7 @@ class UserDevice extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'User_Device';
+		return 'user_device';
 	}
 
 	/**
@@ -29,7 +29,7 @@ class UserDevice extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('Device_token, ID_user', 'required'),
-			array('Device_token', 'length', 'max'=>64),
+			array('Device_token', 'length', 'max'=>128),
 			array('ID_user', 'length', 'max'=>20),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

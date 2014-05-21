@@ -1,17 +1,15 @@
 <?php
-Yii::import('webroot.protected.modules.Push.default');
-class TokenController extends Controller
+//Yii::import('webroot.protected.modules.Push.default');
+class TokenController extends \User\controllers\DefaultController
 {
-	private $_user;
+	//private $_user;
 	//private $_device_token;
 
 	public function actionCreate()
 	{
-		if (!(isset($_POST['User']) && isset($_POST['DeviceToken'])))
-			throw new CException("param not enough");
-		$c_default = new DefaultController();
-		$c_default->actionIndex();
-		return;
+		//$c_default = new DefaultController();
+		//$c_default->actionIndex();
+		//return;
 
 		// user
 		$this->prepareUser();
@@ -19,9 +17,11 @@ class TokenController extends Controller
 		$this->prepareDeviceToken();
 
 
+		new \Error(1);
 		//$this->render('create');
 	}
 
+	/*
 	private function prepareUser()
 	{
 		$user = json_decode($_POST['User'], true);
@@ -39,15 +39,32 @@ class TokenController extends Controller
 		}
 		$this->_user = $user_adp->getData()[0];
 	}
+	 */
 
 	private function prepareDeviceToken()
 	{
-		$token = json_decode($_POST['DeviceToken'], true);
+		//$token = json_decode($_POST['DeviceToken'], true);
+		if (!isset($_POST['DeviceToken']))
+		{
+			new \Error(4, 'DeviceToken');
+		}
+		$token = $_POST['DeviceToken'];
 		$tiUser_Device = new UserDevice;
 		$tiUser_Device->Device_token = $token;
-		$tiUser_Device->ID_user = $this->_user->ID;
-		$tiUser_Device->save();
+		$tiUser_Device->ID_user = $this->tiUser->ID;
+		try
+		{
+			if (!$tiUser_Device->save())
+			{
+				new \Error(5, null, json_encode($tiUser_Device->getErrors()));
+			}
+		}
+		catch(Exception $e)
+		{
+			new \Error(5, null, $e->getMessage());
+		}
 	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()
