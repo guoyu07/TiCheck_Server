@@ -17,13 +17,13 @@ class AddController extends \Order\controllers\DefaultController
 		$order = new \Order();
 		$order->TempOrder = $this->tempOrder;
 		$order->ID_user = $this->tiUser->ID;
-		$order->OrderDetail = $this->OrderDetail;
+		$order->OrderDetail = $this->orderDetail;
 		//TODO deal with flight here
 		try
 		{
 			if(!$order->save())
 			{
-				var_dump($order);
+				new \Error(5, null, $order->getErrors());
 				exit;
 			}
 		}

@@ -16,7 +16,7 @@ class DefaultController extends \User\controllers\DefaultController
 			new \Error(4, "OrderDetail");
 		}
 
-		$this->tempOrder = json_decode($_POST['OrderDetail']);
+		$this->orderDetail = json_decode($_POST['OrderDetail']);
 	}
 
 	public function prepareTempOrder()
@@ -26,11 +26,7 @@ class DefaultController extends \User\controllers\DefaultController
 			new \Error(4, "TempOrder");
 		}
 
-<<<<<<< HEAD
 		$this->tempOrder = json_decode($_POST['TempOrder'], true)['OrderID'];
-=======
-		$this->tempOrder = $_POST['TempOrder'];
->>>>>>> 2ed3551d0aee9586d0919f59a73cc64eb107efb7
 	}
 	
 }

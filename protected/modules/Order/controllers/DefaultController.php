@@ -16,7 +16,7 @@ class DefaultController extends \User\controllers\DefaultController
 			new \Error(4, "OrderDetail");
 		}
 
-		$this->tempOrder = json_decode($_POST['OrderDetail']);
+		$this->orderDetail = $_POST['OrderDetail'];
 	}
 
 	public function prepareTempOrder()
