@@ -1,6 +1,6 @@
 <?php
 
-class DeleteController extends Controller
+class DeleteController extends \Order\controllers\Controller
 {
 	public function actionIndex()
 	{

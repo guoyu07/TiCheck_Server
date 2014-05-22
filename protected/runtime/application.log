@@ -1910,3 +1910,92 @@ Stack trace:
 #10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
 #11 {main}
 ---
+2014/05/21 16:36:15 [error] [exception.CException] exception 'CException' with message 'SearchFlightCommand and its behaviors do not have a method or closure named "createHistoryPrice".' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(26): CComponent->__call('createHistoryPr...', Array)
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(26): SearchFlightCommand->createHistoryPrice(Object(Subscription), 680)
+#2 [internal function]: SearchFlightCommand->actionSearch()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#10 {main}
+---
+2014/05/22 22:15:09 [error] [php] Use of undefined constant nil - assumed 'nil' (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:24)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/22 22:50:56 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'Property "HistoryPrice.0" is not defined.' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(65): Error->__construct(5, NULL, 'Property "Histo...')
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/22 22:56:54 [error] [php] Array to string conversion (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:131)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (131)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (32)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/22 23:00:58 [error] [php] Missing argument 1 for CModel::getError(), called in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php on line 148 and defined (/Library/WebServer/Documents/YiiRoot/framework/base/CModel.php:371)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (148)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (32)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/22 23:01:31 [error] [exception.CHttpException.5] exception 'CHttpException' with message '{"Price":["Price must be a number."]}' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(65): Error->__construct(5, NULL, '{"Price":["Pric...')
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/22 23:04:36 [error] [php] Argument 2 passed to SearchFlightCommand::createHistoryPrice() must be an instance of int, integer given, called in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php on line 32 and defined (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:124)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (124)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (32)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)

@@ -4,7 +4,8 @@
  */
 include_once('SDK.config.php');
 include_once('Common/getDate.php');
-class D_FlightSearch{
+class D_FlightSearch
+{
 	/**
 	 * @var 航程类型：string类型；必填；S（单程）D（往返程）M（联程）
 	 */

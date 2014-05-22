@@ -13,6 +13,7 @@ function getDataFromSoap($url,$funcName,$parameters)
 	//调用指定的URL
 	$soap=new SoapClient($url);
 	try{
+		Request($parameters);
 		$coutw=$soap->$funcName($parameters);
 		// echo json_encode($coutw);
 		return  $coutw;
