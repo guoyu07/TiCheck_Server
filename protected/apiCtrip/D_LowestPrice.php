@@ -21,60 +21,56 @@ class D_LowestPrice extends D_FlightSearch
 		while ($date <= $endDate)
 		{
 			sleep(3);
+			echo $date->format(Datetime::W3C);
 			//echo "while";
 			if ($date < $today)
 			{
 				echo "yesterday";
-				return;
+				continue;
 
 			}
 			
 			$this->DepartCity=$subs->DepartCity;
 			$this->ArriveCity=$subs->ArriveCity;
 			$this->DepartDate=$date->format('Y-m-d');
-			$this->EarliestDepartTime=$subs->EarliestDepartTime;
-			$this->LatestDepartTime=$subs->LatestDepartTime;
+			if ($this->EarliestDepartTime != null)
+				$this->EarliestDepartTime=$this->DepartDate . "T" . $subs->EarliestDepartTime;
+			if ($this->LatestDepartTime != null)
+				$this->LatestDepartTime=$this->DepartDate . "T" . $subs->LatestDepartTime;
 			$this->AirlineDibitCode=$subs->AirlineDibitCode;
 			$this->IsLowestPrice="true";
 			$this->OrderBy="Price";
 			$this->main();
 			$returnXML=$this->ResponseXML;
 
-			//exit;
 			if (!$this->checkReturnXML($returnXML))
 			{
+				//var_dump($this->returnXML);exit;
+				
 				$date->add(new DateInterval('P1D'));
 				continue;
 			}
+			//var_dump($this->ResponseXML);exit;
 
-			$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
-			
-			//var_dump($flights);
-			if (is_array($flights))
-				$flight = $flights[0];
-			else
-				$flight = $flights;
+			$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList;//->DomesticFlightData;
+				$flights = $this->filterLowestPriceFlight($flights);
+				$flight = $flights->DomesticFlightData;
 
-			//if ($flight->Price == 0)
+			$this->str_responseXML=str_replace("<",@"&lt;",$this->str_responseXML);
+			$this->str_responseXML=str_replace(">",@"&gt;",$this->str_responseXML);
 
 			if ($this->price > $flight->Price || $this->price==NULL)
 			{
 				$this->price = $flight->Price;	
-				if ($this->price == 0)
-				{
-					var_dump($returnXML);
-					exit;
-				}
 			}
+
 			$date->add(new DateInterval('P1D'));
-			//var_dump($date);
 		}
 		return $this->price;
 	}
 
 	private function checkReturnXML($returnXML)
 	{
-
 		if ($returnXML->FlightSearchResponse== NULL)
 		{
 			return false;
@@ -96,6 +92,33 @@ class D_LowestPrice extends D_FlightSearch
 			return false;
 		}
 		return true;
+	}
+
+	private function filterLowestPriceFlight($obj_response_xml)
+	{
+
+		$lowest_price = $obj_response_xml->DomesticFlightData->Price;	
+		$dom_element = dom_import_simplexml($obj_response_xml);
+		$dom_list = $dom_element->getElementsByTagName('DomesticFlightData');
+
+		foreach ($dom_list as $node)
+		{
+			if ((int)$node->getElementsByTagName('Price')->item(0)->nodeValue > $lowest_price)
+			{
+				$nodes[] = $node;
+			}
+		}
+		echo "\n\n\n";
+		var_dump($nodes);
+
+		foreach ($nodes as $node)
+			$node->parentNode->removeChild($node);
+
+		$xml = simplexml_import_dom($dom_element);
+		echo "\n\n\n";
+		var_dump($xml);
+
+		return $xml;
 	}
 }
 ?>

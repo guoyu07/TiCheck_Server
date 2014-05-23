@@ -6,6 +6,7 @@ include_once('SDK.config.php');
 include_once('Common/getDate.php');
 class D_FlightSearch
 {
+	public $str_responseXML;
 	/**
 	 * @var 航程类型：string类型；必填；S（单程）D（往返程）M（联程）
 	 */
@@ -224,21 +225,25 @@ BEGIN;
 		return  $paravalue;
 	}
 
+	//public $requestXML;
 	function main(){
 		try{
 			$requestXML=$this->getRequestXML();
+			//$this->requestXML=$this->getRequestXML();
 			$commonRequestDo=new commonRequest();//常用数据请求
 			$commonRequestDo->requestURL=OTA_FlightSearch_Url;
 			$commonRequestDo->requestXML=$requestXML;
 			$commonRequestDo->requestType=System_RequestType;//取config中的配置
 			$commonRequestDo->doRequest();
-			$returnXML=$commonRequestDo->responseXML;
+			$this->str_responseXML = $commonRequestDo->responseXML;
+			//echo $this->str_responseXML;
+			//$returnXML=$commonRequestDo->responseXML;
 			
 			//print_r($commonRequestDo);die;
 // echo json_encode($returnXML);die;//校验请求数据-临时用
 			//调用Common/RequestDomXml.php中函数解析返回的XML
 //			echo $returnXML;
-			$this->ResponseXML=getXMLFromReturnString($returnXML);
+			$this->ResponseXML=getXMLFromReturnString($this->str_responseXML);
 		}
 		catch(Exception $e)
 		{

@@ -20,7 +20,7 @@ class SearchFlightCommand extends CConsoleCommand
 			//exit;
 			foreach ($array_subs as $tiSubs)
 			{
-				var_dump($tiSubs);
+				//var_dump($tiSubs);
 				//echo "xxxxxxxxxxxxxxxx<br>";
 				$lowestPrice = new D_LowestPrice;
 				$tempPrice = $lowestPrice->searchFlight($tiSubs);
@@ -59,7 +59,7 @@ class SearchFlightCommand extends CConsoleCommand
 				}
 				sleep(6);
 			}
-			sleep(600);
+			sleep(6);
 		}
 		}
 		catch(Exception $e)
