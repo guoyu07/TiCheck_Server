@@ -16,12 +16,11 @@ function getXMLFromReturnString($ReturnString)
 		$xml = simplexml_import_dom($dom);
 		//判断当前的接口是否调用成功
 		$header=$xml->Header;
-		//echo $xml;//null
+		//echo $xml;
 		if($header!=null){
 			$resultCode=$header["ResultCode"];
 			if($resultCode=="Success"){
 				//调用成功
-				echo json_encode($header);
 				$coutw=$xml;
 			}
 			else

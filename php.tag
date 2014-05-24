@@ -78,8 +78,7 @@ Direction	protected/apiCtrip/D_FlightSearch.php	/^	var $Direction="ASC";$/;"	v
 EarliestDepartTime	protected/apiCtrip/D_FlightSearch.php	/^			$EarliestDepartTime=<<<BEGIN$/;"	v
 EarliestDepartTime	protected/apiCtrip/D_FlightSearch.php	/^		$EarliestDepartTime="";$/;"	v
 EarliestDepartTime	protected/apiCtrip/D_FlightSearch.php	/^	var $EarliestDepartTime="";$/;"	v
-EarliestDepartTime	protected/apiCtrip/D_LowestPrice.php	/^			$this->EarliestDepartTime=$subs->EarliestDepartTime;$/;"	v
-EndDate	protected/apiCtrip/D_LowestPrice.php	/^		$this->EndDate = $endDate->format('Y-m-d');$/;"	v
+EarliestDepartTime	protected/apiCtrip/D_LowestPrice.php	/^				$this->EarliestDepartTime=$this->DepartDate . "T" . $subs->EarliestDepartTime;$/;"	v
 Error	protected/controllers/Error.php	/^class Error extends Controller$/;"	c
 Error	protected/controllers/ErrorController.php	/^class Error extends Controller$/;"	c
 FirstString	protected/apiCtrip/Common/browseHistoryClass.php	/^						$FirstString=substr($RecentlyGoods,0,$pos); \/\/取出第一个参数$/;"	v
@@ -111,7 +110,7 @@ KeyString	protected/apiCtrip/Common/rightControl.php	/^	$KeyString=$Timestamp.$A
 LatestDepartTime	protected/apiCtrip/D_FlightSearch.php	/^			$LatestDepartTime=<<<BEGIN$/;"	v
 LatestDepartTime	protected/apiCtrip/D_FlightSearch.php	/^		$LatestDepartTime="";$/;"	v
 LatestDepartTime	protected/apiCtrip/D_FlightSearch.php	/^	var $LatestDepartTime="";$/;"	v
-LatestDepartTime	protected/apiCtrip/D_LowestPrice.php	/^			$this->LatestDepartTime=$subs->LatestDepartTime;$/;"	v
+LatestDepartTime	protected/apiCtrip/D_LowestPrice.php	/^				$this->LatestDepartTime=$this->DepartDate . "T" . $subs->LatestDepartTime;$/;"	v
 LatestDepartTimeOptions	protected/apiCtrip/D_FlightSearch.php	/^			$LatestDepartTimeOptions=<<<BEGIN$/;"	v
 LatestDepartTimeOptions	protected/apiCtrip/D_FlightSearch.php	/^		$LatestDepartTimeOptions="";$/;"	v
 LatestDepartTimeOptions	protected/apiCtrip/D_FlightSearch.php	/^	var $LatestDepartTimeOptions="";$/;"	v
@@ -147,7 +146,7 @@ RecentlyGoodsNew	protected/apiCtrip/Common/browseHistoryClass.php	/^						$Recen
 RecentlyGoodsNum	protected/apiCtrip/Common/browseHistoryClass.php	/^				$RecentlyGoodsNum=count($RecentlyGoodsArray); \/\/RecentlyGoodsNum 当前存储的变量个数$/;"	v
 RequestType	protected/apiCtrip/D_FlightSearch.php	/^		$RequestType="OTA_FlightSearch";$/;"	v
 RequestType	protected/apiCtrip/OTA_UserUniqueID.php	/^		$RequestType="OTA_UserUniqueID";$/;"	v
-ResponseXML	protected/apiCtrip/D_FlightSearch.php	/^			$this->ResponseXML=getXMLFromReturnString($returnXML);$/;"	v
+ResponseXML	protected/apiCtrip/D_FlightSearch.php	/^			$this->ResponseXML=getXMLFromReturnString($this->str_responseXML);$/;"	v
 ResponseXML	protected/apiCtrip/D_FlightSearch.php	/^			$this->ResponseXML=null;$/;"	v
 ResponseXML	protected/apiCtrip/D_FlightSearch.php	/^	var $ResponseXML="";$/;"	v
 ResponseXML	protected/apiCtrip/OTA_UserUniqueID.php	/^			$this->ResponseXML=getXMLFromReturnString($commonRequestDo->responseXML);$/;"	v
@@ -199,7 +198,9 @@ UserSubscription	protected/models/UserSubscription.php	/^class UserSubscription 
 WebTestCase	protected/tests/WebTestCase.php	/^class WebTestCase extends CWebTestCase$/;"	c
 YII_DEBUG	index-test.php	/^defined('YII_DEBUG') or define('YII_DEBUG',true);$/;"	d
 YII_DEBUG	index.php	/^defined('YII_DEBUG') or define('YII_DEBUG',true);$/;"	d
+YII_DEBUG	protected/yiic.php	/^defined('YII_DEBUG') or define('YII_DEBUG',true);$/;"	d
 YII_TRACE_LEVEL	index.php	/^defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);$/;"	d
+YII_TRACE_LEVEL	protected/yiic.php	/^defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL',3);$/;"	d
 __construct	protected/apiCtrip/Common/HttpRequest.php	/^	function __construct($url="",$method="GET",$useSocket=0){$/;"	f
 __construct	protected/apiCtrip/Common/Session.php	/^	public function __construct(){$/;"	f
 __construct	protected/apiCtrip/Common/operXml.php	/^  public function __construct() $/;"	f
@@ -409,6 +410,7 @@ buffer	protected/apiCtrip/Common/HttpRequest.php	/^			$buffer="";$/;"	v
 cdata	protected/apiCtrip/Common/operXml.php	/^  public function cdata($parser, $cdata) $/;"	f
 checkCookieIsReady	protected/apiCtrip/Common/browseHistoryClass.php	/^	function checkCookieIsReady()$/;"	f
 checkDate	protected/apiCtrip/Common/toolExt.php	/^	$checkDate= date($format,$unixTime);$/;"	v
+checkReturnXML	protected/apiCtrip/D_LowestPrice.php	/^	private function checkReturnXML($returnXML)$/;"	f
 childCount	protected/apiCtrip/Common/operXml.php	/^    $childCount = count($treeNode->children);$/;"	v
 chunk_hex	protected/apiCtrip/Common/HttpRequest.php	/^		$chunk_hex = substr ( $chunk_hex, 0, $sc_pos );$/;"	v
 chunk_hex	protected/apiCtrip/Common/HttpRequest.php	/^		$chunk_hex = trim ( substr ( $in, 0, $lf_pos ) );$/;"	v
@@ -572,6 +574,8 @@ doRequest	protected/apiCtrip/Common/commonRequestData.php	/^	public function doR
 documentation	protected/views/subscription/_form.php	/^	\/\/ See class documentation of CActiveForm for details on this.$/;"	c
 documentation	protected/views/tiUser/_form.php	/^	\/\/ See class documentation of CActiveForm for details on this.$/;"	c
 dom	protected/apiCtrip/Common/RequestDomXml.php	/^		$dom=new DOMDocument('1.0','UTF-8');$/;"	v
+dom_element	protected/apiCtrip/D_LowestPrice.php	/^		$dom_element = dom_import_simplexml($obj_response_xml);$/;"	v
+dom_list	protected/apiCtrip/D_LowestPrice.php	/^		$dom_list = $dom_element->getElementsByTagName('DomesticFlightData');$/;"	v
 domain	protected/apiCtrip/Common/browseHistoryClass.php	/^		$domain='http:\/\/ctrip.com';$/;"	v
 duration	protected/models/LoginForm.php	/^			$duration=$this->rememberMe ? 3600*24*30 : 0; \/\/ 30 days$/;"	v
 email	protected/models/ContactForm.php	/^	public $email;$/;"	v
@@ -602,6 +606,7 @@ fetchContactsOfUser	protected/modules/Contact/controllers/InfoController.php	/^	
 fetchSpecificContact	protected/modules/Contact/controllers/InfoController.php	/^	private function fetchSpecificContact()$/;"	f
 filenamelen	protected/apiCtrip/Common/HttpRequest.php	/^		$filenamelen = 0;$/;"	v
 filterHtmls	protected/apiCtrip/Common/toolExt.php	/^function filterHtmls($str)$/;"	f
+filterLowestPriceFlight	protected/apiCtrip/D_LowestPrice.php	/^	private function filterLowestPriceFlight($obj_response_xml)$/;"	f
 filters	protected/controllers/Error.php	/^	public function filters()$/;"	f
 filters	protected/controllers/ErrorController.php	/^	public function filters()$/;"	f
 filters	protected/controllers/SubscriptionController.php	/^	public function filters()$/;"	f
@@ -626,12 +631,12 @@ filters	protected/modules/User/controllers/InfoController.php	/^	public function
 filters	protected/modules/User/controllers/LoginController.php	/^	public function filters()$/;"	f
 filters	protected/modules/User/controllers/ModifyController.php	/^	public function filters()$/;"	f
 flags	protected/apiCtrip/Common/HttpRequest.php	/^		$flags = ord ( substr ( $data, 3, 1 ) );$/;"	v
-flight	protected/apiCtrip/D_LowestPrice.php	/^				$flight = $flights;$/;"	v
-flight	protected/apiCtrip/D_LowestPrice.php	/^				$flight = $flights[0];$/;"	v
+flight	protected/apiCtrip/D_LowestPrice.php	/^				$flight = $flights->DomesticFlightData;$/;"	v
 flight	protected/modules/Subscription/controllers/CreateController.php	/^				$flight = $flights;$/;"	v
 flight	protected/modules/Subscription/controllers/CreateController.php	/^				$flight = $flights[0];$/;"	v
 flight_asker	protected/modules/Flight/controllers/CtripController.php	/^		$flight_asker = new D_FlightSearch;$/;"	v
-flights	protected/apiCtrip/D_LowestPrice.php	/^			$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;$/;"	v
+flights	protected/apiCtrip/D_LowestPrice.php	/^				$flights = $this->filterLowestPriceFlight($flights);$/;"	v
+flights	protected/apiCtrip/D_LowestPrice.php	/^			$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList;\/\/->DomesticFlightData;$/;"	v
 flights	protected/apiCtrip/demo/demo_flightSearch.php	/^$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList;$/;"	v
 flights	protected/modules/Flight/controllers/CtripController.php	/^		$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;$/;"	v
 flights	protected/modules/Push/controllers/DefaultController.php	/^			$flights = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;$/;"	v
@@ -707,7 +712,6 @@ headerstr	protected/apiCtrip/Common/HttpRequest.php	/^		$headerstr = $this->resp
 history_price	protected/commands/HistoryPriceCommand.php	/^			$history_price = $history_price[0];$/;"	v
 history_price	protected/commands/HistoryPriceCommand.php	/^			$history_price = new HistoryPrice;$/;"	v
 history_price	protected/commands/HistoryPriceCommand.php	/^		$history_price = \\HistoryPrice::model()->findByAttributes(array($/;"	v
-history_price	protected/commands/SearchFlightCommand.php	/^			$history_price = $history_price[0];$/;"	v
 history_price	protected/commands/SearchFlightCommand.php	/^			$history_price = new HistoryPrice;$/;"	v
 history_price	protected/commands/SearchFlightCommand.php	/^		$history_price = HistoryPrice::model()->findByAttributes(array($/;"	v
 history_price	protected/modules/Push/controllers/DefaultController.php	/^			$history_price = $history_price[0];$/;"	v
@@ -772,6 +776,7 @@ lowestPrice	protected/commands/HistoryPriceCommand.php	/^		$lowestPrice = new \\
 lowestPrice	protected/commands/SearchFlightCommand.php	/^				$lowestPrice = new D_LowestPrice;$/;"	v
 lowestPrice	protected/modules/Push/controllers/DefaultController.php	/^				$lowestPrice = new D_LowestPrice;$/;"	v
 lowestPrice	protected/modules/Subscription/controllers/DefaultController.php	/^			$lowestPrice = new \\D_LowestPrice;$/;"	v
+lowest_price	protected/apiCtrip/D_LowestPrice.php	/^		$lowest_price = $obj_response_xml->DomesticFlightData->Price;	$/;"	v
 main	protected/apiCtrip/D_FlightSearch.php	/^	function main(){$/;"	f
 main	protected/apiCtrip/OTA_UserUniqueID.php	/^	function main(){$/;"	f
 menu	protected/components/Controller.php	/^	public $menu=array();$/;"	v
@@ -981,7 +986,6 @@ result	protected/commands/SearchFlightCommand.php	/^		$result = fwrite($apns_con
 result	protected/modules/Push/controllers/DefaultController.php	/^		$result = fwrite($apns_con, $msg, strlen($msg));$/;"	v
 result	simplepush.php	/^$result = fwrite($fp, $msg, strlen($msg));$/;"	v
 resultCode	protected/apiCtrip/Common/RequestDomXml.php	/^			$resultCode=$header["ResultCode"];$/;"	v
-returnXML	protected/apiCtrip/D_FlightSearch.php	/^			$returnXML=$commonRequestDo->responseXML;$/;"	v
 returnXML	protected/apiCtrip/D_LowestPrice.php	/^			$returnXML=$this->ResponseXML;$/;"	v
 returnXML	protected/apiCtrip/OTA_UserUniqueID.php	/^	 	\/\/ $returnXML=$commonRequestDo->responseXML;$/;"	v
 returnXML	protected/apiCtrip/demo/demo_flightSearch.php	/^$returnXML=$D_FlightSearch->ResponseXML;\/\/返回的数据是一个XML$/;"	v
@@ -1083,6 +1087,10 @@ str	protected/apiCtrip/Common/toolExt.php	/^	$str=str_replace("<\/b>",",",$str);
 str	protected/apiCtrip/Common/toolExt.php	/^	$str=str_replace("<b>",",",$str);$/;"	v
 strArr	protected/apiCtrip/Common/toolExt.php	/^	$strArr = explode("-",$str);$/;"	v
 strSubstr	protected/apiCtrip/Common/toolExt.php	/^function strSubstr($str,$lengths)$/;"	f
+str_responseXML	protected/apiCtrip/D_FlightSearch.php	/^			$this->str_responseXML = $commonRequestDo->responseXML;$/;"	v
+str_responseXML	protected/apiCtrip/D_FlightSearch.php	/^	public $str_responseXML;$/;"	v
+str_responseXML	protected/apiCtrip/D_LowestPrice.php	/^			$this->str_responseXML=str_replace("<",@"&lt;",$this->str_responseXML);$/;"	v
+str_responseXML	protected/apiCtrip/D_LowestPrice.php	/^			$this->str_responseXML=str_replace(">",@"&gt;",$this->str_responseXML);$/;"	v
 subject	protected/controllers/SiteController.php	/^				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';$/;"	v
 subject	protected/models/ContactForm.php	/^	public $subject;$/;"	v
 subs	protected/commands/HistoryPriceCommand.php	/^		$subs = \\Subscription::model()->findByAttributes(array('ID'=>$subs_id));$/;"	v
@@ -1107,6 +1115,7 @@ tag_close	protected/apiCtrip/Common/operXml.php	/^  public function tag_close($p
 tag_open	protected/apiCtrip/Common/operXml.php	/^  public function tag_open($parser, $tag, $attributes) $/;"	f
 tempOrder	protected/modules/Order/controllers/DefaultController.php	/^		$this->tempOrder = json_decode($_POST['TempOrder'], true)['OrderID'];$/;"	v
 tempOrder	protected/modules/Order/controllers/DefaultController.php	/^	protected $tempOrder = null;$/;"	v
+tempPrice	protected/commands/SearchFlightCommand.php	/^				$tempPrice = $lowestPrice->searchFlight($tiSubs);$/;"	v
 temp_str	protected/apiCtrip/Common/toolExt.php	/^		$temp_str=substr($str,0,1);$/;"	v
 testContact	protected/tests/functional/SiteTest.php	/^	public function testContact()$/;"	f
 testIndex	protected/tests/functional/SiteTest.php	/^	public function testIndex()$/;"	f
@@ -1137,6 +1146,7 @@ timediff	protected/apiCtrip/getDate.php	/^function timediff($begin_time,$end_tim
 timeout	protected/apiCtrip/Common/HttpRequest.php	/^		$this->timeout = $timeout;$/;"	v
 timestart	protected/apiCtrip/Common/HttpRequest.php	/^			$timestart = time();$/;"	v
 tmp_ip	protected/apiCtrip/Common/toolExt.php	/^		$tmp_ip = explode( ",", $REMOTE_ADDR );$/;"	v
+today	protected/apiCtrip/D_LowestPrice.php	/^		$today = new DateTime('now');$/;"	v
 token	protected/modules/Push/controllers/TokenController.php	/^		$token = $_POST['DeviceToken'];$/;"	v
 token	protected/modules/User/controllers/DeviceTokenController.php	/^		$this->token = json_decode($_POST['DeviceToken']);$/;"	v
 token	protected/modules/User/controllers/DeviceTokenController.php	/^	protected $token;$/;"	v
@@ -1193,6 +1203,7 @@ verifyPassword	protected/modules/User/controllers/CreateController.php	/^	privat
 verifyPassword	protected/modules/User/controllers/DefaultController.php	/^	private function verifyPassword($passwd)$/;"	f
 x	protected/apiCtrip/Common/toolExt.php	/^	$x=explode(".",$hotelIDDouble);$/;"	v
 xml	protected/apiCtrip/Common/RequestDomXml.php	/^		$xml = simplexml_import_dom($dom);$/;"	v
+xml	protected/apiCtrip/D_LowestPrice.php	/^		$xml = simplexml_import_dom($dom_element);$/;"	v
 xmlStr	protected/apiCtrip/Common/operXml.php	/^    $this->xmlStr = $xmlStr;$/;"	v
 yii	index-test.php	/^$yii=dirname(__FILE__).'\/..\/YiiRoot\/framework\/yii.php';$/;"	v
 yii	index.php	/^$yii=dirname(__FILE__).'\/..\/YiiRoot\/framework\/yii.php';$/;"	v

@@ -2065,3 +2065,111 @@ Stack trace:
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (101)
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (56)
 in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (26)
+2014/05/24 09:06:54 [error] [exception.CDbException] exception 'CDbException' with message 'update old history_price fail' in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:126
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(23): SearchFlightCommand->createHistoryPrice(Object(Subscription), Object(D_LowestPrice))
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/24 09:09:26 [error] [exception.CHttpException.5] exception 'CHttpException' with message '{"Timestamp":["Timestamp cannot be blank."]}' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(209): Error->__construct(5, NULL, '{"Timestamp":["...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(146): SearchFlightCommand->addNewFlights(Object(Subscription), Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(25): SearchFlightCommand->addFlightsOfSubscription(Object(Subscription), Object(D_LowestPrice))
+#3 [internal function]: SearchFlightCommand->actionSearch()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/24 09:22:42 [error] [php] Undefined property: D_LowestPrice::$returnXML (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:43)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (43)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (19)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/24 09:25:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'flight_xml' at row 1. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1).
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (204)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (146)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (25)
+2014/05/24 09:25:13 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'flight_xml' at row 1. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1)' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(209): Error->__construct(5, NULL, 'CDbCommand fail...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(146): SearchFlightCommand->addNewFlights(Object(Subscription), Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(25): SearchFlightCommand->addFlightsOfSubscription(Object(Subscription), Object(D_LowestPrice))
+#3 [internal function]: SearchFlightCommand->actionSearch()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/24 09:33:46 [error] [exception.CHttpException.5] exception 'CHttpException' with message '{"CurrentPrice":["Current Price must be a number."]}' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(166): Error->__construct(5, NULL, '{"CurrentPrice"...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(26): SearchFlightCommand->modifyPriceOfSubscription(Object(Subscription))
+#2 [internal function]: SearchFlightCommand->actionSearch()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#10 {main}
+---
+2014/05/24 09:40:53 [error] [php] Undefined variable: nodes (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:119)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(19): D_LowestPrice->searchFlight()
+#1 unknown(0): SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (119)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (69)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (61)
+2014/05/24 11:00:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flight_xml' in 'field list'. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1).
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (207)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (149)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (28)
+2014/05/24 11:00:40 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flight_xml' in 'field list'. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1)' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(212): Error->__construct(5, NULL, 'CDbCommand fail...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(149): SearchFlightCommand->addNewFlights(Object(Subscription), Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(28): SearchFlightCommand->addFlightsOfSubscription(Object(Subscription), Object(D_LowestPrice))
+#3 [internal function]: SearchFlightCommand->actionSearch()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---

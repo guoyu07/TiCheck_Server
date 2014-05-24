@@ -5,35 +5,28 @@ class SearchFlightCommand extends CConsoleCommand
 	private $_deviceToken;
 	private $_message;
 //	private $_flight;
-	private $_date;
+	//private $_date;
 	private $_price=NULL;
 	public function actionSearch()
 	{
-		//echo dirname(__FILE__);
-		try{
-
 		set_time_limit(0);
 		while(1)
 		{
 			$array_subs = Subscription::model()->with('userSubscriptions')->findALl();
-			//var_dump($array_subs);
-			//exit;
 			foreach ($array_subs as $tiSubs)
 			{
-				//var_dump($tiSubs);
-				//echo "xxxxxxxxxxxxxxxx<br>";
 				$lowestPrice = new D_LowestPrice;
-				$tempPrice = $lowestPrice->searchFlight($tiSubs);
-				if ($tempPrice == null)
-					continue;
 				$this->_price = $lowestPrice->searchFlight($tiSubs);
+
+				//date backward
+				//search fail
 				if ((int)$this->_price==0)
 					continue;
-				$this->_date = $lowestPrice->date;
 
 				$this->createHistoryPrice($tiSubs, (int)$this->_price);
 
-				$isModified = $this->modifySubscription($tiSubs, (int)$this->_price);
+				$this->addFlightsOfSubscription($tiSubs, $lowestPrice);
+				$isModified = $this->modifyPriceOfSubscription($tiSubs);
 
 				if ($isModified)
 				{
@@ -60,11 +53,6 @@ class SearchFlightCommand extends CConsoleCommand
 				sleep(6);
 			}
 			sleep(6);
-		}
-		}
-		catch(Exception $e)
-		{
-			new \Error(5, null, $e->getMessage());
 		}
 	}
 
@@ -151,20 +139,80 @@ class SearchFlightCommand extends CConsoleCommand
 		}
 	}
 
+	private function addFlightsOfSubscription(Subscription $subs, $lowestPrice)
+	{
+		//delete all flights of subs
+		$this->deleteOldFlights($subs);
 
-	private function modifySubscription(Subscription $subs, $price)
+		//add flights
+		$flights = $lowestPrice->str_xml;
+		$this->addNewFlights($subs, $flights);
+	}
+
+	private function modifyPriceOfSubscription(Subscription $subs)
 	{
 		$old_price = (int)$subs->CurrentPrice;
+		$price = (int)$this->_price;
 
 		if ($price != $old_price)
 		{
 			$subs->CurrentPrice = $price;
-			if (!$subs->save())
+			try
 			{
-				throw new CDbException("save new subs failed");
+				if (!$subs->save())
+				{
+					new \Error(5, null, json_encode($subs->getErrors()));
+				}
+			}
+			catch(Exception $e)
+			{
+				new \Error(5, null, $e->getMessage());
 			}
 			return true;
 		}
 		return false;
+	}
+
+	private function deleteOldFlights(Subscription $subs)
+	{
+		$old_flights = \SubsFlight::model()->findAllByAttributes(array('ID_subscription'=>$subs->ID));
+		foreach($old_flights as $old_flight)
+		{
+			try
+			{
+				if (!$old_flight->delete())
+				{
+					new \Error(5, null, json_encode($old_flight->getErrors));
+				}
+			}
+			catch(Exception $e)
+			{
+				new \Error(5, null, $e->getMessage());
+			}
+		}
+
+	}
+
+	private function addNewFlights(Subscription $subs, $flights)
+	{
+		if ($flights!=null)
+		{
+			foreach ($flights as $flight)
+			{
+				$subs_flight = new \SubsFlight;
+				$subs_flight->ID_subscription = $subs->ID;
+				$subs_flight->FlightXML = $flight;
+				try
+				{
+					if (!$subs_flight->save())
+						new \Error(5, null, json_encode($subs_flight->getErrors()));
+				}
+				catch(Exception $e)
+				{
+					new \Error(5, null, $e->getMessage());
+				}
+			}
+		}
+
 	}
 }

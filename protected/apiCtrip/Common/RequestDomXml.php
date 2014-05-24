@@ -26,6 +26,7 @@ function getXMLFromReturnString($ReturnString)
 			else
 			{
 				echo "null header";
+				var_dump($header);
 				$coutw=$xml->Header["ResultMsg"];//null;
 			}
 		}

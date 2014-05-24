@@ -10,7 +10,16 @@ class InfoController extends \Subscription\controllers\DefaultController
 		$this->array_subs_users = $this->tiUser->userSubscriptions;
 		foreach ($this->array_subs_users as $user_subs)
 		{
-			$this->array_subs[] = $user_subs->iDSubscription->attributes;
+			$subs = $user_subs->iDSubscription;
+			$subs_flights = \SubsFlight::model()->findAllByAttributes(array('ID_subscription'=>$subs->ID));
+			$flight_xml = null;
+			foreach ($subs_flights as $flight)
+			{
+				$flight_xml[] = $flight->attributes;
+			}
+
+			$this->array_subs[] = array('Subscription'=>$subs->attributes,
+				'FlightXML'=>$flight_xml);
 		}
 		
 		echo json_encode(array(
