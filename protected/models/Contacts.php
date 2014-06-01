@@ -5,13 +5,13 @@
  *
  * The followings are the available columns in table 'Contacts':
  * @property string $ID
- * @property string $Name
- * @property string $ConfirmOption
- * @property string $MobilePhone
- * @property string $ForeignMobile
- * @property string $MobileCountryFix
- * @property string $Email
+ * @property string $PassengerName
+ * @property string $ContactTelephone
  * @property string $ID_user
+ * @property string $Birthday
+ * @property string $PassType
+ * @property string $PassportNumber
+ * @property string $Gender
  *
  * The followings are the available model relations:
  * @property TiUser $iDUser
@@ -34,15 +34,15 @@ class Contacts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Name, ConfirmOption, MobilePhone, Email, ID_user', 'required'),
-			array('Name, ID_user', 'length', 'max'=>20),
-			array('ConfirmOption', 'length', 'max'=>3),
-			array('MobilePhone, ForeignMobile', 'length', 'max'=>15),
-			array('MobileCountryFix', 'length', 'max'=>10),
-			array('Email', 'length', 'max'=>512),
+			array('PassengerName, ContactTelephone, ID_user, PassType, PassportNumber, Gender', 'required'),
+			array('PassengerName, ContactTelephone, ID_user', 'length', 'max'=>20),
+			array('PassType', 'length', 'max'=>3),
+			array('PassportNumber', 'length', 'max'=>100),
+			array('Gender', 'length', 'max'=>1),
+			array('Birthday', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, Name, ConfirmOption, MobilePhone, ForeignMobile, MobileCountryFix, Email, ID_user', 'safe', 'on'=>'search'),
+			array('ID, PassengerName, ContactTelephone, ID_user, Birthday, PassType, PassportNumber, Gender', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,13 +65,13 @@ class Contacts extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'Name' => 'Name',
-			'ConfirmOption' => 'Confirm Option',
-			'MobilePhone' => 'Mobile Phone',
-			'ForeignMobile' => 'Foreign Mobile',
-			'MobileCountryFix' => 'Mobile Country Fix',
-			'Email' => 'Email',
+			'PassengerName' => 'Passenger Name',
+			'ContactTelephone' => 'Contact Telephone',
 			'ID_user' => 'Id User',
+			'Birthday' => 'Birthday',
+			'PassType' => 'Pass Type',
+			'PassportNumber' => 'Passport Number',
+			'Gender' => 'Gender',
 		);
 	}
 
@@ -94,13 +94,13 @@ class Contacts extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID',$this->ID,true);
-		$criteria->compare('Name',$this->Name,true);
-		$criteria->compare('ConfirmOption',$this->ConfirmOption,true);
-		$criteria->compare('MobilePhone',$this->MobilePhone,true);
-		$criteria->compare('ForeignMobile',$this->ForeignMobile,true);
-		$criteria->compare('MobileCountryFix',$this->MobileCountryFix,true);
-		$criteria->compare('Email',$this->Email,true);
+		$criteria->compare('PassengerName',$this->PassengerName,true);
+		$criteria->compare('ContactTelephone',$this->ContactTelephone,true);
 		$criteria->compare('ID_user',$this->ID_user,true);
+		$criteria->compare('Birthday',$this->Birthday,true);
+		$criteria->compare('PassType',$this->PassType,true);
+		$criteria->compare('PassportNumber',$this->PassportNumber,true);
+		$criteria->compare('Gender',$this->Gender,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
