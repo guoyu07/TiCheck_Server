@@ -10,8 +10,11 @@
  * @property string $Email
  * @property string $Timestamp
  * @property integer $Pushable
+ * @property string $UID
  *
  * The followings are the available model relations:
+ * @property Contacts[] $contacts
+ * @property Order[] $orders
  * @property UserDevice[] $userDevices
  * @property UserSubscription[] $userSubscriptions
  */
@@ -33,13 +36,14 @@ class TiUser extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Password, Email', 'required'),
+			array('Password, Email, Timestamp', 'required'),
 			array('Pushable', 'numerical', 'integerOnly'=>true),
 			array('Account, Password', 'length', 'max'=>64),
 			array('Email', 'length', 'max'=>320),
+			array('UID', 'length', 'max'=>40),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, Account, Password, Email, Timestamp, Pushable', 'safe', 'on'=>'search'),
+			array('ID, Account, Password, Email, Timestamp, Pushable, UID', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -51,6 +55,8 @@ class TiUser extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'contacts' => array(self::HAS_MANY, 'Contacts', 'ID_user'),
+			'orders' => array(self::HAS_MANY, 'Order', 'ID_user'),
 			'userDevices' => array(self::HAS_MANY, 'UserDevice', 'ID_user'),
 			'userSubscriptions' => array(self::HAS_MANY, 'UserSubscription', 'ID_user'),
 		);
@@ -68,6 +74,7 @@ class TiUser extends CActiveRecord
 			'Email' => 'Email',
 			'Timestamp' => 'Timestamp',
 			'Pushable' => 'Pushable',
+			'UID' => 'Uid',
 		);
 	}
 
@@ -95,6 +102,7 @@ class TiUser extends CActiveRecord
 		$criteria->compare('Email',$this->Email,true);
 		$criteria->compare('Timestamp',$this->Timestamp,true);
 		$criteria->compare('Pushable',$this->Pushable);
+		$criteria->compare('UID',$this->UID,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
