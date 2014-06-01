@@ -71,7 +71,7 @@ class SearchFlightCommand extends CConsoleCommand
 		////////////////////////////////////////////////////////////////////////////////
 
 		$ctx = stream_context_create();
-		stream_context_set_option($ctx, 'ssl', 'local_cert', '/Library/WebServer/Documents/TiCheck_Server/ck.pem');
+		stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
 		stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 		// Open a connection to the APNS server

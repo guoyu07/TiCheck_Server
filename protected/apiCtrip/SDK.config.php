@@ -108,7 +108,7 @@ if(!defined('D_GetBrandCityRequest_Url')) {
 
 //定义本系统的对于API2.0采用的请求模式：httpRequest/soap(如果PHP的服务器上没有开启支持SOAP的功能，则用httpRequest)
 if(!defined('System_RequestType')) {
-	define('System_RequestType','httpRequest');//soap  httpRequest
+	define('System_RequestType', 'httpRequest');//soap  httpRequest
 }
 
 //定义首页团购获取距离今天多少天内的产品
