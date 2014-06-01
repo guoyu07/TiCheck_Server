@@ -5,12 +5,12 @@
  *
  * The followings are the available columns in table 'Contacts':
  * @property string $ID
- * @property string $passengerName
- * @property string $contactTelephone
+ * @property string $PassengerName
+ * @property string $ContactTelephone
  * @property string $ID_user
- * @property string $birthday
- * @property string $passType
- * @property string $passportNumber
+ * @property string $Birthday
+ * @property string $PassType
+ * @property string $PassportNumber
  * @property string $Gender
  *
  * The followings are the available model relations:
@@ -34,15 +34,15 @@ class Contacts extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('passengerName, contactTelephone, ID_user, passType, passportNumber, Gender', 'required'),
-			array('passengerName, contactTelephone, ID_user', 'length', 'max'=>20),
-			array('passType', 'length', 'max'=>3),
-			array('passportNumber', 'length', 'max'=>100),
+			array('PassengerName, ContactTelephone, ID_user, PassType, PassportNumber, Gender', 'required'),
+			array('PassengerName, ContactTelephone, ID_user', 'length', 'max'=>20),
+			array('PassType', 'length', 'max'=>3),
+			array('PassportNumber', 'length', 'max'=>100),
 			array('Gender', 'length', 'max'=>1),
-			array('birthday', 'safe'),
+			array('Birthday', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID, passengerName, contactTelephone, ID_user, birthday, passType, passportNumber, Gender', 'safe', 'on'=>'search'),
+			array('ID, PassengerName, ContactTelephone, ID_user, Birthday, PassType, PassportNumber, Gender', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,12 +65,12 @@ class Contacts extends CActiveRecord
 	{
 		return array(
 			'ID' => 'ID',
-			'passengerName' => 'Passenger Name',
-			'contactTelephone' => 'Contact Telephone',
+			'PassengerName' => 'Passenger Name',
+			'ContactTelephone' => 'Contact Telephone',
 			'ID_user' => 'Id User',
-			'birthday' => 'Birthday',
-			'passType' => 'Pass Type',
-			'passportNumber' => 'Passport Number',
+			'Birthday' => 'Birthday',
+			'PassType' => 'Pass Type',
+			'PassportNumber' => 'Passport Number',
 			'Gender' => 'Gender',
 		);
 	}
@@ -94,12 +94,12 @@ class Contacts extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('ID',$this->ID,true);
-		$criteria->compare('passengerName',$this->passengerName,true);
-		$criteria->compare('contactTelephone',$this->contactTelephone,true);
+		$criteria->compare('PassengerName',$this->PassengerName,true);
+		$criteria->compare('ContactTelephone',$this->ContactTelephone,true);
 		$criteria->compare('ID_user',$this->ID_user,true);
-		$criteria->compare('birthday',$this->birthday,true);
-		$criteria->compare('passType',$this->passType,true);
-		$criteria->compare('passportNumber',$this->passportNumber,true);
+		$criteria->compare('Birthday',$this->Birthday,true);
+		$criteria->compare('PassType',$this->PassType,true);
+		$criteria->compare('PassportNumber',$this->PassportNumber,true);
 		$criteria->compare('Gender',$this->Gender,true);
 
 		return new CActiveDataProvider($this, array(
