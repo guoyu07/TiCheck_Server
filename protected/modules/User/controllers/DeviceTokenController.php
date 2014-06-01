@@ -12,7 +12,10 @@ class DeviceTokenController extends User\controllers\DefaultController
 		$user_device->Device_token = $this->token;
 		try
 		{
-			$user_device->save();
+			if (!$user_device->save())
+			{
+				new \Error(5, null, json_encode($user_device->getErrors()));
+			}
 		}
 		catch(Exception $e)
 		{
@@ -46,7 +49,7 @@ class DeviceTokenController extends User\controllers\DefaultController
 		{
 			new Error(4, "DeviceToken");
 		}
-		$this->token = json_decode($_POST['DeviceToken']);
+		$this->token = $_POST['DeviceToken'];
 	}
 	// Uncomment the following methods and override them if needed
 	/*

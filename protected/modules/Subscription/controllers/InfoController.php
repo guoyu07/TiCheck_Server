@@ -21,6 +21,15 @@ class InfoController extends \Subscription\controllers\DefaultController
 			$this->array_subs[] = array('Subscription'=>$subs->attributes,
 				'FlightXML'=>$flight_xml);
 		}
+
+		if ($this->array_subs == null)
+		{
+			echo json_encode(array(
+				'Code'=>1,
+				'Message'=>"Succeed",
+				'Data'=>'null'));
+			exit;
+		}
 		
 		echo json_encode(array(
 			'Code'=>1,
