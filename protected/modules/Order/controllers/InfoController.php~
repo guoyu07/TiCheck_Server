@@ -20,6 +20,13 @@ class InfoController extends \Order\controllers\DefaultController
 		{
 			$arr_data_return[] = $value->attributes;
 		}
+		if ($arr_data_return == null)
+		{
+
+			echo json_encode(array('Code'=>1, 'Message'=>'Succeed', 'Data'=>'null'));
+			exit;
+		}
+
 		echo json_encode(array('Code'=>1, 'Message'=>'Succeed', 'Data'=>$arr_data_return));
 		
 		
