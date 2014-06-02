@@ -27,11 +27,14 @@ class CreateController extends Controller
 		//var_dump($tiUser);
 		try
 		{
-			$tiUser->save();
+			if (!$tiUser->save())
+			{
+				new Error(5, null, json_encode($tiUser->getErrors()));
+			}
 		}
 		catch(Exception $e)
 		{
-			new Error(2);
+			new Error(5, null, $e->getMessage());
 		}
 		new Error(1);
 	}
@@ -44,7 +47,6 @@ class CreateController extends Controller
 			return true;
 		}
 		new Error(3, NULL, "Email");
-		return false;
 	}
 
 	private function verifyAccount($account)
@@ -57,7 +59,6 @@ class CreateController extends Controller
 		if (preg_match($pattern,$account))
 			return true;
 		new Error(3, NULL, "Account");
-		return false;
 	}
 
 	private function verifyPassword($passwd)
@@ -66,7 +67,6 @@ class CreateController extends Controller
 		if (preg_match($pattern,$passwd))
 			return true;
 		new Error(3, NULL, "Password");
-		return false;
 	}
 
 	private function verifyInfo($user)

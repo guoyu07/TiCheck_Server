@@ -18,7 +18,11 @@ class DefaultController extends \User\controllers\DefaultController
 		$Contacts = json_decode($_POST['Contacts'], true);
 		//echo var_dump($Contacts);
 		if ($Contacts)
+		{
+			$this->prepareUser();
 			$this->contacts = $Contacts;
+			$this->contacts['ID_user'] = $this->tiUser->ID;
+		}
 		else
 			new \Error(4, "Contacts");
 	}

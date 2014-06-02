@@ -36,7 +36,7 @@ class TiUser extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Password, Email, Timestamp', 'required'),
+			array('Password, Email', 'required'),
 			array('Pushable', 'numerical', 'integerOnly'=>true),
 			array('Account, Password', 'length', 'max'=>64),
 			array('Email', 'length', 'max'=>320),

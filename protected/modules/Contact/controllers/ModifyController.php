@@ -15,7 +15,10 @@ class ModifyController extends \Contact\controllers\DefaultController
 			$data->attributes = $this->newContacts;
 			try
 			{
-				$data->save();
+				if (!$data->save())
+				{
+					new \Error(5, null, json_encode($data->getErrors()));
+				}
 			}
 			catch(Exception $e)
 			{
