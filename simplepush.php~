@@ -4,8 +4,6 @@
 //$deviceToken = '439c258d38b086471e8f84a5f41b38b38a57acbe77a23361bca03cd9a97f2d68';
 $deviceToken = '70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7';
 
-$deviceToken = '70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7';
-
 // Put your private key's passphrase here:
 $passphrase = 'TiCheck';
 
@@ -34,6 +32,7 @@ $body['aps'] = array(
 	'alert' => $message,
 	'sound' => 'default'
 	);
+$body['ID'] = '38';
 
 // Encode the payload as JSON
 $payload = json_encode($body);
