@@ -7,6 +7,8 @@ class SearchFlightCommand extends CConsoleCommand
 //	private $_flight;
 	//private $_date;
 	private $_price=NULL;
+	private $_id;
+
 	public function actionSearch()
 	{
 		set_time_limit(0);
@@ -42,6 +44,7 @@ class SearchFlightCommand extends CConsoleCommand
 							foreach ($user_devices as $user_device)
 							{
 								$this->_deviceToken = $user_device->Device_token;
+								$this->_id = $tiSubs->ID;
 								//$this->_deviceToken = "70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7";
 								//$this->_message = "asdf";
 								$this->_message = "您订阅的{$tiSubs->DepartCity}至{$tiSubs->ArriveCity}价格已更新至{$this->_price}";
@@ -90,6 +93,7 @@ class SearchFlightCommand extends CConsoleCommand
 			'alert' => urlencode($message),
 			'sound' => 'default'
 			);
+		$body['ID'] = $this->_id;
 
 		// Encode the payload as JSON
 		$payload = urldecode(json_encode($body));

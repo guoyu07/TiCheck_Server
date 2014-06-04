@@ -10,6 +10,10 @@ class ModifyController extends \Contact\controllers\DefaultController
 		$this->prepareNewContacts();
 
 		$con_model = \Contacts::model()->findAllByAttributes($this->contacts);
+		if (count($con_model)==0)
+		{
+			new \Error(5, null, "no such contacts");
+		}
 		foreach ($con_model as $data)
 		{
 			$data->attributes = $this->newContacts;
