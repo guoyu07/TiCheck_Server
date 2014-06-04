@@ -8,7 +8,8 @@ class InfoController extends User\controllers\DefaultController
 		$userInfo = $this->tiUser->attributes;
 		$info = array(
 			'Account'=>$userInfo['Account'],
-			'Pushable'=>$userInfo['Pushable']
+			'Pushable'=>$userInfo['Pushable'],
+			'UID'=>$userInfo['UID']
 		);
 		echo json_encode(array('Code'=>1, 'Message'=>"Succeed", 'Data'=>$info));
 		exit;
