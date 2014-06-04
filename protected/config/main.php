@@ -28,6 +28,7 @@ return array(
 		'Flight',
 		'Order',
 		'Contact',
+		'AirlineCompany',
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'123',
