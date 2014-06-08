@@ -63,7 +63,7 @@ class CreateController extends Controller
 
 	private function verifyPassword($passwd)
 	{
-		$pattern = "/[\s|\S]{5,64}$/";
+		$pattern = "/^[\s|\S]{5,64}$/";
 		if (preg_match($pattern,$passwd))
 			return true;
 		new Error(3, NULL, "Password");

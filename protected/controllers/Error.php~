@@ -10,13 +10,13 @@ class Error extends Controller
 		case 1:
 			$message = "Succeed";
 			if ($data !=NULL )
-				$message = $data;
+				$message = json_encode($data);
 			break;
 		case 2:
 			$message = "邮箱已被使用";
 			break;
 		case 3:
-			$message = $msg . "格式错误";
+			$message = $msg . " format error";
 			break;
 		case 4:
 			$param_message = NULL;

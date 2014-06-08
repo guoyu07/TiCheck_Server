@@ -16,13 +16,17 @@ class CreateController extends Subscription\controllers\DefaultController
 
 		// subscription
 		$this->prepareSubscription();
+		//print_r($this->_subs);
+		//exit;
 
 		// modify database
 		$this->createRelation();
-		// TODO 异步搜最低价
 
-//		$this->createHistoryPrice($this->_subs);
-		shell_exec(YiiBase::getPathOfAlias('application') . "yiic historyprice index --subs=" . $this->_subs . "> /dev/null 1>/dev/null &");
+		//  异步搜最低价
+		//$this->createHistoryPrice($this->_subs);
+		//echo (YiiBase::getPathOfAlias('application') . "yiic historyprice index --subs_id=" . $this->_subs->ID . " >/dev/null 2>/dev/null &");
+		shell_exec(YiiBase::getPathOfAlias('application') . "/yiic historyprice index --subs_id=" . $this->_subs->ID . " >/dev/null 2>/dev/null &");
+		new \Error(1);
 	}
 
 	/*
@@ -52,8 +56,6 @@ class CreateController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
-			//var_dump($history_price);
-			$history_price = $history_price[0];
 			if ($history_price->Price == $price)
 				return;
 			$history_price->Price = ($price < $history_price->Price)?$price:$history_price;
@@ -68,7 +70,7 @@ class CreateController extends Subscription\controllers\DefaultController
 		}
 	}
 	 */
-
+	
 	/*
 	private function currentPrice(Subscription $subs)
 	{
@@ -146,21 +148,25 @@ class CreateController extends Subscription\controllers\DefaultController
 		$user_subs->ID_user = $user->ID;
 		$user_subs->ID_subscription = $subs->ID;
 		$user_subs_adp = $user_subs->search();
+		//var_dump($subs->ID);
+		//exit;
 		if ($user_subs_adp->itemCount)
 		{
-			new Error(5,NULL, "已订阅");
-			return;
+			new Error(5,NULL, "has been subscriped");
 		}
 		try
 		{
-			$user_subs->save();
+			if (!$user_subs->save())
+			{
+				new \Error(5, null, json_encode($user_subs->getErrors()));
+			}
 		}
 		catch(Exception $e)
 		{
 			new Error(5, NULL, $e->getMessage());
 		}
 
-		new Error(1);
+		//new Error(1);
 	}
 
 	// Uncomment the following methods and override them if needed

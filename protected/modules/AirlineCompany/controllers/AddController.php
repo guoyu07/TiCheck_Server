@@ -29,6 +29,7 @@ class AddController extends \AirlineCompany\controllers\DefaultController
 			}
 			new \Error(1);
 		}
+		new \Error(5, null, "no this airline company");
 	}
 
 	// Uncomment the following methods and override them if needed

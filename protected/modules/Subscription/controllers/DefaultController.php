@@ -53,7 +53,7 @@ class DefaultController extends \User\controllers\DefaultController
 			{
 				if (!$tiSubs->save())
 				{
-					//var_dump($tiSubs->getErrors());
+					new \Error(5, null, json_encode($tiSubs->getErrors()));
 				}
 			}
 			catch(Exception $e)

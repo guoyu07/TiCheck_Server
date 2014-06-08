@@ -16,7 +16,7 @@ class Error extends Controller
 			$message = "邮箱已被使用";
 			break;
 		case 3:
-			$message = $msg . "格式错误";
+			$message = $msg . " format error";
 			break;
 		case 4:
 			$param_message = NULL;

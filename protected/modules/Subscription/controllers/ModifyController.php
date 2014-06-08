@@ -8,6 +8,8 @@ class ModifyController extends Subscription\controllers\DefaultController
 		$this->prepareUser();
 		$this->prepareSubscription();
 		$this->prepareNewSubscription();
+		$this->_subs = null;
+		$this->_subs = $this->_newSubs;
 		$this->prepareUserSubscription();
 
 		if ($this->_newSubs != NULL)
@@ -42,10 +44,13 @@ class ModifyController extends Subscription\controllers\DefaultController
 		}
 		else
 		{
-			$this->_subs->attributes = $subs;
+			$this->_newSubs->attributes = $subs;
 			try
 			{
-				$this->_subs->save();
+				if(!$this->_newSubs->save())
+				{
+					new \Error(5, null, $this->_newSubs->getErrors());
+				}
 			}
 			catch(Exception $e)
 			{
