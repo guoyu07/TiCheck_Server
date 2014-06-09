@@ -41,6 +41,30 @@ class D_LowestPrice extends D_FlightSearch
 			$this->main();
 			$returnXML=$this->ResponseXML;
 
+			/*
+				查看返回代码是否为成功
+			 */
+			$resultCode = $returnXML->Header->attributes()->ResultCode;
+			echo "result code: ". $resultCode . "\n";
+
+			if ($resultCode != 'Success')
+			{
+				$date->add(new DateInterval('P1D'));
+				continue;
+			}
+
+			/*
+				查看返回航班数量是否为0
+			 */
+			$recordCount = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->RecordCount;
+
+			if ($recordCount == 0)
+			{
+				$date->add(new DateInterval('P1D'));
+				continue;
+			}
+
+
 			$this->obj_xml[] = $returnXML;
 
 			if (!$this->checkReturnXML($returnXML))
@@ -48,12 +72,17 @@ class D_LowestPrice extends D_FlightSearch
 				$date->add(new DateInterval('P1D'));
 				continue;
 			}
+			//print_r($returnXML);
 
 			$flight = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
 
 			if ($this->price > $flight->Price || $this->price==NULL)
 			{
+				//echo "\n";
+				//print_r($flight->Price);
+				//echo "\n";
 				$this->price = $flight->Price;	
+				echo "price updated to ". $this->price . "\n";
 			}
 
 			$date->add(new DateInterval('P1D'));

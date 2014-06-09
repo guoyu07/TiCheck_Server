@@ -22,7 +22,7 @@ class CreateController extends Subscription\controllers\DefaultController
 		// modify database
 		$this->createRelation();
 
-		//  异步搜最低价
+		// 异步搜最低价
 		//$this->createHistoryPrice($this->_subs);
 		//echo (YiiBase::getPathOfAlias('application') . "yiic historyprice index --subs_id=" . $this->_subs->ID . " >/dev/null 2>/dev/null &");
 		shell_exec(YiiBase::getPathOfAlias('application') . "/yiic historyprice index --subs_id=" . $this->_subs->ID . " >/dev/null 2>/dev/null &");

@@ -17,9 +17,13 @@ class HistoryPriceCommand extends CConsoleCommand
 		$subs = \Subscription::model()->findByAttributes(array('ID'=>$subs_id));
 		$lowestPrice = new \D_LowestPrice;
 		$subs->CurrentPrice = (int)$lowestPrice->searchFlight($subs);
+		echo "now subs " . $subs_id . " current price is ". $subs->CurrentPrice . "\n";
 		try
 		{
-			$subs->save();
+			if (!$subs->save())
+			{
+				new \Error(5, null, json_encode($subs->getErrors()));
+			}
 		}
 		catch(Exception $e)
 		{
@@ -29,11 +33,11 @@ class HistoryPriceCommand extends CConsoleCommand
 		$date = new \DateGenerater;
 		$date = $date->getDateYMD("-");
 		$price = $subs->CurrentPrice;
-		$history_price = \HistoryPrice::model()->findByAttributes(array(
+		$history_price = \HistoryPrice::model()->findAllByAttributes(array(
 			'ID_subscription'=>$subs->ID,
 			'Date'=>$date
 		));
-		if ($history_price==NULL || $history_price->count()==0)
+		if ($history_price==NULL || count($history_price)==0)
 		{
 			$history_price = new HistoryPrice;
 			$history_price->ID_subscription = $subs->ID;

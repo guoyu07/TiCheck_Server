@@ -1,6 +1,6 @@
 <?php
 
-class CancelController extends Subscription\controllers\DefaultController
+class CancelController extends Subscription\controllers\ModifyController
 {
 	public function actionIndex()
 	{
@@ -9,12 +9,14 @@ class CancelController extends Subscription\controllers\DefaultController
 
 		// subscription
 		$this->prepareSubscription();
+		$this->_subs->Count = $this->_subs->Count - 1;
 
 		// modify database
 		$this->deleteRelation();
 
 		// check if subscription could be deleted
 		$this->deleteSubscription();
+		new \Error(1);
 	}
 
 	private function deleteRelation()
@@ -44,13 +46,26 @@ class CancelController extends Subscription\controllers\DefaultController
 	private function deleteSubscription()
 	{
 		$subs = $this->_subs;
+		$subs->Count--;
+		try
+		{
+			if(!$subs->save())
+			{
+				new \Error(5, null, json_encode($subs->getErrors()));
+			}
+		}
+		catch(Exception $e)
+		{
+			new \Error(5,null,$e->getMessage());
+		}
+
 		try
 		{
 			$subs->delete();
 		}
 		catch (Exception $e)
 		{
-			new Error(5, NULL, $e->getMessage());
+			//new Error(5, NULL, $e->getMessage());
 		}
 	}
 

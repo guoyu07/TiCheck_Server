@@ -42,6 +42,7 @@ class DefaultController extends \User\controllers\DefaultController
 		if ($subs_adp->itemCount)
 		{
 			$this->_subs = $subs_adp->getData()[0];
+			$this->_subs->Count = $this->_subs->Count + 1;
 		}
 		else
 		{
@@ -49,18 +50,19 @@ class DefaultController extends \User\controllers\DefaultController
 			$lowestPrice = new \D_LowestPrice;
 			$tiSubs->CurrentPrice = (int)$lowestPrice->searchFlight($tiSubs);
 			 */
-			try
-			{
-				if (!$tiSubs->save())
-				{
-					new \Error(5, null, json_encode($tiSubs->getErrors()));
-				}
-			}
-			catch(Exception $e)
-			{
-				new \Error(5, NULL, $e->getMessage());
-			}
 			$this->_subs = $tiSubs;
+		}
+
+		try
+		{
+			if (!$this->_subs->save())
+			{
+				new \Error(5, null, json_encode($this->_subs->getErrors()));
+			}
+		}
+		catch(Exception $e)
+		{
+			new \Error(5, NULL, $e->getMessage());
 		}
 	}
 

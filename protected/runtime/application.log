@@ -2227,3 +2227,31 @@ Stack trace:
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php (37)
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/httpRequestData.php (44)
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php (40)
+2014/06/09 16:00:26 [error] [php] Undefined variable: flight (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:51)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (51)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php (19)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/06/09 16:01:09 [error] [exception.CException] exception 'CException' with message 'Property "HistoryPrice.0" is not defined.' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:130
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(145): CComponent->__get('0')
+#1 /Library/WebServer/Documents/YiiRoot/framework/base/CModel.php(596): CActiveRecord->__get('0')
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(54): CModel->offsetGet(0)
+#3 [internal function]: HistoryPriceCommand->actionIndex('49')
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---

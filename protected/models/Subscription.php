@@ -15,8 +15,11 @@
  * @property string $AirlineDibitCode
  * @property string $ArriveAirport
  * @property string $DepartAirport
+ * @property integer $Count
  *
  * The followings are the available model relations:
+ * @property HistoryPrice[] $historyPrices
+ * @property SubsFlight[] $subsFlights
  * @property UserSubscription[] $userSubscriptions
  */
 class Subscription extends CActiveRecord
@@ -29,8 +32,7 @@ class Subscription extends CActiveRecord
 		return 'Subscription';
 	}
 
-	/**
-	 * @return array validation rules for model attributes.
+	/** * @return array validation rules for model attributes.
 	 */
 	public function rules()
 	{
@@ -38,7 +40,7 @@ class Subscription extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('DepartCity, ArriveCity, StartDate, EndDate', 'required'),
-			array('CurrentPrice', 'numerical', 'integerOnly'=>true),
+			array('CurrentPrice, Count', 'numerical', 'integerOnly'=>true),
 			array('DepartCity, ArriveCity, ArriveAirport, DepartAirport', 'length', 'max'=>3),
 			array('AirlineDibitCode', 'length', 'max'=>2),
 			array('EarliestDepartTime, LatestDepartTime', 'safe'),
@@ -56,6 +58,8 @@ class Subscription extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'historyPrices' => array(self::HAS_MANY, 'HistoryPrice', 'ID_subscription'),
+			'subsFlights' => array(self::HAS_MANY, 'SubsFlight', 'ID_subscription'),
 			'userSubscriptions' => array(self::HAS_MANY, 'UserSubscription', 'ID_subscription'),
 		);
 	}
@@ -77,6 +81,7 @@ class Subscription extends CActiveRecord
 			'AirlineDibitCode' => 'Airline Dibit Code',
 			'ArriveAirport' => 'Arrive Airport',
 			'DepartAirport' => 'Depart Airport',
+			'Count' => 'Count',
 		);
 	}
 
@@ -109,6 +114,7 @@ class Subscription extends CActiveRecord
 		$criteria->compare('AirlineDibitCode',$this->AirlineDibitCode,true);
 		$criteria->compare('ArriveAirport',$this->ArriveAirport,true);
 		$criteria->compare('DepartAirport',$this->DepartAirport,true);
+		//$criteria->compare('Count',$this->Count);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
