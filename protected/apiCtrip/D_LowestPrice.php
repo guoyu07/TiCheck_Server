@@ -13,20 +13,26 @@ class D_LowestPrice extends D_FlightSearch
 	public function searchFlight(Subscription $subs)
 	{
 		//echo "search";
+		echo "start search for new subscription " . $subs->ID . "\n";
 		$today = new DateTime('now');
 		$date = new DateTime($subs->StartDate);
 		$endDate = new DateTime($subs->EndDate);
 		if ($endDate < $today)
+		{
+			echo "end date is yesterday\n";
 			return;
+		}
 		while ($date <= $endDate)
 		{
-			sleep(3);
+			echo "search for ". $date->format(DateTime::W3C) . "\n";
 			if ($date < $today)
 			{
-				echo "yesterday";
-				$date->add(new DateInterval('P1D'));
+				echo "yesterday\n";
+				$date = new Datetime;
+				//$date->add(new DateInterval('P1D'));
 				continue;
 			}
+			sleep(3);
 			
 			$this->DepartCity=$subs->DepartCity;
 			$this->ArriveCity=$subs->ArriveCity;
@@ -94,6 +100,8 @@ class D_LowestPrice extends D_FlightSearch
 
 	private function deleteNoneLowestPriceFlights()
 	{
+		if ($this->obj_xml == null)
+			return;
 		foreach ($this->obj_xml as $returnXML)
 		{
 			$str_responseXML = $this->filterLowestPriceFlight($returnXML, $this->price);
@@ -134,7 +142,7 @@ class D_LowestPrice extends D_FlightSearch
 
 	private function filterLowestPriceFlight($obj_response_xml, $lowest_price)
 	{
-
+		echo "filter based on lowest price " . $lowest_price . "\n\n";
 		$dom_element = dom_import_simplexml($obj_response_xml);
 		$dom_list = $dom_element->getElementsByTagName('DomesticFlightData');
 
@@ -143,8 +151,10 @@ class D_LowestPrice extends D_FlightSearch
 		{
 			if ((int)$node->getElementsByTagName('Price')->item(0)->nodeValue > $lowest_price)
 			{
+				echo "delete the node ";
 				$nodes[] = $node;
 			}
+			echo $node->getElementsByTagName('Price')->item(0)->nodeValue . "\n";
 		}
 
 		if (!($nodes == null))
@@ -160,6 +170,7 @@ class D_LowestPrice extends D_FlightSearch
 		}
 
 		$xml = simplexml_import_dom($dom_element);
+		//print_r($xml);
 		return $xml;
 	}
 }

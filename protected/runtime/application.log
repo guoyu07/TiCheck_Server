@@ -2255,3 +2255,87 @@ Stack trace:
 #10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
 #11 {main}
 ---
+2014/06/10 09:23:43 [error] [php] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:83)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (83)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic (4)
+2014/06/10 09:24:06 [error] [php] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:83)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (83)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic (4)
+2014/06/10 09:27:38 [error] [php] Invalid argument supplied for foreach() (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:97)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (97)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+2014/06/10 09:38:57 [error] [php] Invalid argument supplied for foreach() (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:99)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (99)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+2014/06/10 09:42:22 [error] [php] Undefined variable: obj_xml (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:99)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (99)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+2014/06/10 09:45:40 [error] [php] Invalid argument supplied for foreach() (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:99)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (99)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)

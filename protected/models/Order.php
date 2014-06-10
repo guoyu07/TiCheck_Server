@@ -97,8 +97,14 @@ class Order extends CActiveRecord
 		$criteria->compare('ID_flight',$this->ID_flight,true);
 		$criteria->compare('OrderDetail',$this->OrderDetail,true);
 
+		$criteria->order = 'ID DESC';
+
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'pagination'=>array(
+				'pageSize'=>100000,
+			),
 		));
 	}
 

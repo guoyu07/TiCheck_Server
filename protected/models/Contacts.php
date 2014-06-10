@@ -102,6 +102,7 @@ class Contacts extends CActiveRecord
 		$criteria->compare('PassportNumber',$this->PassportNumber,true);
 		$criteria->compare('Gender',$this->Gender,true);
 
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
