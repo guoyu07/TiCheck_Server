@@ -82,7 +82,7 @@ class D_LowestPrice extends D_FlightSearch
 
 			$flight = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
 
-			if ($this->price > $flight->Price || $this->price==NULL)
+			if ((int)$this->price > (int)$flight->Price || $this->price==NULL)
 			{
 				//echo "\n";
 				//print_r($flight->Price);
@@ -170,7 +170,7 @@ class D_LowestPrice extends D_FlightSearch
 		}
 
 		$xml = simplexml_import_dom($dom_element);
-		print_r($xml);
+		//print_r($xml);
 		return $xml;
 	}
 }
