@@ -5,6 +5,7 @@ class DeleteController extends \Contact\controllers\DefaultController
 	public function actionIndex()
 	{
 		//$this->render('index');
+		new \Error(1);
 		$this->prepareUser();
 		$this->prepareContacts();
 
@@ -29,7 +30,10 @@ class DeleteController extends \Contact\controllers\DefaultController
 		{
 			try
 			{
-				$data->delete();
+				if (!$data->delete())
+				{
+					new \Error(5,null,json_encode($data->getErrors()));
+				}
 			}
 			catch(Exception $e)
 			{

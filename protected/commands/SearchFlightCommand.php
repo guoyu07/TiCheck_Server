@@ -15,7 +15,7 @@ class SearchFlightCommand extends CConsoleCommand
 		while(1)
 		{
 			$array_subs = Subscription::model()->with('userSubscriptions')->findALl();
-			$array_subs = Subscription::model()->with('userSubscriptions')->findAllByAttributes(array('ID'=>57));
+			//$array_subs = Subscription::model()->with('userSubscriptions')->findAllByAttributes(array('ID'=>57));
 			
 			foreach ($array_subs as $tiSubs)
 			{
