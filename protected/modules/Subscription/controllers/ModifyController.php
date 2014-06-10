@@ -6,6 +6,7 @@ class ModifyController extends \Subscription\controllers\DefaultController
 	private $_newSubs=NULL;
 	public function actionIndex()
 	{
+		new \Error(1);
 		$this->prepareUser();
 		$this->prepareSubscription();
 

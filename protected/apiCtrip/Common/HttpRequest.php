@@ -34,7 +34,7 @@ class HttpRequest{
 				}
 			}
 		}else{
-			if(!$this->fp=fsockopen($ip, $port,$errno,$errstr,10)) {
+			if(!$this->fp=fsockopen($ip, $port,$errno,$errstr)) {
 				$this->excption="can not connect to server " . $this->hostname . " on port" . $this->port;return false;
 			}
 		}

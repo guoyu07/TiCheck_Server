@@ -8,8 +8,10 @@ class DeleteController extends \Contact\controllers\DefaultController
 		$this->prepareUser();
 		$this->prepareContacts();
 
-		if (array_key_exists('Name', $this->contacts))
+		if (array_key_exists('PassengerName', $this->contacts))
+		{
 			$this->deleteContact($this->contacts);
+		}
 		else
 		{
 			foreach($this->contacts as $con)

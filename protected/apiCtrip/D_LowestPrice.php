@@ -15,8 +15,11 @@ class D_LowestPrice extends D_FlightSearch
 		//echo "search";
 		echo "start search for new subscription " . $subs->ID . "\n";
 		$today = new DateTime('now');
+		$today->setTime(0,0,0);
 		$date = new DateTime($subs->StartDate);
 		$endDate = new DateTime($subs->EndDate);
+
+		//echo $endDate->format('Y-m-d H:i:s') . " ". $today->format('Y-m-d H:i:s');
 		if ($endDate < $today)
 		{
 			echo "end date is yesterday\n";

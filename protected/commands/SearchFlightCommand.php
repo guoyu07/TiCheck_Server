@@ -32,13 +32,17 @@ class SearchFlightCommand extends CConsoleCommand
 
 				if ($isModified)
 				{
+					echo "subscription is modified \n";
 					$array_user_subs = $tiSubs->userSubscriptions;
+					print_r($array_user_subs);
 					foreach ($array_user_subs as $user_tiSubs)
 					{
 						$tiUser = $user_tiSubs->iDUser;
 						if (!$tiUser->Pushable)
 							continue;
-						if ($this->_price < $user_tiSubs->PriceLimit || $user_tiSubs->PriceLimit == NULL)
+
+						echo "user is pushable\n";
+						if ((int)$this->_price < (int)$user_tiSubs->PriceLimit || $user_tiSubs->PriceLimit == NULL)
 						{
 							$user_devices = $tiUser->userDevices;
 							foreach ($user_devices as $user_device)
@@ -48,6 +52,7 @@ class SearchFlightCommand extends CConsoleCommand
 								//$this->_deviceToken = "70a10324b2a2e4e6daaa8eee74a30c8bb196db31be43043cc94cb149d117aeb7";
 								//$this->_message = "asdf";
 								$this->_message = "您订阅的{$tiSubs->DepartCity}至{$tiSubs->ArriveCity}价格已更新至{$this->_price}";
+								echo "start to push\n";
 								$this->actionIndex();
 							}
 						}
@@ -172,6 +177,7 @@ class SearchFlightCommand extends CConsoleCommand
 			{
 				new \Error(5, null, $e->getMessage());
 			}
+			echo "current price of subscription ". $subs->ID . " is updated\n";
 			return true;
 		}
 		return false;

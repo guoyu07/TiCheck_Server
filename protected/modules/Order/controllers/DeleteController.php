@@ -1,10 +1,11 @@
 <?php
 
-class DeleteController extends \Order\controllers\Controller
+class DeleteController extends \Order\controllers\DefaultController
 {
 	public function actionIndex()
 	{
 		//$this->render('index');
+		//new \Error(1);
 		$this->prepareUser();
 		$order = new \Order;
 		$this->prepareTempOrder();
