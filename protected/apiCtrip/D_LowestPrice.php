@@ -50,6 +50,7 @@ class D_LowestPrice extends D_FlightSearch
 			$this->main();
 			$returnXML=$this->ResponseXML;
 
+			print_r($returnXML);
 			/*
 				查看返回代码是否为成功
 			 */
@@ -85,7 +86,7 @@ class D_LowestPrice extends D_FlightSearch
 
 			$flight = $returnXML->FlightSearchResponse->FlightRoutes->DomesticFlightRoute->FlightsList->DomesticFlightData;
 
-			if ($this->price > $flight->Price || $this->price==NULL)
+			if ((int)$this->price > (int)$flight->Price || $this->price==NULL)
 			{
 				//echo "\n";
 				//print_r($flight->Price);

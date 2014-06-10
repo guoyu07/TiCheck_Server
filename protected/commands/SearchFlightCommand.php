@@ -15,8 +15,12 @@ class SearchFlightCommand extends CConsoleCommand
 		while(1)
 		{
 			$array_subs = Subscription::model()->with('userSubscriptions')->findALl();
+			//$array_subs = Subscription::model()->with('userSubscriptions')->findAllByAttributes(array('ID'=>57));
+			
 			foreach ($array_subs as $tiSubs)
 			{
+				//delete all flights of subs
+				$this->deleteOldFlights($tiSubs);
 				$lowestPrice = new D_LowestPrice;
 				$this->_price = $lowestPrice->searchFlight($tiSubs);
 
@@ -58,9 +62,9 @@ class SearchFlightCommand extends CConsoleCommand
 						}
 					}
 				}
-				sleep(6);
+				sleep(1);
 			}
-			sleep(6);
+			sleep(2);
 		}
 	}
 
@@ -150,8 +154,6 @@ class SearchFlightCommand extends CConsoleCommand
 
 	private function addFlightsOfSubscription(Subscription $subs, $lowestPrice)
 	{
-		//delete all flights of subs
-		$this->deleteOldFlights($subs);
 
 		//add flights
 		$flights = $lowestPrice->str_xml;

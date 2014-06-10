@@ -1536,5 +1536,886 @@ Stack trace:
 #6 /Library/Server/Web/Data/Sites/www.ticheck.com/server/index.php(13): CApplication->run()
 #7 {main}
 REQUEST_URI=/server/index.php?r=User/create
->>>>>>> 95a66ab4809801cd60f0e8b2b1118ea75280ae87
 ---
+2014/05/19 07:26:11 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:27:08 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:27:31 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:28:08 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:28:29 [error] [php] include(HistoryPriceCommand.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(170): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CHelpCommand.php(64): CConsoleCommandRunner->createCommand()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CHelpCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:30:13 [error] [php] include(Subscription.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/YiiRoot/framework/YiiBase.php:427)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): spl_autoload_call()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/19 07:31:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/19 07:32:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/19 07:32:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/19 14:07:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 01:58:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 02:03:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 02:10:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 02:10:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Subscription))
+#7 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(8): CActiveRecord->__construct()
+#9 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#10 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#11 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#12 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#13 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#14 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#15 {main}
+---
+2014/05/20 02:52:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 05:53:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08004] [1040] Too many connections' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 05:56:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08004] [1040] Too many connections' in /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Library/WebServer/Documents/YiiRoot/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(7): CModule->__get('db')
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 06:00:48 [error] [php] Use of undefined constant w - assumed 'w' (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:17)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:04:32 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:17)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:05:24 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:17)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:06:05 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:06:43 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:07:47 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:07:53 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:08:04 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 06:08:43 [error] [php] fopen(../commands/a.txt): failed to open stream: No such file or directory (/Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php:18)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/20 15:51:48 [error] [exception.CException] exception 'CException' with message 'Subscription and its behaviors do not have a method or closure named "findByAttribute".' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(227): CComponent->__call('findByAttribute', Array)
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(17): CActiveRecord->__call('findByAttribute', Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(17): Subscription->findByAttribute(Array)
+#3 [internal function]: HistoryPriceCommand->actionIndex('27')
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/20 15:52:36 [error] [exception.CException] exception 'CException' with message 'Property "Subscription.0" is not defined.' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:130
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(145): CComponent->__get('0')
+#1 /Library/WebServer/Documents/YiiRoot/framework/base/CModel.php(596): CActiveRecord->__get('0')
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(17): CModel->offsetGet(0)
+#3 [internal function]: HistoryPriceCommand->actionIndex('27')
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/21 16:36:15 [error] [exception.CException] exception 'CException' with message 'SearchFlightCommand and its behaviors do not have a method or closure named "createHistoryPrice".' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:266
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(26): CComponent->__call('createHistoryPr...', Array)
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(26): SearchFlightCommand->createHistoryPrice(Object(Subscription), 680)
+#2 [internal function]: SearchFlightCommand->actionSearch()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once('/Library/WebSer...')
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#10 {main}
+---
+2014/05/22 22:15:09 [error] [php] Use of undefined constant nil - assumed 'nil' (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:24)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#3 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#4 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(7): require_once()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+2014/05/22 22:50:56 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'Property "HistoryPrice.0" is not defined.' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(65): Error->__construct(5, NULL, 'Property "Histo...')
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/22 22:56:54 [error] [php] Array to string conversion (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:131)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (131)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (32)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/22 23:00:58 [error] [php] Missing argument 1 for CModel::getError(), called in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php on line 148 and defined (/Library/WebServer/Documents/YiiRoot/framework/base/CModel.php:371)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (148)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (32)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/22 23:01:31 [error] [exception.CHttpException.5] exception 'CHttpException' with message '{"Price":["Price must be a number."]}' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(65): Error->__construct(5, NULL, '{"Price":["Pric...')
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/22 23:04:36 [error] [php] Argument 2 passed to SearchFlightCommand::createHistoryPrice() must be an instance of int, integer given, called in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php on line 32 and defined (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:124)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (124)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (32)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/23 12:05:32 [error] [php] Object of class DateTime could not be converted to string (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:24)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (24)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (26)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/23 16:50:27 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] Operation timed out' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(67): Error->__construct(5, NULL, 'CDbConnection f...')
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/23 17:02:07 [error] [php] Undefined property: D_LowestPrice::$requestXML (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:46)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (46)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (26)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/23 17:04:02 [error] [php] Undefined property: D_LowestPrice::$returnXML (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:51)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (51)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (26)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/23 23:27:34 [error] [php] Undefined variable: xml (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:101)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (101)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (56)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (26)
+2014/05/24 09:06:54 [error] [exception.CDbException] exception 'CDbException' with message 'update old history_price fail' in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:126
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(23): SearchFlightCommand->createHistoryPrice(Object(Subscription), Object(D_LowestPrice))
+#1 [internal function]: SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#9 {main}
+---
+2014/05/24 09:09:26 [error] [exception.CHttpException.5] exception 'CHttpException' with message '{"Timestamp":["Timestamp cannot be blank."]}' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(209): Error->__construct(5, NULL, '{"Timestamp":["...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(146): SearchFlightCommand->addNewFlights(Object(Subscription), Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(25): SearchFlightCommand->addFlightsOfSubscription(Object(Subscription), Object(D_LowestPrice))
+#3 [internal function]: SearchFlightCommand->actionSearch()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/24 09:22:42 [error] [php] Undefined property: D_LowestPrice::$returnXML (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:43)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (43)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (19)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/05/24 09:25:13 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'flight_xml' at row 1. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1).
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (204)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (146)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (25)
+2014/05/24 09:25:13 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'flight_xml' at row 1. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1)' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(209): Error->__construct(5, NULL, 'CDbCommand fail...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(146): SearchFlightCommand->addNewFlights(Object(Subscription), Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(25): SearchFlightCommand->addFlightsOfSubscription(Object(Subscription), Object(D_LowestPrice))
+#3 [internal function]: SearchFlightCommand->actionSearch()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/24 09:33:46 [error] [exception.CHttpException.5] exception 'CHttpException' with message '{"CurrentPrice":["Current Price must be a number."]}' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(166): Error->__construct(5, NULL, '{"CurrentPrice"...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(26): SearchFlightCommand->modifyPriceOfSubscription(Object(Subscription))
+#2 [internal function]: SearchFlightCommand->actionSearch()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#7 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#10 {main}
+---
+2014/05/24 09:40:53 [error] [php] Undefined variable: nodes (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:119)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(19): D_LowestPrice->searchFlight()
+#1 unknown(0): SearchFlightCommand->actionSearch()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#5 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#6 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#8 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (119)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (69)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (61)
+2014/05/24 11:00:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flight_xml' in 'field list'. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1).
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (207)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (149)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (28)
+2014/05/24 11:00:40 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'flight_xml' in 'field list'. The SQL statement executed was: INSERT INTO `subs_flight` (`ID_subscription`, `flight_xml`) VALUES (:yp0, :yp1)' in /Library/WebServer/Documents/TiCheck_Server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(212): Error->__construct(5, NULL, 'CDbCommand fail...')
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(149): SearchFlightCommand->addNewFlights(Object(Subscription), Array)
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(28): SearchFlightCommand->addFlightsOfSubscription(Object(Subscription), Object(D_LowestPrice))
+#3 [internal function]: SearchFlightCommand->actionSearch()
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/05/29 08:24:30 [error] [php] fsockopen(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php:37)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php(40): httpRequestSoapData()
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_FlightSearch.php(237): commonRequest->doRequest()
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php(41): D_LowestPrice->main()
+#3 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(19): D_LowestPrice->searchFlight()
+#4 unknown(0): SearchFlightCommand->actionSearch()
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#7 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#11 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php (37)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/httpRequestData.php (44)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php (40)
+2014/05/29 09:17:31 [error] [php] fsockopen(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php:37)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php(40): httpRequestSoapData()
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_FlightSearch.php(237): commonRequest->doRequest()
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php(41): D_LowestPrice->main()
+#3 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(19): D_LowestPrice->searchFlight()
+#4 unknown(0): SearchFlightCommand->actionSearch()
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#7 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#11 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php (37)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/httpRequestData.php (44)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php (40)
+2014/06/01 19:42:18 [error] [php] fsockopen(): unable to connect to openapi.ctrip.com:80 (Operation timed out) (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php:37)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php(40): httpRequestSoapData()
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_FlightSearch.php(237): commonRequest->doRequest()
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php(41): D_LowestPrice->main()
+#3 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(19): D_LowestPrice->searchFlight()
+#4 unknown(0): SearchFlightCommand->actionSearch()
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#7 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#11 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php (37)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/httpRequestData.php (44)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php (40)
+2014/06/09 16:00:26 [error] [php] Undefined variable: flight (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:51)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): HistoryPriceCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (51)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php (19)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+2014/06/09 16:01:09 [error] [exception.CException] exception 'CException' with message 'Property "HistoryPrice.0" is not defined.' in /Library/WebServer/Documents/YiiRoot/framework/base/CComponent.php:130
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/db/ar/CActiveRecord.php(145): CComponent->__get('0')
+#1 /Library/WebServer/Documents/YiiRoot/framework/base/CModel.php(596): CActiveRecord->__get('0')
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/commands/HistoryPriceCommand.php(54): CModel->offsetGet(0)
+#3 [internal function]: HistoryPriceCommand->actionIndex('49')
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#8 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#9 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once('/Library/WebSer...')
+#11 {main}
+---
+2014/06/10 09:23:43 [error] [php] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:83)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (83)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic (4)
+2014/06/10 09:24:06 [error] [php] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure (/Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php:83)
+Stack trace:
+#0 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (83)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php (10)
+in /Library/WebServer/Documents/TiCheck_Server/protected/yiic (4)
+2014/06/10 09:27:38 [error] [php] Invalid argument supplied for foreach() (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:97)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (97)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+2014/06/10 09:38:57 [error] [php] Invalid argument supplied for foreach() (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:99)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (99)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+2014/06/10 09:42:22 [error] [php] Undefined variable: obj_xml (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:99)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (99)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+2014/06/10 09:45:40 [error] [php] Invalid argument supplied for foreach() (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php:99)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (99)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php (91)
+in /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php (21)
+<<<<<<< HEAD
+2014/06/10 20:03:11 [error] [php] D_LowestPrice::searchFlight(): Node no longer exists (/Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/D_LowestPrice.php:53)
+Stack trace:
+#0 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Volumes/Sites/www.ticheck.com/server/protected/yiic.php(10): require_once()
+#6 /Volumes/Sites/www.ticheck.com/server/protected/yiic(4): require_once()
+
+in /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/D_LowestPrice.php (53)
+in /Volumes/Sites/www.ticheck.com/server/protected/commands/SearchFlightCommand.php (21)
+in /Volumes/Sites/www.ticheck.com/server/protected/yiic.php (10)
+2014/06/10 20:41:12 [error] [php] stream_socket_client(): SSL operation failed with code 1. OpenSSL Error messages:
+error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure (/Volumes/Sites/www.ticheck.com/server/protected/commands/SearchFlightCommand.php:83)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#3 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#4 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#5 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Volumes/Sites/www.ticheck.com/server/protected/yiic.php(10): require_once()
+#7 /Volumes/Sites/www.ticheck.com/server/protected/yiic(4): require_once()
+
+in /Volumes/Sites/www.ticheck.com/server/protected/commands/SearchFlightCommand.php (83)
+in /Volumes/Sites/www.ticheck.com/server/protected/commands/SearchFlightCommand.php (51)
+in /Volumes/Sites/www.ticheck.com/server/protected/yiic.php (10)
+2014/06/10 21:04:54 [error] [php] D_LowestPrice::searchFlight(): Node no longer exists (/Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/D_LowestPrice.php:56)
+Stack trace:
+#0 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#1 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#2 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#3 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#4 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#5 /Volumes/Sites/www.ticheck.com/server/protected/yiic.php(10): require_once()
+#6 /Volumes/Sites/www.ticheck.com/server/protected/yiic(4): require_once()
+
+in /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/D_LowestPrice.php (56)
+in /Volumes/Sites/www.ticheck.com/server/protected/commands/SearchFlightCommand.php (21)
+in /Volumes/Sites/www.ticheck.com/server/protected/yiic.php (10)
+2014/06/10 21:44:49 [error] [php] fsockopen(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known (/Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/Common/HttpRequest.php:37)
+Stack trace:
+#0 /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/Common/commonRequestData.php(40): httpRequestSoapData()
+#1 /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/D_FlightSearch.php(237): commonRequest->doRequest()
+#2 /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/D_LowestPrice.php(50): D_LowestPrice->main()
+#3 /Volumes/Sites/www.ticheck.com/server/protected/commands/SearchFlightCommand.php(21): D_LowestPrice->searchFlight()
+#4 unknown(0): SearchFlightCommand->actionSearch()
+#5 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#7 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Volumes/Sites/www.ticheck.com/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Volumes/Sites/www.ticheck.com/server/protected/yiic.php(10): require_once()
+#11 /Volumes/Sites/www.ticheck.com/server/protected/yiic(4): require_once()
+
+in /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/Common/HttpRequest.php (37)
+in /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/Common/httpRequestData.php (44)
+in /Volumes/Sites/www.ticheck.com/server/protected/apiCtrip/Common/commonRequestData.php (40)
+=======
+2014/06/10 15:11:25 [error] [php] fsockopen(): unable to connect to openapi.ctrip.com:80 (Operation timed out) (/Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php:37)
+Stack trace:
+#0 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php(40): httpRequestSoapData()
+#1 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_FlightSearch.php(237): commonRequest->doRequest()
+#2 /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/D_LowestPrice.php(47): D_LowestPrice->main()
+#3 /Library/WebServer/Documents/TiCheck_Server/protected/commands/SearchFlightCommand.php(21): D_LowestPrice->searchFlight()
+#4 unknown(0): SearchFlightCommand->actionSearch()
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#6 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(71): SearchFlightCommand->run()
+#7 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#8 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(180): CConsoleApplication->processRequest()
+#9 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#10 /Library/WebServer/Documents/TiCheck_Server/protected/yiic.php(10): require_once()
+#11 /Library/WebServer/Documents/TiCheck_Server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php (37)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/httpRequestData.php (44)
+in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php (40)
+>>>>>>> 9bf264312d7c613c5e4e994178f5d8b88240fa00
