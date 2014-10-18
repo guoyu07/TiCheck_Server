@@ -20,12 +20,12 @@ return array(
 		'db'=>array(
 			//'connectionString' => 'mysql:host=localhost;dbname=TiCheck',
 			'class' => 'CDbConnection',
-			'connectionString' => 'mysql:host=10.60.41.52;dbname=TiCheck',
+			'connectionString' => 'mysql:host=127.0.0.1;dbname=TiCheck',
 			'emulatePrepare' => true,
-			'username' => 'tac',
-			'password' => 'tongjiappleclub',
-//			'username' => 'root',
-			//'password' => '',
+			//'username' => 'tac',
+			//'password' => 'tongjiappleclub',
+			'username' => 'root',
+			'password' => '199193',
 			'charset' => 'utf8',
 		),
 		/*

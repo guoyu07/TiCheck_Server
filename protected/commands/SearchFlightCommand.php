@@ -75,7 +75,12 @@ class SearchFlightCommand extends CConsoleCommand
 		$deviceToken = $this->_deviceToken;
 
 		// Put your private key's passphrase here:
-		$passphrase = 'TiCheck';
+		//$passphrase = 'TiCheck';// for pem from Apple Club
+		$passphrase = '199193';// for pem from Jiping 
+
+		$pemFile = 'ck_jiping.pem';//jiping
+		//$pemFile = 'ck.pem';//tac
+
 
 		// Put your alert message here:
 		$message = $this->_message;
@@ -83,7 +88,7 @@ class SearchFlightCommand extends CConsoleCommand
 		////////////////////////////////////////////////////////////////////////////////
 
 		$ctx = stream_context_create();
-		stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
+		stream_context_set_option($ctx, 'ssl', 'local_cert', $pemFile);
 		stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 		// Open a connection to the APNS server

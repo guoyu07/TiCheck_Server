@@ -2415,3 +2415,359 @@ Stack trace:
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/HttpRequest.php (37)
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/httpRequestData.php (44)
 in /Library/WebServer/Documents/TiCheck_Server/protected/apiCtrip/Common/commonRequestData.php (40)
+2014/10/18 01:51:59 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 01:53:24 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 01:58:29 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/CreateController.php(39): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/create')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/create
+---
+2014/10/18 01:58:29 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 02:32:32 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 02:48:29 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 02:48:59 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 02:51:18 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 02:52:13 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 02:52:25 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/DeviceTokenController.php(24): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): DeviceTokenController->actionAdd()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('add')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/deviceToke...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/deviceToken/add
+---
+2014/10/18 03:15:43 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/LoginController.php(18): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): LoginController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/login')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/login
+---
+2014/10/18 03:15:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '790306aed6235279917b4f837126a0e99d7bfdf75ad099c4965f5470a568b8b1' for key 'device_user'. The SQL statement executed was: INSERT INTO `user_device` (`ID_user`, `Device_token`) VALUES (:yp0, :yp1).
+in /Library/WebServer/Documents/server/protected/modules/User/controllers/DeviceTokenController.php (15)
+in /Library/WebServer/Documents/server/index.php (13)
+2014/10/18 03:15:43 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '790306aed6235279917b4f837126a0e99d7bfdf75ad099c4965f5470a568b8b1' for key 'device_user'. The SQL statement executed was: INSERT INTO `user_device` (`ID_user`, `Device_token`) VALUES (:yp0, :yp1)' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/DeviceTokenController.php(22): Error->__construct(5, NULL, 'CDbCommand fail...')
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): DeviceTokenController->actionAdd()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('add')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/deviceToke...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/deviceToken/add
+---
+2014/10/18 03:15:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '790306aed6235279917b4f837126a0e99d7bfdf75ad099c4965f5470a568b8b1' for key 'device_user'. The SQL statement executed was: INSERT INTO `user_device` (`ID_user`, `Device_token`) VALUES (:yp0, :yp1).
+in /Library/WebServer/Documents/server/protected/modules/User/controllers/DeviceTokenController.php (15)
+in /Library/WebServer/Documents/server/index.php (13)
+2014/10/18 03:15:43 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '790306aed6235279917b4f837126a0e99d7bfdf75ad099c4965f5470a568b8b1' for key 'device_user'. The SQL statement executed was: INSERT INTO `user_device` (`ID_user`, `Device_token`) VALUES (:yp0, :yp1)' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/User/controllers/DeviceTokenController.php(22): Error->__construct(5, NULL, 'CDbCommand fail...')
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): DeviceTokenController->actionAdd()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('add')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('User/deviceToke...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=User/deviceToken/add
+---
+2014/10/18 03:16:14 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'no this airline company' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/AirlineCompany/controllers/AddController.php(32): Error->__construct(5, NULL, 'no this airline...')
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): AddController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('AirlineCompany/...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=AirlineCompany/add
+---
+2014/10/18 03:17:05 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/Subscription/controllers/CreateController.php(29): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('Subscription/cr...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=Subscription/create
+---
+2014/10/18 03:17:06 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.' in /Library/WebServer/Documents/server/protected/apiCtrip/D_LowestPrice.php:17
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/apiCtrip/D_LowestPrice.php(17): DateTime->__construct('now')
+#1 /Library/WebServer/Documents/server/protected/commands/HistoryPriceCommand.php(19): D_LowestPrice->searchFlight(Object(Subscription))
+#2 [internal function]: HistoryPriceCommand->actionIndex('83')
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(HistoryPriceCommand), Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#7 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#8 /Library/WebServer/Documents/server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#9 /Library/WebServer/Documents/server/protected/yiic(4): require_once('/Library/WebSer...')
+#10 {main}
+---
+2014/10/18 03:19:04 [error] [exception.Exception] exception 'Exception' with message 'DateTime::__construct(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.' in /Library/WebServer/Documents/server/protected/apiCtrip/D_LowestPrice.php:17
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/apiCtrip/D_LowestPrice.php(17): DateTime->__construct('now')
+#1 /Library/WebServer/Documents/server/protected/commands/SearchFlightCommand.php(25): D_LowestPrice->searchFlight(Object(Subscription))
+#2 [internal function]: SearchFlightCommand->actionSearch()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(SearchFlightCommand), Array)
+#4 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#6 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#7 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CApplication->run()
+#8 /Library/WebServer/Documents/server/protected/yiic.php(10): require_once('/Library/WebSer...')
+#9 /Library/WebServer/Documents/server/protected/yiic(4): require_once('/Library/WebSer...')
+#10 {main}
+---
+2014/10/18 03:28:30 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'no this airline company' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/AirlineCompany/controllers/AddController.php(32): Error->__construct(5, NULL, 'no this airline...')
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): AddController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('AirlineCompany/...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=AirlineCompany/add
+---
+2014/10/18 03:29:00 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/Subscription/controllers/CreateController.php(29): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('Subscription/cr...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=Subscription/create
+---
+2014/10/18 11:36:04 [error] [php] stream_socket_client(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known (/Library/WebServer/Documents/server/protected/commands/SearchFlightCommand.php:97)
+Stack trace:
+#0 unknown(0): SearchFlightCommand->actionSearch()
+#1 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#2 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleCommandRunner.php(67): SearchFlightCommand->run()
+#3 /Library/WebServer/Documents/YiiRoot/framework/console/CConsoleApplication.php(91): CConsoleCommandRunner->run()
+#4 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CConsoleApplication->processRequest()
+#5 /Library/WebServer/Documents/YiiRoot/framework/yiic.php(33): CConsoleApplication->run()
+#6 /Library/WebServer/Documents/server/protected/yiic.php(10): require_once()
+#7 /Library/WebServer/Documents/server/protected/yiic(4): require_once()
+
+in /Library/WebServer/Documents/server/protected/commands/SearchFlightCommand.php (97)
+in /Library/WebServer/Documents/server/protected/commands/SearchFlightCommand.php (60)
+in /Library/WebServer/Documents/server/protected/yiic.php (10)
+2014/10/18 03:39:31 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'no this airline company' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/AirlineCompany/controllers/AddController.php(32): Error->__construct(5, NULL, 'no this airline...')
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): AddController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('AirlineCompany/...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=AirlineCompany/add
+---
+2014/10/18 03:39:43 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/Subscription/controllers/CreateController.php(29): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('Subscription/cr...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=Subscription/create
+---
+2014/10/18 03:43:28 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/Subscription/controllers/CreateController.php(29): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('Subscription/cr...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=Subscription/create
+---
+2014/10/18 03:49:12 [error] [exception.CHttpException.5] exception 'CHttpException' with message 'no this airline company' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/AirlineCompany/controllers/AddController.php(32): Error->__construct(5, NULL, 'no this airline...')
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): AddController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('AirlineCompany/...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=AirlineCompany/add
+---
+2014/10/18 03:49:27 [error] [exception.CHttpException.1] exception 'CHttpException' with message 'Succeed' in /Library/WebServer/Documents/server/protected/controllers/Error.php:43
+Stack trace:
+#0 /Library/WebServer/Documents/server/protected/modules/Subscription/controllers/CreateController.php(29): Error->__construct(1)
+#1 /Library/WebServer/Documents/YiiRoot/framework/web/actions/CInlineAction.php(49): CreateController->actionIndex()
+#2 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/YiiRoot/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(282): CController->run('')
+#6 /Library/WebServer/Documents/YiiRoot/framework/web/CWebApplication.php(141): CWebApplication->runController('Subscription/cr...')
+#7 /Library/WebServer/Documents/YiiRoot/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#8 /Library/WebServer/Documents/server/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/server/index.php?r=Subscription/create
+---

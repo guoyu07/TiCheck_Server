@@ -14,6 +14,7 @@ class D_LowestPrice extends D_FlightSearch
 	{
 		//echo "search";
 		echo "start search for new subscription " . $subs->ID . "\n";
+		date_default_timezone_set('Asia/Shanghai');
 		$today = new DateTime('now');
 		$today->setTime(0,0,0);
 		$date = new DateTime($subs->StartDate);
